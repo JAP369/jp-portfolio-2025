@@ -66,7 +66,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-400">
                 JP
               </span>
             </motion.a>
@@ -84,7 +84,7 @@ export default function Navbar() {
                   transition={{ delay: index * 0.1 }}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-red-400 to-blue-400 group-hover:w-full transition-all duration-300" />
                 </motion.a>
               ))}
             </div>
@@ -93,7 +93,7 @@ export default function Navbar() {
             <motion.a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')}
-              className="hidden md:block px-6 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity"
+              className="hidden md:block px-6 py-2 bg-gradient-to-r from-red-500 to-blue-500 rounded-full text-white font-medium hover:opacity-90 transition-opacity"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -6,27 +6,27 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'Jio | UCP 🔒',
-    description: "Jio's CDP tool turns customer data into insights & action",
-    link: '#',
-    bgGradient: 'from-[#2d2d5f] via-[#3d3d7f] to-[#4d4d8f]'
+    title: 'Kusina - Filipino Restaurant',
+    description: 'Authentic Filipino cuisine website with online menu and catering services in Hong Kong',
+    link: 'https://kusina-hk.vercel.app/',
+    bgGradient: 'from-[#5f2d2d] via-[#7f3d3d] to-[#8f4d4d]'
   },
   {
-    title: 'Fynd Speed',
-    description: 'Performance monitoring tool for eCommerce websites',
-    link: '#',
+    title: 'NPL Marketplace',
+    description: "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
+    link: 'https://npl-marketplace.vercel.app/',
     bgGradient: 'from-[#1e3a4a] via-[#2e4a5a] to-[#3e5a6a]'
   },
   {
-    title: 'Nexus - Design System',
-    description: 'Supports 150+ variables & 600+ variants',
-    link: '#',
-    bgGradient: 'from-[#3d2d5f] via-[#5d4d7f] to-[#7d5d9f]'
+    title: 'Dragon-i Nightclub',
+    description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
+    link: 'https://dihk.vercel.app/',
+    bgGradient: 'from-[#3d2d2d] via-[#5d4d4d] to-[#7d6d6d]'
   },
   {
-    title: 'Nexus - NFT App',
-    description: 'A marketplace where users can buy, sell, or create NFTs',
-    link: '#',
+    title: 'Portfolio Website',
+    description: 'Personal portfolio showcasing full-stack development and product management expertise',
+    link: 'https://jonathanpaita.vercel.app/',
     bgGradient: 'from-[#2d3d5f] via-[#4d5d7f] to-[#6d7d9f]'
   }
 ];
@@ -99,7 +99,7 @@ export default function ProjectsSection() {
                 </motion.div>
 
                 {/* Subtle glow on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600/20 via-blue-600/20 to-cyan-600/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.a>
             ))}
           </div>
