@@ -36,7 +36,7 @@ export default function ProjectsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-32 px-6 bg-[#0a0a0a]" ref={ref}>
+    <section id="projects" className="py-32 px-6 bg-[#020617]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -104,7 +104,7 @@ export default function ProjectsSection() {
                 </motion.div>
 
                 {/* Subtle glow on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/30 via-pink-600/30 to-purple-600/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 via-blue-600/30 to-cyan-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.a>
             ))}
           </div>

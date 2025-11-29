@@ -85,33 +85,48 @@ export default function HeroSection() {
   return (
     <section id="home" className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
       {/* Background animated gradient */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-20">
         <motion.div 
           animate={{ 
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-            rotate: [0, 180, 360]
+            opacity: [0.4, 0.6, 0.4],
+            x: [-20, 20, -20],
+            y: [-20, 20, -20]
           }}
           transition={{ 
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"
+          className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600 rounded-full filter blur-3xl"
         />
         <motion.div 
           animate={{ 
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3],
-            rotate: [360, 180, 0]
+            opacity: [0.3, 0.5, 0.3],
+            x: [20, -20, 20],
+            y: [20, -20, 20]
           }}
           transition={{ 
-            duration: 25,
+            duration: 20,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600 rounded-full filter blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-cyan-500 rounded-full filter blur-3xl"
+        />
+        <motion.div 
+          animate={{ 
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2]
+          }}
+          transition={{ 
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-sky-600 rounded-full filter blur-3xl"
         />
       </div>
 
@@ -147,12 +162,12 @@ export default function HeroSection() {
           >
             Hey, I'm{' '}
             <motion.span 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600"
               animate={{ 
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
               transition={{ 
-                duration: 5,
+                duration: 8,
                 repeat: Infinity,
                 ease: "linear"
               }}

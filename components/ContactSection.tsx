@@ -10,7 +10,7 @@ export default function ContactSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-20 px-6 bg-[#0a0a0a]" ref={ref}>
+    <section id="contact" className="py-20 px-6 bg-[#020617]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -43,16 +43,16 @@ export default function ContactSection() {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.a
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
               whileTap={{ scale: 0.95 }}
               href="#"
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2"
             >
               <FileText className="w-5 h-5" />
               Resume
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.05, borderColor: "rgba(168, 85, 247, 0.8)" }}
+              whileHover={{ scale: 1.05, borderColor: "rgba(6, 182, 212, 0.8)" }}
               whileTap={{ scale: 0.95 }}
               href="mailto:jonathan.paita@gmail.com"
               className="px-8 py-4 border-2 border-white/20 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
@@ -76,7 +76,7 @@ export default function ContactSection() {
                   animate={{ scale: [1, 1.2, 1] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  <Heart className="w-4 h-4 text-pink-500" />
+                  <Heart className="w-4 h-4 text-cyan-400" />
                 </motion.span>
               </motion.p>
 
@@ -88,7 +88,7 @@ export default function ContactSection() {
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(168, 85, 247, 0.2)" }}
+                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
                   whileTap={{ scale: 0.9 }}
                   href="https://www.linkedin.com/in/jonathan-paita"
                   target="_blank"
@@ -98,7 +98,7 @@ export default function ContactSection() {
                   <Linkedin className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: -5, backgroundColor: "rgba(168, 85, 247, 0.2)" }}
+                  whileHover={{ scale: 1.2, rotate: -5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
                   whileTap={{ scale: 0.9 }}
                   href="https://github.com/JAP369"
                   target="_blank"
@@ -108,7 +108,7 @@ export default function ContactSection() {
                   <Github className="w-5 h-5" />
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(168, 85, 247, 0.2)" }}
+                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
                   whileTap={{ scale: 0.9 }}
                   href="mailto:jonathan.paita@gmail.com"
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300"
