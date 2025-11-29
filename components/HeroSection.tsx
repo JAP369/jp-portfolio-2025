@@ -129,12 +129,57 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
+          {/* Tools/Software Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 }}
+            className="mt-20 pt-12 border-t border-white/10"
+          >
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              {/* Adobe Illustrator */}
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-3 group cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-[#FF9A00] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#FF9A00]/50 transition-all duration-300">
+                  <span className="text-2xl font-bold text-[#330000]">Ai</span>
+                </div>
+                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Adobe Illustrator</span>
+              </motion.div>
+
+              {/* Adobe Photoshop */}
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-3 group cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-[#31A8FF] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#31A8FF]/50 transition-all duration-300">
+                  <span className="text-2xl font-bold text-[#001E36]">Ps</span>
+                </div>
+                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Adobe Photoshop</span>
+              </motion.div>
+
+              {/* Microsoft Office */}
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="flex flex-col items-center gap-3 group cursor-pointer"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D83B01] to-[#C239B3] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#D83B01]/50 transition-all duration-300">
+                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="white">
+                    <path d="M21.53 4.306v15.363l-9.843 4.324-9.843-4.324v-15.363l9.843-4.324 9.843 4.324zm-10.543 1.694v15.362l9.843-4.324v-15.363l-9.843 4.325zm-8.043 11.662l6.244 2.754v-6.249l-6.244-2.754v6.249zm0-7.294l6.244 2.754v-6.249l-6.244-2.754v6.249zm0-7.294l6.244 2.754v-2.754l-6.244-2.754v2.754z"/>
+                  </svg>
+                </div>
+                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Microsoft Office</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
           {/* Ticker Text */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="mt-20 overflow-hidden"
+            transition={{ delay: 1.6 }}
+            className="mt-12 overflow-hidden"
           >
             <div className="flex animate-scroll whitespace-nowrap text-sm text-gray-600">
               <span className="mx-8">Available for new opportunities</span>
