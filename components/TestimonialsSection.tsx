@@ -28,17 +28,19 @@ export default function TestimonialsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="testimonials" className="py-20 px-6 bg-[#0a0a0a]" ref={ref}>
+    <section id="testimonials" className="py-32 px-6 bg-[#0a0a0a]" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-4">TESTIMONIALS</h2>
-          <h3 className="text-4xl md:text-6xl font-bold mb-12">In their words</h3>
+          <div className="text-center mb-16">
+            <h2 className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">TESTIMONIALS</h2>
+            <h3 className="text-5xl md:text-6xl font-bold">In their words</h3>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}

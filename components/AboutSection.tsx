@@ -16,26 +16,29 @@ export default function AboutSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
+          {/* Section Header */}
           <div className="text-center mb-20">
-            <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-4">+ ABOUT +</h2>
-            <h3 className="text-4xl md:text-6xl font-bold">Journey so far</h3>
+            <h2 className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">ABOUT</h2>
+            <h3 className="text-5xl md:text-6xl font-bold">Journey so far</h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16">
-            {/* My Story */}
+          {/* Content Grid */}
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+            {/* Left Column - My Story */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-8"
             >
-              <div className="mb-8">
-                <h4 className="text-3xl font-bold mb-4">My story</h4>
-                <p className="text-gray-500 text-lg mb-8">
-                  From the Philippines to Hong Kong, building digital experiences that matter
+              <div>
+                <h4 className="text-2xl md:text-3xl font-semibold mb-3">My story</h4>
+                <p className="text-gray-400 text-base leading-relaxed">
+                  A journey in crafting engaging experiences and exploring new horizons
                 </p>
               </div>
               
-              <div className="space-y-6 text-gray-400 leading-relaxed">
+              <div className="space-y-5 text-gray-400 text-base leading-relaxed">
                 <p>
                   Originally from the Philippines, I moved to Hong Kong to pursue my passion for technology
                   and innovation. With over 7 years of experience spanning full-stack development and
@@ -47,31 +50,31 @@ export default function AboutSection() {
                   management - giving me a unique perspective on building products that users love.
                 </p>
                 <p>
-                  I believe in the power of technology to solve real-world problems and create meaningful
-                  impact. Whether it's developing scalable web applications or crafting intuitive mobile
-                  experiences, I'm driven by the challenge of turning complex ideas into elegant solutions.
+                  When I'm not immersed in coding projects, you'll likely find me exploring new
+                  technologies and frameworks. Balancing work with continuous learning keeps me inspired
+                  and fuels my creativity.
                 </p>
               </div>
             </motion.div>
 
-            {/* Work Experience */}
+            {/* Right Column - Work Experience */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
+              className="space-y-8"
             >
-              <div className="mb-8">
-                <h4 className="text-3xl font-bold mb-4">Work experience</h4>
-                <p className="text-gray-500 text-lg mb-8">
+              <div>
+                <h4 className="text-2xl md:text-3xl font-semibold mb-3">Work experience</h4>
+                <p className="text-gray-400 text-base leading-relaxed">
                   Building products across continents
                 </p>
               </div>
 
-              <div className="space-y-6 text-gray-400 leading-relaxed">
+              <div className="space-y-5 text-gray-400 text-base leading-relaxed">
                 <p>
-                  Throughout my career, I've had the privilege of working with diverse teams across
-                  Asia, contributing to projects ranging from e-commerce platforms to enterprise
-                  solutions and mobile applications.
+                  I've worked across diverse environments and teams of all sizes, which has
+                  strengthened my adaptability, creativity, and ability to deliver impactful solutions.
                 </p>
                 <p>
                   My experience spans the entire product lifecycle - from initial concept and technical

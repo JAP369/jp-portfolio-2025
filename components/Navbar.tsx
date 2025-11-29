@@ -5,10 +5,10 @@ import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navItems = [
-  { name: 'About', href: '#about' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Skills', href: '#skills' },
   { name: 'Testimonials', href: '#testimonials' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
   { name: 'Contact', href: '#contact' },
 ];

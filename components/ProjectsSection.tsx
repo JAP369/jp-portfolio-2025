@@ -44,8 +44,8 @@ export default function ProjectsSection() {
           transition={{ duration: 0.8 }}
         >
           <div className="text-center mb-20">
-            <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-4">+ PROJECTS +</h2>
-            <h3 className="text-4xl md:text-6xl font-bold mb-4">What i've been up to</h3>
+            <h2 className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">PROJECTS</h2>
+            <h3 className="text-5xl md:text-6xl font-bold mb-4">What i've been up to</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">

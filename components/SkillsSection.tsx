@@ -115,16 +115,16 @@ export default function SkillsSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-sm uppercase tracking-widest text-gray-500 mb-4"
+            className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6"
           >
-            + SKILLS +
+            SKILLS
           </motion.h2>
           <motion.h3 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold"
+            className="text-5xl md:text-6xl font-bold"
           >
             Things I'm good at
           </motion.h3>
