@@ -3,40 +3,53 @@
 import { motion } from 'framer-motion';
 import { FileText, Mail, Linkedin, Github } from 'lucide-react';
 
+const tools = [
+  { name: 'Adobe Illustrator', icon: 'Ai', bg: '#FF9A00', text: '#330000' },
+  { name: 'Adobe Photoshop', icon: 'Ps', bg: '#31A8FF', text: '#001E36' },
+  { name: 'Microsoft Office', icon: 'Ms', bg: '#D83B01', text: '#FFFFFF' },
+  { name: 'Graphic Design', icon: 'Gd', bg: '#00D4AA', text: '#003D2E' },
+  { name: 'Web Design', icon: 'Wd', bg: '#667EEA', text: '#FFFFFF' },
+  { name: 'Database', icon: 'Db', bg: '#F56565', text: '#FFFFFF' },
+  { name: '3D Animation', icon: '3D', bg: '#48BB78', text: '#FFFFFF' },
+  { name: 'Bartending', icon: 'Bt', bg: '#ED8936', text: '#FFFFFF' },
+  { name: 'Product Sourcing', icon: 'Ps', bg: '#9F7AEA', text: '#FFFFFF' },
+  { name: 'Warehouse Logistics', icon: 'Wl', bg: '#4299E1', text: '#FFFFFF' },
+  { name: 'Inventory Management', icon: 'Im', bg: '#ECC94B', text: '#2D3748' },
+];
+
 export default function HeroSection() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
       {/* Background animated gradient */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10 w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          {/* Profile Image */}
+          {/* Availability Badge */}
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-gray-400 to-blue-500 p-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8"
           >
-            <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-6xl font-bold">
-              JP
-            </div>
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span className="text-sm text-gray-300">Available for new opportunities</span>
           </motion.div>
 
           {/* Name and Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-5xl md:text-7xl font-bold mb-6"
+            transition={{ delay: 0.3 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
             Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-blue-400">Jonathan</span>.
           </motion.h1>
@@ -44,17 +57,17 @@ export default function HeroSection() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="text-xl md:text-2xl text-gray-400 mb-4 max-w-3xl mx-auto"
+            transition={{ delay: 0.5 }}
+            className="text-lg md:text-xl text-gray-400 mb-3 max-w-3xl mx-auto"
           >
-            Full-Stack Developer & Product Manager based in Hong Kong with 7+ years of experience,
+            Full-Stack Developer & Product Manager based in Hong Kong with <span className="text-white font-semibold">7+ years</span> of experience,
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="text-lg md:text-xl text-gray-500 mb-12"
+            transition={{ delay: 0.6 }}
+            className="text-base md:text-lg text-gray-500 mb-12"
           >
             specializing in Web Development, Mobile Apps & Digital Product Strategy
           </motion.p>
@@ -63,8 +76,8 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-wrap gap-4 justify-center items-center"
+            transition={{ delay: 0.7 }}
+            className="flex flex-wrap gap-4 justify-center items-center mb-12"
           >
             <a
               href="#"
@@ -86,8 +99,8 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="flex gap-6 justify-center mt-12"
+            transition={{ delay: 0.9 }}
+            className="flex gap-6 justify-center"
           >
             <a
               href="https://www.linkedin.com/in/jonathan-paita"
@@ -112,91 +125,59 @@ export default function HeroSection() {
               <Mail className="w-5 h-5" />
             </a>
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, repeat: Infinity, duration: 1.5 }}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          >
-            <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                className="w-1.5 h-1.5 bg-white rounded-full"
-              />
-            </div>
-          </motion.div>
-
-          {/* Tools/Software Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4 }}
-            className="mt-20 pt-12 border-t border-white/10"
-          >
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              {/* Adobe Illustrator */}
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="flex flex-col items-center gap-3 group cursor-pointer"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-[#FF9A00] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#FF9A00]/50 transition-all duration-300">
-                  <span className="text-2xl font-bold text-[#330000]">Ai</span>
-                </div>
-                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Adobe Illustrator</span>
-              </motion.div>
-
-              {/* Adobe Photoshop */}
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="flex flex-col items-center gap-3 group cursor-pointer"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-[#31A8FF] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#31A8FF]/50 transition-all duration-300">
-                  <span className="text-2xl font-bold text-[#001E36]">Ps</span>
-                </div>
-                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Adobe Photoshop</span>
-              </motion.div>
-
-              {/* Microsoft Office */}
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="flex flex-col items-center gap-3 group cursor-pointer"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#D83B01] to-[#C239B3] flex items-center justify-center group-hover:shadow-lg group-hover:shadow-[#D83B01]/50 transition-all duration-300">
-                  <svg className="w-8 h-8" viewBox="0 0 24 24" fill="white">
-                    <path d="M21.53 4.306v15.363l-9.843 4.324-9.843-4.324v-15.363l9.843-4.324 9.843 4.324zm-10.543 1.694v15.362l9.843-4.324v-15.363l-9.843 4.325zm-8.043 11.662l6.244 2.754v-6.249l-6.244-2.754v6.249zm0-7.294l6.244 2.754v-6.249l-6.244-2.754v6.249zm0-7.294l6.244 2.754v-2.754l-6.244-2.754v2.754z"/>
-                  </svg>
-                </div>
-                <span className="text-xs text-gray-400 group-hover:text-white transition-colors">Microsoft Office</span>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Ticker Text */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.6 }}
-            className="mt-12 overflow-hidden"
-          >
-            <div className="flex animate-scroll whitespace-nowrap text-sm text-gray-600">
-              <span className="mx-8">Available for new opportunities</span>
-              <span className="mx-8">•</span>
-              <span className="mx-8">Available for new opportunities</span>
-              <span className="mx-8">•</span>
-              <span className="mx-8">Available for new opportunities</span>
-              <span className="mx-8">•</span>
-              <span className="mx-8">Available for new opportunities</span>
-              <span className="mx-8">•</span>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
 
+      {/* Tools Carousel - Bottom Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.1 }}
+        className="absolute bottom-0 left-0 right-0 pb-8 z-10"
+      >
+        <div className="relative overflow-hidden">
+          {/* Gradient fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10"></div>
+          
+          {/* Scrolling carousel */}
+          <div className="flex animate-carousel">
+            {/* First set of tools */}
+            {tools.map((tool, index) => (
+              <div
+                key={`tool-1-${index}`}
+                className="flex-shrink-0 mx-4 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-sm font-bold"
+                  style={{ backgroundColor: tool.bg, color: tool.text }}
+                >
+                  {tool.icon}
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">{tool.name}</span>
+              </div>
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {tools.map((tool, index) => (
+              <div
+                key={`tool-2-${index}`}
+                className="flex-shrink-0 mx-4 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity duration-300"
+              >
+                <div
+                  className="w-12 h-12 rounded-xl flex items-center justify-center text-sm font-bold"
+                  style={{ backgroundColor: tool.bg, color: tool.text }}
+                >
+                  {tool.icon}
+                </div>
+                <span className="text-xs text-gray-500 whitespace-nowrap">{tool.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
       <style jsx>{`
-        @keyframes scroll {
+        @keyframes carousel {
           0% {
             transform: translateX(0);
           }
@@ -204,8 +185,11 @@ export default function HeroSection() {
             transform: translateX(-50%);
           }
         }
-        .animate-scroll {
-          animation: scroll 20s linear infinite;
+        .animate-carousel {
+          animation: carousel 40s linear infinite;
+        }
+        .animate-carousel:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
