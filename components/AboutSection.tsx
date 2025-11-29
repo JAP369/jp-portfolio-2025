@@ -34,7 +34,7 @@ export default function AboutSection() {
               <div>
                 <h4 className="text-2xl md:text-3xl font-semibold mb-3">My story</h4>
                 <p className="text-gray-400 text-base leading-relaxed">
-                  A journey in crafting engaging experiences and exploring new horizons
+                  From the Philippines to Hong Kong - A 15+ year journey in Food & Beverage
                 </p>
               </div>
               
@@ -44,27 +44,29 @@ export default function AboutSection() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
-                  Originally from the Philippines, I moved to Hong Kong to pursue my passion for technology
-                  and innovation. With over 7 years of experience spanning full-stack development and
-                  product management, I've built a career creating seamless digital experiences.
+                  Originally from the Philippines, I moved to Hong Kong to pursue opportunities in the
+                  Food & Beverage industry. With over 15 years of hands-on experience, I've built a career
+                  from the ground up, starting from a simple coffee shop to establishing central kitchens
+                  and managing multiple outlets.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  I specialize in web development, mobile applications, and digital product strategy.
-                  My journey has taken me through diverse roles - from software engineering to product
-                  management - giving me a unique perspective on building products that users love.
+                  My expertise spans purchasing management, administrative operations, graphic design,
+                  and team leadership. I've completed numerous computer courses that complement my
+                  operational skills, allowing me to bridge traditional F&B management with modern
+                  digital solutions.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  When I'm not immersed in coding projects, you'll likely find me exploring new
-                  technologies and frameworks. Balancing work with continuous learning keeps me inspired
-                  and fuels my creativity.
+                  I believe in delivering exceptional customer experiences through efficient operations,
+                  quality service, and continuous improvement. Whether it's managing inventory, designing
+                  marketing materials, or optimizing kitchen workflows, I'm driven by excellence.
                 </motion.p>
               </div>
             </motion.div>
@@ -79,7 +81,7 @@ export default function AboutSection() {
               <div>
                 <h4 className="text-2xl md:text-3xl font-semibold mb-3">Work experience</h4>
                 <p className="text-gray-400 text-base leading-relaxed">
-                  Building products across continents
+                  Building F&B operations from coffee shops to central kitchens
                 </p>
               </div>
 
@@ -89,26 +91,27 @@ export default function AboutSection() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  I've worked across diverse environments and teams of all sizes, which has
-                  strengthened my adaptability, creativity, and ability to deliver impactful solutions.
+                  Throughout my 15+ year career in Food & Beverage, I've progressed from entry-level
+                  positions to managing entire operations. I successfully established a central kitchen
+                  and expanded operations to 3 outlets, handling everything from vendor relationships
+                  to staff management.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  My experience spans the entire product lifecycle - from initial concept and technical
-                  architecture to development, deployment, and continuous improvement. I thrive in
-                  collaborative environments where innovation meets execution.
+                  My responsibilities have included purchasing management, inventory control, administrative
+                  duties, graphic design for marketing materials, and team leadership. I thrive in
+                  fast-paced environments where operational efficiency meets customer satisfaction.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                  Currently based in Hong Kong, I continue to expand my expertise in modern web
-                  technologies, mobile development, and agile product management, always staying
-                  at the forefront of industry best practices.
+                  Currently based in Hong Kong, I continue to leverage my extensive F&B knowledge
+                  combined with computer skills to optimize operations and deliver outstanding results.
                 </motion.p>
               </div>
             </motion.div>

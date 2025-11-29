@@ -6,28 +6,28 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'Kusina - Filipino Restaurant',
-    description: 'Authentic Filipino cuisine website with online menu and catering services in Hong Kong',
-    link: 'https://kusina-hk.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop'
+    title: 'Central Kitchen Operations',
+    description: 'Established and managed central kitchen serving 3 retail outlets with streamlined operations',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop'
   },
   {
-    title: 'NPL Marketplace',
-    description: "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
-    link: 'https://npl-marketplace.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop'
+    title: 'Coffee Shop Establishment',
+    description: 'Built successful coffee shop from ground up, managing all aspects from concept to daily operations',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop'
   },
   {
-    title: 'Dragon-i Nightclub',
-    description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
-    link: 'https://dihk.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop'
+    title: 'Multi-Outlet Expansion',
+    description: 'Successfully expanded operations to 3 outlets across Hong Kong with consistent quality standards',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&h=600&fit=crop'
   },
   {
-    title: 'Portfolio Website',
-    description: 'Personal portfolio showcasing full-stack development and product management expertise',
-    link: 'https://jonathanpaita.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+    title: 'Brand & Marketing Design',
+    description: 'Created comprehensive brand identity, marketing materials, and menu designs for F&B businesses',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop'
   }
 ];
 
@@ -45,7 +45,7 @@ export default function ProjectsSection() {
         >
           <div className="text-center mb-20">
             <h2 className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">PROJECTS</h2>
-            <h3 className="text-5xl md:text-6xl font-bold mb-4">What i've been up to</h3>
+            <h3 className="text-5xl md:text-6xl font-bold mb-4">What I've accomplished</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -60,13 +60,11 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group relative block"
               >
-                {/* Project Card */}
                 <motion.div 
                   className="relative overflow-hidden rounded-3xl aspect-[16/11]"
                   whileHover={{ scale: 1.02, y: -8 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  {/* Project Image */}
                   <motion.img
                     src={project.image}
                     alt={project.title}
@@ -76,35 +74,27 @@ export default function ProjectsSection() {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                   />
                   
-                  {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                  
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  />
 
-                  {/* Bottom overlay with title and description */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
                     <motion.h4 
-                      className="text-2xl font-bold mb-2 text-white"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 + index * 0.1 }}
+                      className="text-2xl font-bold mb-3 text-white"
+                      initial={{ y: 0 }}
+                      whileHover={{ y: -5 }}
                     >
                       {project.title}
                     </motion.h4>
-                    <motion.p 
-                      className="text-gray-300 text-sm leading-relaxed"
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 + index * 0.1 }}
-                    >
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
                       {project.description}
-                    </motion.p>
+                    </p>
                   </div>
 
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-300" />
+                  <div className="absolute inset-0 border-2 border-white/0 group-hover:border-cyan-500/50 rounded-3xl transition-all duration-500" />
                 </motion.div>
-
-                {/* Subtle glow on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 via-blue-600/30 to-cyan-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.a>
             ))}
           </div>

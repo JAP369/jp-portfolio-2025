@@ -6,45 +6,42 @@ import { useInView } from 'framer-motion';
 
 const skills = [
   {
-    title: 'Full-Stack Development',
-    description: 'Building scalable web applications with modern frameworks and best practices, from front-end to back-end.',
+    title: 'Operations Management',
+    description: '15+ years managing F&B operations from coffee shops to central kitchens and multiple outlets.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
+        <rect x="2" y="3" width="20" height="14" rx="2" strokeWidth="2"/>
+        <path d="M7 8h10M7 12h10M7 16h5" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    )
+  },
+  {
+    title: 'Purchasing & Inventory',
+    description: 'Expert in vendor management, cost control, inventory systems, and supply chain optimization.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" strokeWidth="2"/>
+        <path d="M9 12h6M9 16h3" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    )
+  },
+  {
+    title: 'Design & Marketing',
+    description: 'Creating marketing materials, menu designs, and brand visuals with Adobe Creative Suite.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    )
+  },
+  {
+    title: 'Administration & IT',
+    description: 'Computer proficiency with MS Office, POS systems, and digital tools for business operations.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
         <rect x="2" y="3" width="20" height="14" rx="2" strokeWidth="2"/>
         <path d="M8 21h8" strokeWidth="2" strokeLinecap="round"/>
         <path d="M12 17v4" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M7 10l3 3-3 3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M13 16h3" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    )
-  },
-  {
-    title: 'Product Management',
-    description: 'Leading product strategy and driving execution from concept to launch with cross-functional teams.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M2 17l10 5 10-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M2 12l10 5 10-5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-      </svg>
-    )
-  },
-  {
-    title: 'Mobile Development',
-    description: 'Creating cross-platform mobile applications with intuitive user experiences and native performance.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
-        <rect x="5" y="2" width="14" height="20" rx="2" strokeWidth="2"/>
-        <path d="M12 18h.01" strokeWidth="2" strokeLinecap="round"/>
-      </svg>
-    )
-  },
-  {
-    title: 'Cloud & DevOps',
-    description: 'Implementing cloud infrastructure, CI/CD pipelines, and ensuring scalable, reliable deployments.',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
-        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     )
   },

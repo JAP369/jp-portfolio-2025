@@ -184,7 +184,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5 }}
             className="text-lg md:text-xl text-gray-400 mb-3 max-w-3xl mx-auto"
           >
-            Full-Stack Developer & Product Manager based in Hong Kong with <span className="text-white font-semibold">7+ years</span> of experience,
+            Food & Beverage Professional with <span className="text-white font-semibold">15+ years</span> of experience,
           </motion.p>
 
           <motion.p
@@ -193,7 +193,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="text-base md:text-lg text-gray-500 mb-12"
           >
-            specializing in Web Development, Mobile Apps & Digital Product Strategy
+            specializing in Operations Management, Purchasing, Admin & Design from coffee shops to central kitchens
           </motion.p>
 
           {/* CTA Buttons */}
@@ -206,7 +206,7 @@ export default function HeroSection() {
             <motion.a
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255,255,255,0.3)" }}
               whileTap={{ scale: 0.95 }}
-              href="#"
+              href="/resume"
               className="group px-8 py-4 bg-white text-black rounded-full font-medium transition-all duration-300 flex items-center gap-2"
             >
               <FileText className="w-5 h-5" />

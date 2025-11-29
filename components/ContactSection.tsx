@@ -45,7 +45,7 @@ export default function ContactSection() {
             <motion.a
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              href="#"
+              href="/resume"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2"
             >
               <FileText className="w-5 h-5" />
