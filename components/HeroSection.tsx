@@ -89,27 +89,29 @@ export default function HeroSection() {
         <motion.div 
           animate={{ 
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
+            rotate: [0, 180, 360]
           }}
           transition={{ 
-            duration: 8,
+            duration: 20,
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-400 rounded-full filter blur-3xl"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600 rounded-full filter blur-3xl"
         />
         <motion.div 
           animate={{ 
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.6, 0.3]
+            opacity: [0.3, 0.6, 0.3],
+            rotate: [360, 180, 0]
           }}
           transition={{ 
-            duration: 10,
+            duration: 25,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-600 rounded-full filter blur-3xl"
         />
       </div>
 
@@ -145,7 +147,7 @@ export default function HeroSection() {
           >
             Hey, I'm{' '}
             <motion.span 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-blue-400"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600"
               animate={{ 
                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
               }}
@@ -154,6 +156,7 @@ export default function HeroSection() {
                 repeat: Infinity,
                 ease: "linear"
               }}
+              style={{ backgroundSize: '200% auto' }}
             >
               Jonathan
             </motion.span>

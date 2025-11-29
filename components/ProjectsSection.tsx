@@ -9,25 +9,25 @@ const projects = [
     title: 'Kusina - Filipino Restaurant',
     description: 'Authentic Filipino cuisine website with online menu and catering services in Hong Kong',
     link: 'https://kusina-hk.vercel.app/',
-    bgGradient: 'from-[#5f2d2d] via-[#7f3d3d] to-[#8f4d4d]'
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop'
   },
   {
     title: 'NPL Marketplace',
     description: "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
     link: 'https://npl-marketplace.vercel.app/',
-    bgGradient: 'from-[#1e3a4a] via-[#2e4a5a] to-[#3e5a6a]'
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop'
   },
   {
     title: 'Dragon-i Nightclub',
     description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
     link: 'https://dihk.vercel.app/',
-    bgGradient: 'from-[#3d2d2d] via-[#5d4d4d] to-[#7d6d6d]'
+    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop'
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio showcasing full-stack development and product management expertise',
     link: 'https://jonathanpaita.vercel.app/',
-    bgGradient: 'from-[#2d3d5f] via-[#4d5d7f] to-[#6d7d9f]'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
   }
 ];
 
@@ -53,6 +53,8 @@ export default function ProjectsSection() {
               <motion.a
                 key={index}
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -61,18 +63,21 @@ export default function ProjectsSection() {
                 {/* Project Card */}
                 <motion.div 
                   className="relative overflow-hidden rounded-3xl aspect-[16/11]"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  whileHover={{ scale: 1.02, y: -8 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  {/* Background gradient */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${project.bgGradient}`} />
+                  {/* Project Image */}
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.15 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                  />
                   
-                  {/* Mockup/Screenshot placeholder - you can replace with actual images */}
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="w-full h-full bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm flex items-center justify-center">
-                      <span className="text-white/20 text-sm font-medium">Project Preview</span>
-                    </div>
-                  </div>
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
                   {/* Bottom overlay with title and description */}
                   <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 via-black/50 to-transparent">
@@ -99,7 +104,7 @@ export default function ProjectsSection() {
                 </motion.div>
 
                 {/* Subtle glow on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-400/20 via-blue-600/20 to-cyan-600/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/30 via-pink-600/30 to-purple-600/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.a>
             ))}
           </div>
