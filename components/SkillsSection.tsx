@@ -147,7 +147,7 @@ export default function SkillsSection() {
                 <div className="w-48 h-48 mx-auto mb-8 text-gray-400 group-hover:text-white transition-colors duration-300">
                   {skill.illustration}
                 </div>
-                <h4 className="text-2xl font-bold mb-4 group-hover:text-red-400 transition-colors">
+                <h4 className="text-2xl font-bold mb-4 group-hover:text-gray-300 transition-colors">
                   {skill.title}
                 </h4>
                 <p className="text-gray-400 leading-relaxed">

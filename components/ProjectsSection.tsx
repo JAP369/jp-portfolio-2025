@@ -99,7 +99,7 @@ export default function ProjectsSection() {
                 </motion.div>
 
                 {/* Subtle glow on hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600/20 via-blue-600/20 to-cyan-600/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-gray-400/20 via-blue-600/20 to-cyan-600/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
               </motion.a>
             ))}
           </div>

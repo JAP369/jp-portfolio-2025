@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section id="home" className="min-h-screen flex items-center justify-center px-6 py-20 relative overflow-hidden">
       {/* Background animated gradient */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-600 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gray-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
@@ -24,7 +24,7 @@ export default function HeroSection() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-red-500 to-blue-500 p-1"
+            className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-gray-400 to-blue-500 p-1"
           >
             <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-6xl font-bold">
               JP
@@ -38,7 +38,7 @@ export default function HeroSection() {
             transition={{ delay: 0.4 }}
             className="text-5xl md:text-7xl font-bold mb-6"
           >
-            Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-400">Jonathan</span>.
+            Hey, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-blue-400">Jonathan</span>.
           </motion.h1>
 
           <motion.p

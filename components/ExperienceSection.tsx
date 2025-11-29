@@ -73,7 +73,7 @@ export default function ExperienceSection() {
                       <h4 className="text-2xl font-bold mb-4">{exp.company}</h4>
                       <div className="space-y-3">
                         {exp.positions.map((position, posIndex) => (
-                          <div key={posIndex} className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-l-2 border-red-500 pl-4">
+                          <div key={posIndex} className="flex flex-col sm:flex-row sm:justify-between sm:items-center border-l-2 border-gray-400 pl-4">
                             <p className="text-gray-300 font-medium">{position.title}</p>
                             <p className="text-gray-500 text-sm flex items-center gap-2">
                               <Calendar className="w-4 h-4" />
@@ -105,9 +105,9 @@ export default function ExperienceSection() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  className="p-8 rounded-2xl bg-gradient-to-br from-red-500/10 to-blue-500/10 border border-red-500/20 hover:border-red-500/40 transition-all duration-300"
+                  className="p-8 rounded-2xl bg-gradient-to-br from-gray-500/10 to-blue-500/10 border border-gray-400/20 hover:border-gray-400/40 transition-all duration-300"
                 >
-                  <Award className="w-12 h-12 text-red-400 mb-4" />
+                  <Award className="w-12 h-12 text-gray-300 mb-4" />
                   <h4 className="text-xl font-bold mb-2">{award.title}</h4>
                   <p className="text-gray-400">{award.description}</p>
                 </motion.div>
