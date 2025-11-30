@@ -9,25 +9,25 @@ const projects = [
     title: 'Kusina - Filipino Restaurant',
     description: 'Authentic Filipino cuisine website with online menu and catering services in Hong Kong',
     link: 'https://kusina-hk.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop'
+    image: '/kusina.png'
   },
   {
     title: 'NPL Marketplace',
     description: "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
     link: 'https://npl-marketplace.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop'
+    image: '/npl-marketplace.jpg'
   },
   {
     title: 'Dragon-i Nightclub',
     description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
     link: 'https://dihk.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop'
+    image: '/dragon-i.png'
   },
   {
     title: 'Portfolio Website',
     description: 'Personal portfolio showcasing full-stack development and product management expertise',
     link: 'https://jonathanpaita.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+    image: '/portfolio.png'
   }
 ];
 
