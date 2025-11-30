@@ -6,18 +6,17 @@ import { useInView } from 'framer-motion';
 
 const skills = [
   {
-    title: 'Operations Management',
-    description: '15+ years managing F&B operations from coffee shops to central kitchens and multiple outlets.',
+    title: 'Bartending & Mixology',
+    description: '15+ years behind the bar, fine-tuning service and craft for drinks, specializing in cocktails and beverage preparation.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
-        <rect x="2" y="3" width="20" height="14" rx="2" strokeWidth="2"/>
-        <path d="M7 8h10M7 12h10M7 16h5" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M6 3h12M8 3v6a4 4 0 0 0 4 4 4 4 0 0 0 4-4V3M12 13v8M8 21h8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     )
   },
   {
     title: 'Purchasing & Inventory',
-    description: 'Expert in vendor management, cost control, inventory systems, and supply chain optimization.',
+    description: 'Expert in beverage purchasing, vendor management, inventory control systems, and cost optimization.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
         <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" strokeWidth="2"/>
@@ -27,7 +26,7 @@ const skills = [
   },
   {
     title: 'Design & Marketing',
-    description: 'Creating marketing materials, menu designs, and brand visuals with Adobe Creative Suite.',
+    description: 'Creating drink menus, marketing materials, and brand visuals with Adobe Creative Suite and digital tools.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
         <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -35,13 +34,12 @@ const skills = [
     )
   },
   {
-    title: 'Administration & IT',
-    description: 'Computer proficiency with MS Office, POS systems, and digital tools for business operations.',
+    title: 'Operations & Administration',
+    description: 'Managing bar operations, staff leadership, administrative tasks, and business operations with computer proficiency.',
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="w-12 h-12">
         <rect x="2" y="3" width="20" height="14" rx="2" strokeWidth="2"/>
-        <path d="M8 21h8" strokeWidth="2" strokeLinecap="round"/>
-        <path d="M12 17v4" strokeWidth="2" strokeLinecap="round"/>
+        <path d="M7 8h10M7 12h10M7 16h5" strokeWidth="2" strokeLinecap="round"/>
       </svg>
     )
   },

@@ -34,7 +34,7 @@ export default function AboutSection() {
               <div>
                 <h4 className="text-2xl md:text-3xl font-semibold mb-3">My story</h4>
                 <p className="text-gray-400 text-base leading-relaxed">
-                  From the Philippines to Hong Kong - A 15+ year journey in Food & Beverage
+                  From the Philippines to Hong Kong - A 15+ year journey behind the bar
                 </p>
               </div>
               
@@ -45,28 +45,30 @@ export default function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.3 }}
                 >
                   Originally from the Philippines, I moved to Hong Kong to pursue opportunities in the
-                  Food & Beverage industry. With over 15 years of hands-on experience, I've built a career
-                  from the ground up, starting from a simple coffee shop to establishing central kitchens
-                  and managing multiple outlets.
+                  Food & Beverage industry. With over 15 years of hands-on experience, I mainly work
+                  behind the bar where I fine-tuned my service and craft for drinks. I've built a career
+                  from the ground up, starting from a coffee shop to establishing central kitchens
+                  and managing 3 outlets.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 }}
                 >
-                  My expertise spans purchasing management, administrative operations, graphic design,
-                  and team leadership. I've completed numerous computer courses that complement my
-                  operational skills, allowing me to bridge traditional F&B management with modern
-                  digital solutions.
+                  My expertise spans bartending and mixology, purchasing management, administrative
+                  operations, graphic design, and team leadership. I've completed numerous computer
+                  courses that complement my bar and operational skills, allowing me to bridge
+                  traditional F&B service with modern digital solutions.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  I believe in delivering exceptional customer experiences through efficient operations,
-                  quality service, and continuous improvement. Whether it's managing inventory, designing
-                  marketing materials, or optimizing kitchen workflows, I'm driven by excellence.
+                  I believe in delivering exceptional customer experiences through quality service,
+                  expertly crafted drinks, and genuine hospitality. Whether I'm behind the bar creating
+                  cocktails, managing purchasing, or designing marketing materials, I'm driven by
+                  passion and excellence.
                 </motion.p>
               </div>
             </motion.div>
@@ -81,7 +83,7 @@ export default function AboutSection() {
               <div>
                 <h4 className="text-2xl md:text-3xl font-semibold mb-3">Work experience</h4>
                 <p className="text-gray-400 text-base leading-relaxed">
-                  Building F&B operations from coffee shops to central kitchens
+                  Mastering the craft behind the bar and beyond
                 </p>
               </div>
 
@@ -91,27 +93,29 @@ export default function AboutSection() {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
-                  Throughout my 15+ year career in Food & Beverage, I've progressed from entry-level
-                  positions to managing entire operations. I successfully established a central kitchen
-                  and expanded operations to 3 outlets, handling everything from vendor relationships
-                  to staff management.
+                  Throughout my 15+ year career in Food & Beverage, I've primarily worked behind the bar,
+                  where I fine-tuned my service skills and mastered the craft of drink preparation.
+                  I've progressed from barista to bartender, and eventually to managing operations.
+                  I successfully established a central kitchen and expanded to 3 outlets.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  My responsibilities have included purchasing management, inventory control, administrative
-                  duties, graphic design for marketing materials, and team leadership. I thrive in
-                  fast-paced environments where operational efficiency meets customer satisfaction.
+                  My responsibilities span bartending and mixology, purchasing management, inventory
+                  control, administrative duties, graphic design for marketing materials, and team
+                  leadership. I excel in fast-paced bar environments where precision, speed, and
+                  customer service are paramount.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.7 }}
                 >
-                  Currently based in Hong Kong, I continue to leverage my extensive F&B knowledge
-                  combined with computer skills to optimize operations and deliver outstanding results.
+                  Currently based in Hong Kong, I continue to perfect my bartending craft while leveraging
+                  computer skills to optimize bar operations, manage inventory systems, and create
+                  compelling beverage menus and marketing materials.
                 </motion.p>
               </div>
             </motion.div>

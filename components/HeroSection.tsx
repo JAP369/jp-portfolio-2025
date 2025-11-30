@@ -184,7 +184,7 @@ export default function HeroSection() {
             transition={{ delay: 0.5 }}
             className="text-lg md:text-xl text-gray-400 mb-3 max-w-3xl mx-auto"
           >
-            Food & Beverage Professional with <span className="text-white font-semibold">15+ years</span> of experience,
+            Bartender & F&B Professional with <span className="text-white font-semibold">15+ years</span> of experience,
           </motion.p>
 
           <motion.p
@@ -193,7 +193,7 @@ export default function HeroSection() {
             transition={{ delay: 0.6 }}
             className="text-base md:text-lg text-gray-500 mb-12"
           >
-            specializing in Operations Management, Purchasing, Admin & Design from coffee shops to central kitchens
+            specializing in Bartending, Mixology, Service Excellence, Purchasing & Operations from coffee shops to central kitchens
           </motion.p>
 
           {/* CTA Buttons */}

@@ -6,28 +6,28 @@ import { useRef } from 'react';
 
 const projects = [
   {
-    title: 'Central Kitchen Operations',
-    description: 'Established and managed central kitchen serving 3 retail outlets with streamlined operations',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&h=600&fit=crop'
+    title: 'Kusina - Filipino Restaurant',
+    description: 'Authentic Filipino cuisine website with online menu and catering services in Hong Kong',
+    link: 'https://kusina-hk.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop'
   },
   {
-    title: 'Coffee Shop Establishment',
-    description: 'Built successful coffee shop from ground up, managing all aspects from concept to daily operations',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=600&fit=crop'
+    title: 'NPL Marketplace',
+    description: "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
+    link: 'https://npl-marketplace.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop'
   },
   {
-    title: 'Multi-Outlet Expansion',
-    description: 'Successfully expanded operations to 3 outlets across Hong Kong with consistent quality standards',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&h=600&fit=crop'
+    title: 'Dragon-i Nightclub',
+    description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
+    link: 'https://dihk.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&h=600&fit=crop'
   },
   {
-    title: 'Brand & Marketing Design',
-    description: 'Created comprehensive brand identity, marketing materials, and menu designs for F&B businesses',
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop'
+    title: 'Portfolio Website',
+    description: 'Personal portfolio showcasing full-stack development and product management expertise',
+    link: 'https://jonathanpaita.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
   }
 ];
 
@@ -45,7 +45,7 @@ export default function ProjectsSection() {
         >
           <div className="text-center mb-20">
             <h2 className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-6">PROJECTS</h2>
-            <h3 className="text-5xl md:text-6xl font-bold mb-4">What I've accomplished</h3>
+            <h3 className="text-5xl md:text-6xl font-bold mb-4">What i've been up to</h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
