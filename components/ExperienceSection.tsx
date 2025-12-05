@@ -7,37 +7,37 @@ import { Calendar, Award } from 'lucide-react';
 
 const experiences = [
   {
-    company: 'Technology Consultant',
-    logo: '💼',
+    company: 'Food & Beverage Operations',
+    logo: '🍸',
     positions: [
-      { title: 'Full-Stack Developer & Product Manager', period: '2018 - Present' },
+      { title: 'Bartender & Operations Manager', period: '2010 - Present' },
     ]
   },
   {
-    company: 'Digital Solutions Provider',
-    logo: '🚀',
+    company: 'Multi-Outlet F&B Group | Hong Kong',
+    logo: '🏢',
     positions: [
-      { title: 'Senior Software Engineer', period: '2020 - 2023' },
-      { title: 'Software Engineer', period: '2018 - 2020' }
+      { title: 'Bartender & F&B Operations Lead', period: '2015 - Present' },
+      { title: 'Head Bartender', period: '2012 - 2015' }
     ]
   },
   {
-    company: 'Startup Ventures',
-    logo: '⚡',
+    company: 'Independent Coffee Shop | Hong Kong',
+    logo: '☕',
     positions: [
-      { title: 'Product Manager', period: '2019 - 2022' }
+      { title: 'Barista & Coffee Shop Manager', period: '2008 - 2010' }
     ]
   }
 ];
 
 const awards = [
   {
-    title: 'Excellence in Development',
-    description: 'Recognition for outstanding contributions to product development and technical innovation'
+    title: 'Business Growth Achievement',
+    description: 'Successfully grew operations from 2 people to 100 employees, established central kitchen and 3 F&B outlets within 1 year'
   },
   {
-    title: 'Team Leadership Award',
-    description: 'Acknowledged for exceptional leadership in cross-functional team collaboration'
+    title: 'Bartending Excellence',
+    description: '15+ years of exceptional service behind the bar, mastering mixology and delivering outstanding customer experiences'
   }
 ];
 
@@ -94,8 +94,8 @@ export default function ExperienceSection() {
             <h2 className="text-sm uppercase tracking-widest text-gray-500 mb-4">AWARDS</h2>
             <h3 className="text-4xl md:text-6xl font-bold mb-6">Highlighting milestones</h3>
             <p className="text-gray-400 text-lg mb-12">
-              Recognition for dedication to excellence and innovation in software development.
-              Each accolade represents a milestone in my professional journey.
+              Recognition for dedication to excellence and innovation in Food & Beverage operations.
+              Each milestone represents growth and commitment to exceptional service.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">

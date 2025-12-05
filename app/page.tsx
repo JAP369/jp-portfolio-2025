@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import AdditionalExperienceSection from '@/components/AdditionalExperienceSection';
 import SkillsSection from '@/components/SkillsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ExperienceSection from '@/components/ExperienceSection';
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ProjectsSection />
+      <AdditionalExperienceSection />
       {/* <TestimonialsSection /> */}
       <SkillsSection />
       <AboutSection />

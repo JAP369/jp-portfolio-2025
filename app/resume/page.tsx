@@ -46,12 +46,12 @@ export default function ResumePage() {
             <h2 className="text-2xl font-bold mb-4 text-cyan-400">Professional Summary</h2>
             <p className="text-gray-300 leading-relaxed">
               Dedicated and experienced Food & Beverage professional with over 15 years in the hospitality industry, 
-              primarily working behind the bar where I have fine-tuned my service skills and mastered the craft of 
-              drink preparation. Originally from the Philippines, now based in Hong Kong. Proven expertise in bartending, 
-              mixology, purchasing management, inventory control, administrative operations, graphic design, and team 
-              leadership. Successfully established operations from coffee shops to central kitchens serving multiple outlets. 
-              Combines traditional bartending excellence with modern computer skills and digital tools to deliver 
-              exceptional customer experiences.
+              primarily working behind the bar where I have fine-tuned my service skills and mastered the craft for drinks. 
+              Originally from the Philippines, now based in Hong Kong. Proven expertise in bartending, mixology, purchasing 
+              management, inventory control, administrative operations, graphic design, and team leadership. Successfully 
+              scaled operations from just 2 people to 100 employees, establishing a central kitchen and 3 F&B outlets within 
+              1 year. Combines traditional bartending excellence with modern computer skills including software engineering 
+              to deliver exceptional customer experiences and operational efficiency.
             </p>
           </section>
 
@@ -65,16 +65,16 @@ export default function ResumePage() {
                 'Drink Menu Development',
                 'Bar Operations Management',
                 'Purchasing & Procurement',
-                'Inventory Control & Management',
+                'Inventory Control & Cost Management',
                 'Vendor Relations & Negotiations',
                 'Team Leadership & Training',
-                'Administrative Operations',
-                'Graphic Design & Marketing',
+                'Administrative Operations & SOPs',
+                'Graphic Design (Adobe Creative Suite)',
                 'Cost Control & Budgeting',
-                'Quality Assurance',
+                'Quality Assurance & Standards',
                 'POS Systems & Technology',
                 'Microsoft Office Suite',
-                'Adobe Creative Suite'
+                'Software Engineering Knowledge'
               ].map((skill, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <span className="text-cyan-400">▸</span>
@@ -88,20 +88,21 @@ export default function ResumePage() {
           <section>
             <h2 className="text-2xl font-bold mb-4 text-cyan-400">Professional Experience</h2>
             <div className="space-y-6">
-              {/* Experience 1 - Based on CV */}
+              {/* Experience 1 */}
               <div className="border-l-2 border-cyan-500/50 pl-6">
                 <h3 className="text-xl font-semibold text-white">Bartender & Operations Manager</h3>
-                <p className="text-gray-400 mb-2">F&B Group | Hong Kong SAR</p>
+                <p className="text-gray-400 mb-2">Multi-Outlet F&B Group | Hong Kong SAR</p>
                 <p className="text-sm text-gray-500 mb-3">2010 - Present</p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Work primarily behind the bar, fine-tuning service skills and mastering craft for drinks</li>
-                  <li>• Established and managed central kitchen operations serving 3 retail outlets</li>
-                  <li>• Expert in bartending, mixology, and creating signature cocktails</li>
-                  <li>• Oversee purchasing, inventory management, and vendor relationships</li>
-                  <li>• Manage administrative operations including scheduling, payroll, and reporting</li>
+                  <li>• Primarily work behind the bar, fine-tuning service skills and mastering the craft for drinks with 15+ years of dedicated experience</li>
+                  <li>• Successfully scaled operations from 2 people to 100 employees within 1 year, demonstrating exceptional growth management</li>
+                  <li>• Established and managed central kitchen operations serving 3 Food & Beverage retail outlets</li>
+                  <li>• Oversee purchasing, inventory management, cost control, and vendor relationships across all outlets including head office</li>
+                  <li>• Manage Standard Operating Procedures (SOPs), administrative operations, scheduling, and quality control</li>
                   <li>• Design drink menus, marketing materials, and promotional content using Adobe Creative Suite</li>
-                  <li>• Lead and train bar staff across multiple locations</li>
-                  <li>• Implement cost control measures and maintain quality standards</li>
+                  <li>• Lead, train, and mentor bar staff across multiple locations, fostering service excellence</li>
+                  <li>• Implement cost control measures while maintaining premium quality standards</li>
+                  <li>• Leverage computer skills and software engineering knowledge to optimize operations and inventory systems</li>
                 </ul>
               </div>
 
@@ -111,25 +112,25 @@ export default function ResumePage() {
                 <p className="text-gray-400 mb-2">Independent Coffee Shop | Hong Kong SAR</p>
                 <p className="text-sm text-gray-500 mb-3">2008 - 2010</p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Started and managed coffee shop from concept to daily operations</li>
-                  <li>• Developed expertise in coffee preparation and customer service</li>
-                  <li>• Handled all purchasing, inventory, and supplier negotiations</li>
-                  <li>• Created brand identity and marketing materials</li>
-                  <li>• Managed staff recruitment, training, and scheduling</li>
-                  <li>• Maintained quality standards and ensured customer satisfaction</li>
+                  <li>• Launched and managed coffee shop from concept through daily operations</li>
+                  <li>• Developed expertise in coffee preparation, beverage crafting, and customer service</li>
+                  <li>• Handled all purchasing, inventory management, and supplier negotiations</li>
+                  <li>• Created brand identity, marketing materials, and visual designs</li>
+                  <li>• Managed staff recruitment, training, scheduling, and performance development</li>
+                  <li>• Maintained quality standards and ensured exceptional customer satisfaction</li>
                 </ul>
               </div>
 
               {/* Experience 3 */}
               <div className="border-l-2 border-cyan-500/50 pl-6">
                 <h3 className="text-xl font-semibold text-white">F&B Service Staff</h3>
-                <p className="text-gray-400 mb-2">Various Establishments | Philippines & Hong Kong</p>
+                <p className="text-gray-400 mb-2">Various Hospitality Establishments | Philippines & Hong Kong</p>
                 <p className="text-sm text-gray-500 mb-3">2006 - 2008</p>
                 <ul className="space-y-2 text-gray-300">
-                  <li>• Gained foundational F&B experience in service and operations</li>
+                  <li>• Gained foundational Food & Beverage experience in service and operations</li>
                   <li>• Developed strong customer service and hospitality skills</li>
-                  <li>• Learned beverage preparation and bar support</li>
-                  <li>• Built understanding of inventory management fundamentals</li>
+                  <li>• Learned beverage preparation, bar support, and service techniques</li>
+                  <li>• Built understanding of inventory management and operational fundamentals</li>
                 </ul>
               </div>
             </div>
@@ -142,17 +143,18 @@ export default function ResumePage() {
               <div>
                 <h3 className="text-lg font-semibold text-white">Secondary Education</h3>
                 <p className="text-gray-400">Philippines</p>
-                <p className="text-sm text-gray-500">Completed secondary education</p>
+                <p className="text-sm text-gray-500">Completed secondary education with strong academic foundation</p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white">Professional Computer Courses</h3>
+                <h3 className="text-lg font-semibold text-white">Computer & Software Courses</h3>
                 <p className="text-gray-400">Various Institutions | Hong Kong</p>
                 <ul className="mt-2 space-y-1 text-gray-300 text-sm">
-                  <li>• Microsoft Office Suite - Word, Excel, PowerPoint</li>
-                  <li>• Graphic Design - Adobe Photoshop, Illustrator</li>
+                  <li>• Software Engineering - Programming fundamentals and development practices</li>
+                  <li>• Microsoft Office Suite - Word, Excel, PowerPoint (Advanced)</li>
+                  <li>• Graphic Design - Adobe Photoshop, Adobe Illustrator</li>
                   <li>• Digital Marketing & Social Media Management</li>
                   <li>• POS Systems & Restaurant Management Software</li>
-                  <li>• Inventory Management Systems</li>
+                  <li>• Inventory Management Systems & Database Applications</li>
                 </ul>
               </div>
               <div>
@@ -161,7 +163,7 @@ export default function ResumePage() {
                 <ul className="mt-2 space-y-1 text-gray-300 text-sm">
                   <li>• Professional Bartending & Mixology Training</li>
                   <li>• Food Safety & Hygiene Certification</li>
-                  <li>• Barista & Coffee Preparation</li>
+                  <li>• Barista & Coffee Preparation Techniques</li>
                   <li>• Customer Service Excellence</li>
                   <li>• Responsible Alcohol Service</li>
                 </ul>
@@ -176,36 +178,43 @@ export default function ResumePage() {
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🍸</span>
                 <div>
-                  <h4 className="font-semibold text-white">Bartending Excellence</h4>
-                  <p className="text-gray-300 text-sm">15+ years behind the bar, mastering mixology and delivering exceptional customer service</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🏆</span>
-                <div>
-                  <h4 className="font-semibold text-white">Central Kitchen Establishment</h4>
-                  <p className="text-gray-300 text-sm">Successfully established and scaled central kitchen operations supporting 3 outlets</p>
+                  <h4 className="font-semibold text-white">Bartending Mastery</h4>
+                  <p className="text-gray-300 text-sm">15+ years primarily behind the bar, fine-tuning service skills and mastering the craft for drinks, delivering exceptional customer experiences</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">📈</span>
                 <div>
-                  <h4 className="font-semibold text-white">Business Growth</h4>
-                  <p className="text-gray-300 text-sm">Expanded from single coffee shop to multi-outlet operation over 5 years</p>
+                  <h4 className="font-semibold text-white">Rapid Business Growth</h4>
+                  <p className="text-gray-300 text-sm">Scaled operations from just 2 people to 100 employees within 1 year while maintaining quality and service excellence</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-2xl">💡</span>
+                <span className="text-2xl">🏢</span>
                 <div>
-                  <h4 className="font-semibold text-white">Digital Integration</h4>
-                  <p className="text-gray-300 text-sm">Leveraged computer skills to create marketing materials, optimize inventory, and streamline bar operations</p>
+                  <h4 className="font-semibold text-white">Multi-Outlet Operations</h4>
+                  <p className="text-gray-300 text-sm">Successfully established central kitchen and expanded to 3 Food & Beverage outlets with comprehensive operational oversight</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">💼</span>
+                <div>
+                  <h4 className="font-semibold text-white">Comprehensive Operations Management</h4>
+                  <p className="text-gray-300 text-sm">Managed SOPs, inventory, cost control, purchasing, and administrative operations across all outlets including head office</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">💻</span>
+                <div>
+                  <h4 className="font-semibold text-white">Technology Integration</h4>
+                  <p className="text-gray-300 text-sm">Completed computer courses including software engineering, leveraging technology to optimize bar operations and create marketing materials</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-2xl">👥</span>
                 <div>
-                  <h4 className="font-semibold text-white">Team Leadership</h4>
-                  <p className="text-gray-300 text-sm">Trained and mentored bar staff, fostering service excellence and professional growth</p>
+                  <h4 className="font-semibold text-white">Team Leadership Excellence</h4>
+                  <p className="text-gray-300 text-sm">Trained and mentored bar staff across multiple locations, fostering service excellence and professional development</p>
                 </div>
               </div>
             </div>

@@ -46,9 +46,9 @@ export default function AboutSection() {
                 >
                   Originally from the Philippines, I moved to Hong Kong to pursue opportunities in the
                   Food & Beverage industry. With over 15 years of hands-on experience, I mainly work
-                  behind the bar where I fine-tuned my service and craft for drinks. I've built a career
-                  from the ground up, starting from a coffee shop to establishing central kitchens
-                  and managing 3 outlets.
+                  behind the bar where I have fine-tuned my service skills and mastered the craft for drinks.
+                  I've built a career from the ground up, starting with just 2 people including myself,
+                  and grew to 100 employees, establishing a central kitchen and 3 F&B outlets within 1 year.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
@@ -57,8 +57,8 @@ export default function AboutSection() {
                 >
                   My expertise spans bartending and mixology, purchasing management, administrative
                   operations, graphic design, and team leadership. I've completed numerous computer
-                  courses that complement my bar and operational skills, allowing me to bridge
-                  traditional F&B service with modern digital solutions.
+                  courses including software engineering, which complement my bar and operational skills,
+                  allowing me to bridge traditional F&B service with modern digital solutions.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: -20 }}
@@ -66,9 +66,9 @@ export default function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
                   I believe in delivering exceptional customer experiences through quality service,
-                  expertly crafted drinks, and genuine hospitality. Whether I'm behind the bar creating
-                  cocktails, managing purchasing, or designing marketing materials, I'm driven by
-                  passion and excellence.
+                  expertly crafted drinks, and genuine hospitality. From overlooking SOPs, inventory,
+                  and cost control across all outlets including head office and central kitchen, I'm
+                  driven by passion and excellence in everything I do.
                 </motion.p>
               </div>
             </motion.div>
@@ -94,9 +94,10 @@ export default function AboutSection() {
                   transition={{ duration: 0.6, delay: 0.5 }}
                 >
                   Throughout my 15+ year career in Food & Beverage, I've primarily worked behind the bar,
-                  where I fine-tuned my service skills and mastered the craft of drink preparation.
-                  I've progressed from barista to bartender, and eventually to managing operations.
-                  I successfully established a central kitchen and expanded to 3 outlets.
+                  where I have fine-tuned my service skills and mastered the craft of drink preparation.
+                  I've handled purchasing, administrative work, designing, and managing operations from
+                  overlooking SOPs, inventory, and cost control. Started with just 2 people and grew to
+                  100 employees with a central kitchen and 3 F&B outlets within 1 year.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, x: 20 }}
