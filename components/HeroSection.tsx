@@ -2,10 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { FileText, Mail, Linkedin, Github } from 'lucide-react';
+import { ReactElement } from 'react';
 
 // Tool icon components
 const ToolIcon = ({ name, bg }: { name: string; bg: string }) => {
-  const icons: { [key: string]: JSX.Element } = {
+  const icons: { [key: string]: ReactElement } = {
     'Bartending': (
       <svg viewBox="0 0 24 24" fill="white" className="w-8 h-8">
         <path d="M3 14c0 1.3.84 2.4 2 2.82V20H3v2h7v-2H8v-3.18C9.16 16.4 10 15.3 10 14V6H3v8zm2-6h3v3H5V8zm11.7 0l-2-2h-1.4l-2 2h1.7L14 7v7c0 1.1.9 2 2 2s2-.9 2-2V7l1 1h1.7zM22 3H10v2h12V3z"/>
