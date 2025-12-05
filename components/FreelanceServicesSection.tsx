@@ -173,7 +173,7 @@ export default function FreelanceServicesSection() {
               transition={{ 
                 duration: 0.7, 
                 delay: 0.4 + index * 0.15,
-                ease: [0.25, 0.4, 0.25, 1]
+                ease: [0.25, 0.4, 0.25, 1] as const
               }}
               className="group relative"
             >

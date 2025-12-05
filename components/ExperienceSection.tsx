@@ -151,7 +151,7 @@ export default function ExperienceSection() {
                   transition={{ 
                     duration: 0.7, 
                     delay: 0.4 + index * 0.15,
-                    ease: [0.25, 0.4, 0.25, 1]
+                    ease: [0.25, 0.4, 0.25, 1] as const
                   }}
                   whileHover={{ scale: 1.02, x: 10 }}
                   className="group relative"
@@ -304,7 +304,7 @@ export default function ExperienceSection() {
                   transition={{ 
                     duration: 0.7, 
                     delay: 1.2 + index * 0.2,
-                    ease: [0.25, 0.4, 0.25, 1]
+                    ease: [0.25, 0.4, 0.25, 1] as const
                   }}
                   whileHover={{ y: -10, scale: 1.03 }}
                   className="group relative"
