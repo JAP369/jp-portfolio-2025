@@ -12,6 +12,12 @@ const experiences = [
     logoGradient: 'from-orange-500 to-red-500',
     positions: [
       { title: 'Bartender & Operations Manager', period: '2010 - Present' },
+    ],
+    highlights: [
+      'Cocktail bars & premium lounges',
+      'Hotel bars & fine dining restaurants',
+      'Private dining & catering events',
+      'Corporate functions & weddings'
     ]
   },
   {
@@ -21,6 +27,26 @@ const experiences = [
     positions: [
       { title: 'Bartender & F&B Operations Lead', period: '2015 - Present' },
       { title: 'Head Bartender', period: '2012 - 2015' }
+    ],
+    highlights: [
+      'Traditional pubs & gastropubs',
+      'Restaurant bar operations',
+      'Event bartending services',
+      'Staff training & development'
+    ]
+  },
+  {
+    company: 'Technology & Creative Services',
+    logo: '💻',
+    logoGradient: 'from-purple-500 to-pink-500',
+    positions: [
+      { title: 'Freelance Web Developer & Designer', period: '2020 - Present' }
+    ],
+    highlights: [
+      'Web development & design',
+      'Microsoft Office & productivity systems',
+      'Graphic design & marketing materials',
+      'Workflow optimization & automation'
     ]
   },
   {
@@ -29,6 +55,12 @@ const experiences = [
     logoGradient: 'from-green-500 to-emerald-500',
     positions: [
       { title: 'Barista & Coffee Shop Manager', period: '2008 - 2010' }
+    ],
+    highlights: [
+      'Coffee shop management',
+      'Customer service excellence',
+      'Inventory & purchasing',
+      'Brand development'
     ]
   }
 ];
@@ -163,7 +195,7 @@ export default function ExperienceSection() {
                           {exp.company}
                         </motion.h4>
                         
-                        <div className="space-y-4">
+                        <div className="space-y-4 mb-6">
                           {exp.positions.map((position, posIndex) => (
                             <motion.div 
                               key={posIndex} 
@@ -181,6 +213,32 @@ export default function ExperienceSection() {
                             </motion.div>
                           ))}
                         </div>
+
+                        {/* Experience Highlights */}
+                        {exp.highlights && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            whileInView={{ opacity: 1, height: 'auto' }}
+                            transition={{ duration: 0.5 }}
+                            className="mt-4 pt-4 border-t border-white/10"
+                          >
+                            <p className="text-xs uppercase tracking-wider text-gray-500 mb-3">Key Areas</p>
+                            <div className="grid grid-cols-2 gap-2">
+                              {exp.highlights.map((highlight, idx) => (
+                                <motion.div
+                                  key={idx}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                                  transition={{ duration: 0.4, delay: 0.6 + idx * 0.1 }}
+                                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                                >
+                                  <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                                  <span>{highlight}</span>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
                       </div>
                     </div>
 

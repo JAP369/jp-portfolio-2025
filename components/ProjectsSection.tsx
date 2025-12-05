@@ -18,15 +18,15 @@ const projects = [
     image: '/npl-marketplace.jpg'
   },
   {
-    title: 'Dragon-i Nightclub',
-    description: "Hong Kong's premier nightclub experience with events, VIP services, and luxury entertainment",
-    link: 'https://dihk.vercel.app/',
+    title: 'Next Level Club',
+    description: 'Premium nightclub and entertainment venue featuring modern design, event bookings, and VIP experiences',
+    link: 'https://next-level-club.vercel.app/',
     image: '/dragon-i.png'
   },
   {
-    title: 'Portfolio Website',
-    description: 'Personal portfolio showcasing full-stack development and product management expertise',
-    link: 'https://jonathanpaita.vercel.app/',
+    title: 'Airbnb Clone',
+    description: 'Full-featured accommodation booking platform with property listings, search filters, and reservation system',
+    link: 'https://airbnb-jap-clone.vercel.app/',
     image: '/portfolio.png'
   }
 ];

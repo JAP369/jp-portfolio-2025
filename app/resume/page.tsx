@@ -1,318 +1,232 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Download, ArrowLeft, Star, TrendingUp, Users, Award } from 'lucide-react';
 
 export default function ResumePage() {
+  const [activeSection, setActiveSection] = useState('summary');
+  const { scrollYProgress } = useScroll();
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: [0.25, 0.4, 0.25, 1] }
+    }
+  };
+
+  const skillVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.4 }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#020617] text-white">
+    <div className="min-h-screen bg-[#020617] text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <motion.div 
+        className="fixed inset-0 opacity-20"
+        style={{ y: backgroundY }}
+      >
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-purple-500 to-pink-600 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+      </motion.div>
+
       {/* Header */}
-      <div className="border-b border-white/10 py-6">
-        <div className="max-w-4xl mx-auto px-6 flex justify-between items-center">
-          <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-            ← Back to Portfolio
+      <motion.div 
+        className="sticky top-0 z-50 backdrop-blur-xl bg-[#020617]/80 border-b border-white/10"
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="max-w-5xl mx-auto px-6 py-6 flex justify-between items-center">
+          <Link href="/">
+            <motion.button
+              whileHover={{ scale: 1.05, x: -5 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Back to Portfolio
+            </motion.button>
           </Link>
-          <button 
+          <motion.button 
             onClick={() => window.print()}
-            className="px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-lg transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-medium shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300"
           >
-            Print Resume
-          </button>
+            <Download className="w-5 h-5" />
+            Download PDF
+          </motion.button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Resume Content */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-5xl mx-auto px-6 py-16 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 space-y-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="space-y-12"
         >
-          {/* Header */}
-          <div className="text-center border-b border-white/10 pb-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          {/* Hero Header */}
+          <motion.div 
+            variants={itemVariants}
+            className="text-center relative"
+          >
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-6xl shadow-2xl shadow-cyan-500/30"
+            >
+              🍸
+            </motion.div>
+            
+            <motion.h1 
+              className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               Jonathan Paita
-            </h1>
-            <p className="text-xl text-gray-400 mb-4">Bartender & Food & Beverage Professional</p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-              <span>📍 Hong Kong SAR</span>
-              <span>📧 jonathan.paita@gmail.com</span>
-              <span>📱 +852 6421 3849</span>
-            </div>
-          </div>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-2xl md:text-3xl text-gray-400 mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              Bartender • F&B Operations Manager • Web Developer
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-wrap justify-center gap-6 text-gray-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+            >
+              <span className="flex items-center gap-2">📍 Hong Kong SAR</span>
+              <span className="flex items-center gap-2">📧 jonathan.paita@gmail.com</span>
+              <span className="flex items-center gap-2">📱 +852 6421 3849</span>
+            </motion.div>
+          </motion.div>
+
+          {/* Stats Cards */}
+          <motion.div 
+            variants={itemVariants}
+            className="grid md:grid-cols-4 gap-6"
+          >
+            {[
+              { icon: <Star className="w-8 h-8" />, value: '15+', label: 'Years Experience', color: 'from-orange-500 to-red-500' },
+              { icon: <Users className="w-8 h-8" />, value: '100', label: 'Team Members', color: 'from-blue-500 to-cyan-500' },
+              { icon: <TrendingUp className="w-8 h-8" />, value: '3', label: 'Outlets Managed', color: 'from-green-500 to-emerald-500' },
+              { icon: <Award className="w-8 h-8" />, value: '1 Year', label: 'Growth Period', color: 'from-purple-500 to-pink-500' }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -10, scale: 1.05 }}
+                className={`p-6 rounded-3xl bg-gradient-to-br ${stat.color} bg-opacity-10 border border-white/10 hover:border-white/30 transition-all duration-300 text-center`}
+              >
+                <motion.div
+                  className="text-cyan-400 mb-3 flex justify-center"
+                  animate={{ rotate: [0, 10, -10, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                  {stat.icon}
+                </motion.div>
+                <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-400">{stat.label}</div>
+              </motion.div>
+            ))}
+          </motion.div>
 
           {/* Professional Summary */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Professional Summary</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Dedicated and experienced Food & Beverage professional with over 15 years in the hospitality industry, 
+          <motion.div 
+            variants={itemVariants}
+            className="relative p-10 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 backdrop-blur-sm overflow-hidden"
+          >
+            <motion.div
+              className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/20 rounded-full filter blur-3xl"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{ duration: 4, repeat: Infinity }}
+            />
+            <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Professional Summary
+            </h2>
+            <motion.p 
+              className="text-gray-300 leading-relaxed text-lg relative z-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
+              Dedicated and experienced Food & Beverage professional with over <span className="text-white font-semibold">15 years</span> in the hospitality industry, 
               primarily working behind the bar where I have fine-tuned my service skills and mastered the craft for drinks. 
               Originally from the Philippines, now based in Hong Kong. Proven expertise in bartending, mixology, purchasing 
               management, inventory control, administrative operations, graphic design, and team leadership. Successfully 
-              scaled operations from just 2 people to 100 employees, establishing a central kitchen and 3 F&B outlets within 
-              1 year. Combines traditional bartending excellence with modern computer skills including software engineering 
+              scaled operations from just <span className="text-white font-semibold">2 people to 100 employees</span>, establishing a central kitchen and <span className="text-white font-semibold">3 F&B outlets within 
+              1 year</span>. Combines traditional bartending excellence with modern computer skills including <span className="text-white font-semibold">software engineering</span> 
               to deliver exceptional customer experiences and operational efficiency.
-            </p>
-          </section>
+            </motion.p>
+          </motion.div>
 
           {/* Core Competencies */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Core Competencies</h2>
-            <div className="grid md:grid-cols-2 gap-3">
+          <motion.div variants={itemVariants}>
+            <h2 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+              Core Competencies
+            </h2>
+            <div className="grid md:grid-cols-3 gap-4">
               {[
-                'Bartending & Mixology',
-                'Customer Service Excellence',
-                'Drink Menu Development',
-                'Bar Operations Management',
-                'Purchasing & Procurement',
-                'Inventory Control & Cost Management',
-                'Vendor Relations & Negotiations',
-                'Team Leadership & Training',
-                'Administrative Operations & SOPs',
-                'Graphic Design (Adobe Creative Suite)',
-                'Cost Control & Budgeting',
-                'Quality Assurance & Standards',
-                'POS Systems & Technology',
-                'Microsoft Office Suite',
-                'Software Engineering Knowledge'
-              ].map((skill, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <span className="text-cyan-400">▸</span>
-                  <span className="text-gray-300">{skill}</span>
-                </div>
+                { skill: 'Bartending & Mixology', icon: '🍸' },
+                { skill: 'Customer Service Excellence', icon: '⭐' },
+                { skill: 'Drink Menu Development', icon: '📋' },
+                { skill: 'Bar Operations Management', icon: '🏢' },
+                { skill: 'Purchasing & Procurement', icon: '🛒' },
+                { skill: 'Inventory Control & Cost Management', icon: '📊' },
+                { skill: 'Vendor Relations & Negotiations', icon: '🤝' },
+                { skill: 'Team Leadership & Training', icon: '👥' },
+                { skill: 'Administrative Operations & SOPs', icon: '📝' },
+                { skill: 'Graphic Design (Adobe Creative Suite)', icon: '🎨' },
+                { skill: 'Cost Control & Budgeting', icon: '💰' },
+                { skill: 'Quality Assurance & Standards', icon: '✅' },
+                { skill: 'POS Systems & Technology', icon: '💻' },
+                { skill: 'Microsoft Office Suite', icon: '📄' },
+                { skill: 'Software Engineering Knowledge', icon: '⚙️' }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  variants={skillVariants}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 hover:bg-white/10 transition-all duration-300"
+                >
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="text-gray-300">{item.skill}</span>
+                </motion.div>
               ))}
             </div>
-          </section>
-
-          {/* Professional Experience */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Professional Experience</h2>
-            <div className="space-y-6">
-              {/* Experience 1 */}
-              <div className="border-l-2 border-cyan-500/50 pl-6">
-                <h3 className="text-xl font-semibold text-white">Bartender & Operations Manager</h3>
-                <p className="text-gray-400 mb-2">Multi-Outlet F&B Group | Hong Kong SAR</p>
-                <p className="text-sm text-gray-500 mb-3">2010 - Present</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Primarily work behind the bar, fine-tuning service skills and mastering the craft for drinks with 15+ years of dedicated experience</li>
-                  <li>• Successfully scaled operations from 2 people to 100 employees within 1 year, demonstrating exceptional growth management</li>
-                  <li>• Established and managed central kitchen operations serving 3 Food & Beverage retail outlets</li>
-                  <li>• Oversee purchasing, inventory management, cost control, and vendor relationships across all outlets including head office</li>
-                  <li>• Manage Standard Operating Procedures (SOPs), administrative operations, scheduling, and quality control</li>
-                  <li>• Design drink menus, marketing materials, and promotional content using Adobe Creative Suite</li>
-                  <li>• Lead, train, and mentor bar staff across multiple locations, fostering service excellence</li>
-                  <li>• Implement cost control measures while maintaining premium quality standards</li>
-                  <li>• Leverage computer skills and software engineering knowledge to optimize operations and inventory systems</li>
-                </ul>
-              </div>
-
-              {/* Experience 2 */}
-              <div className="border-l-2 border-cyan-500/50 pl-6">
-                <h3 className="text-xl font-semibold text-white">Barista & Coffee Shop Manager</h3>
-                <p className="text-gray-400 mb-2">Independent Coffee Shop | Hong Kong SAR</p>
-                <p className="text-sm text-gray-500 mb-3">2008 - 2010</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Launched and managed coffee shop from concept through daily operations</li>
-                  <li>• Developed expertise in coffee preparation, beverage crafting, and customer service</li>
-                  <li>• Handled all purchasing, inventory management, and supplier negotiations</li>
-                  <li>• Created brand identity, marketing materials, and visual designs</li>
-                  <li>• Managed staff recruitment, training, scheduling, and performance development</li>
-                  <li>• Maintained quality standards and ensured exceptional customer satisfaction</li>
-                </ul>
-              </div>
-
-              {/* Experience 3 */}
-              <div className="border-l-2 border-cyan-500/50 pl-6">
-                <h3 className="text-xl font-semibold text-white">F&B Service Staff</h3>
-                <p className="text-gray-400 mb-2">Various Hospitality Establishments | Philippines & Hong Kong</p>
-                <p className="text-sm text-gray-500 mb-3">2006 - 2008</p>
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Gained foundational Food & Beverage experience in service and operations</li>
-                  <li>• Developed strong customer service and hospitality skills</li>
-                  <li>• Learned beverage preparation, bar support, and service techniques</li>
-                  <li>• Built understanding of inventory management and operational fundamentals</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Education & Training */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Education & Training</h2>
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-lg font-semibold text-white">Secondary Education</h3>
-                <p className="text-gray-400">Philippines</p>
-                <p className="text-sm text-gray-500">Completed secondary education with strong academic foundation</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Computer & Software Courses</h3>
-                <p className="text-gray-400">Various Institutions | Hong Kong</p>
-                <ul className="mt-2 space-y-1 text-gray-300 text-sm">
-                  <li>• Software Engineering - Programming fundamentals and development practices</li>
-                  <li>• Microsoft Office Suite - Word, Excel, PowerPoint (Advanced)</li>
-                  <li>• Graphic Design - Adobe Photoshop, Adobe Illustrator</li>
-                  <li>• Digital Marketing & Social Media Management</li>
-                  <li>• POS Systems & Restaurant Management Software</li>
-                  <li>• Inventory Management Systems & Database Applications</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white">Bartending & F&B Certifications</h3>
-                <p className="text-gray-400">Industry Training</p>
-                <ul className="mt-2 space-y-1 text-gray-300 text-sm">
-                  <li>• Professional Bartending & Mixology Training</li>
-                  <li>• Food Safety & Hygiene Certification</li>
-                  <li>• Barista & Coffee Preparation Techniques</li>
-                  <li>• Customer Service Excellence</li>
-                  <li>• Responsible Alcohol Service</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Key Achievements */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Key Achievements</h2>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🍸</span>
-                <div>
-                  <h4 className="font-semibold text-white">Bartending Mastery</h4>
-                  <p className="text-gray-300 text-sm">15+ years primarily behind the bar, fine-tuning service skills and mastering the craft for drinks, delivering exceptional customer experiences</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">📈</span>
-                <div>
-                  <h4 className="font-semibold text-white">Rapid Business Growth</h4>
-                  <p className="text-gray-300 text-sm">Scaled operations from just 2 people to 100 employees within 1 year while maintaining quality and service excellence</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🏢</span>
-                <div>
-                  <h4 className="font-semibold text-white">Multi-Outlet Operations</h4>
-                  <p className="text-gray-300 text-sm">Successfully established central kitchen and expanded to 3 Food & Beverage outlets with comprehensive operational oversight</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">💼</span>
-                <div>
-                  <h4 className="font-semibold text-white">Comprehensive Operations Management</h4>
-                  <p className="text-gray-300 text-sm">Managed SOPs, inventory, cost control, purchasing, and administrative operations across all outlets including head office</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">💻</span>
-                <div>
-                  <h4 className="font-semibold text-white">Technology Integration</h4>
-                  <p className="text-gray-300 text-sm">Completed computer courses including software engineering, leveraging technology to optimize bar operations and create marketing materials</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">👥</span>
-                <div>
-                  <h4 className="font-semibold text-white">Team Leadership Excellence</h4>
-                  <p className="text-gray-300 text-sm">Trained and mentored bar staff across multiple locations, fostering service excellence and professional development</p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Technical Skills */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Technical Skills</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-3">Computer Applications</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Microsoft Office Suite</span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Adobe Photoshop</span>
-                    <div className="flex gap-1">
-                      {[...Array(4)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                      <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Adobe Illustrator</span>
-                    <div className="flex gap-1">
-                      {[...Array(4)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                      <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-3">Bar & F&B Skills</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Mixology & Cocktails</span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Customer Service</span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between bg-white/5 p-3 rounded-lg">
-                    <span className="text-gray-300">Inventory Management</span>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="w-2 h-2 rounded-full bg-cyan-400"></div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Languages */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Languages</h2>
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-white/5 px-6 py-3 rounded-lg border border-white/10">
-                <span className="text-white font-semibold">English</span>
-                <span className="text-gray-400 text-sm ml-2">- Fluent</span>
-              </div>
-              <div className="bg-white/5 px-6 py-3 rounded-lg border border-white/10">
-                <span className="text-white font-semibold">Tagalog</span>
-                <span className="text-gray-400 text-sm ml-2">- Native</span>
-              </div>
-              <div className="bg-white/5 px-6 py-3 rounded-lg border border-white/10">
-                <span className="text-white font-semibold">Cantonese</span>
-                <span className="text-gray-400 text-sm ml-2">- Conversational</span>
-              </div>
-            </div>
-          </section>
-
-          {/* References */}
-          <section>
-            <h2 className="text-2xl font-bold mb-4 text-cyan-400">References</h2>
-            <p className="text-gray-300">Available upon request</p>
-          </section>
-        </motion.div>
-      </div>
-    </div>
-  );
-}
+          </motion.div>

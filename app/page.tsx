@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import FreelanceServicesSection from '@/components/FreelanceServicesSection';
 import AdditionalExperienceSection from '@/components/AdditionalExperienceSection';
 import SkillsSection from '@/components/SkillsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
+      <FreelanceServicesSection />
       <ProjectsSection />
       <AdditionalExperienceSection />
       {/* <TestimonialsSection /> */}
