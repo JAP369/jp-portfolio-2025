@@ -230,3 +230,9 @@ export default function ResumePage() {
               ))}
             </div>
           </motion.div>
+
+        </motion.div>
+      </div>
+    </div>
+  );
+}

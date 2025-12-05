@@ -16,13 +16,13 @@ export default function Home() {
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden">
       <Navbar />
       <HeroSection />
-      <FreelanceServicesSection />
       <ProjectsSection />
       <AdditionalExperienceSection />
       {/* <TestimonialsSection /> */}
       <SkillsSection />
       <AboutSection />
       <ExperienceSection />
+      <FreelanceServicesSection />
       <ContactSection />
     </main>
   );

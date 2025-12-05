@@ -11,14 +11,18 @@ const services = [
     icon: '🍸',
     gradient: 'from-orange-500/20 to-red-500/20',
     borderColor: 'hover:border-orange-500/50',
+    glowColor: 'from-orange-500 to-red-500',
     description: 'Professional bartending for your events, with 15+ years of expertise',
+    pricing: 'Starting from HK$800/event',
     features: [
       'Cocktail bar setup & service',
       'Signature drink menu creation',
       'Private events & parties',
       'Corporate functions',
       'Wedding receptions',
-      'Bar staff training'
+      'Bar staff training',
+      'Mixology workshops',
+      'Premium spirits consultation'
     ]
   },
   {
@@ -26,14 +30,18 @@ const services = [
     icon: '💼',
     gradient: 'from-blue-500/20 to-cyan-500/20',
     borderColor: 'hover:border-blue-500/50',
+    glowColor: 'from-blue-500 to-cyan-500',
     description: 'Complete F&B operations management and consulting services',
+    pricing: 'Custom quotes available',
     features: [
       'Operations setup & management',
       'Purchasing & inventory systems',
       'Cost control & budgeting',
       'SOP development',
       'Vendor management',
-      'Quality assurance protocols'
+      'Quality assurance protocols',
+      'Staff recruitment & training',
+      'Menu engineering & pricing'
     ]
   },
   {
@@ -41,14 +49,18 @@ const services = [
     icon: '💻',
     gradient: 'from-purple-500/20 to-pink-500/20',
     borderColor: 'hover:border-purple-500/50',
+    glowColor: 'from-purple-500 to-pink-500',
     description: 'Modern, responsive websites and web applications tailored to your needs',
+    pricing: 'From HK$5,000',
     features: [
       'Custom website development',
       'E-commerce solutions',
       'Restaurant & bar websites',
       'Responsive design',
       'SEO optimization',
-      'Website maintenance'
+      'Website maintenance',
+      'Performance optimization',
+      'Mobile app development'
     ]
   },
   {
@@ -56,14 +68,18 @@ const services = [
     icon: '🎨',
     gradient: 'from-green-500/20 to-emerald-500/20',
     borderColor: 'hover:border-green-500/50',
+    glowColor: 'from-green-500 to-emerald-500',
     description: 'Creative design solutions for menus, marketing materials, and branding',
+    pricing: 'Starting from HK$500/project',
     features: [
       'Menu design & creation',
       'Marketing materials',
       'Social media graphics',
       'Brand identity design',
       'Promotional content',
-      'Print & digital design'
+      'Print & digital design',
+      'Logo & branding packages',
+      'Photography editing'
     ]
   }
 ];
@@ -163,13 +179,13 @@ export default function FreelanceServicesSection() {
             >
               {/* Glow Effect */}
               <motion.div
-                className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-100 blur-xl rounded-3xl transition-opacity duration-500`}
+                className={`absolute -inset-1 bg-gradient-to-r ${service.glowColor} opacity-0 group-hover:opacity-100 blur-xl rounded-3xl transition-opacity duration-500`}
               />
               
               <motion.div
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
-                className={`relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/10 ${service.borderColor} transition-all duration-500 h-full`}
+                className={`relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br ${service.gradient} backdrop-blur-sm border border-white/10 ${service.borderColor} transition-all duration-500 h-full flex flex-col`}
               >
                 {/* Icon */}
                 <motion.div 
@@ -192,12 +208,24 @@ export default function FreelanceServicesSection() {
                   {service.title}
                 </motion.h4>
                 
-                <p className="text-gray-400 mb-6 leading-relaxed">
+                <p className="text-gray-400 mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
+                {/* Pricing Badge */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                  className="mb-6 inline-block"
+                >
+                  <span className="px-4 py-2 bg-white/10 rounded-full text-cyan-400 text-sm font-semibold border border-cyan-500/30">
+                    {service.pricing}
+                  </span>
+                </motion.div>
+
                 {/* Features List */}
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-grow">
                   {service.features.map((feature, idx) => (
                     <motion.li
                       key={idx}
@@ -206,7 +234,12 @@ export default function FreelanceServicesSection() {
                       transition={{ duration: 0.5, delay: 0.6 + index * 0.1 + idx * 0.05 }}
                       className="flex items-center gap-3 text-gray-300 group-hover:text-white transition-colors duration-300"
                     >
-                      <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <motion.div
+                        whileHover={{ rotate: 360, scale: 1.2 }}
+                        transition={{ duration: 0.5 }}
+                      >
+                        <Check className="w-5 h-5 text-green-400 shrink-0" />
+                      </motion.div>
                       <span>{feature}</span>
                     </motion.li>
                   ))}
@@ -224,6 +257,11 @@ export default function FreelanceServicesSection() {
                     ease: "easeInOut"
                   }}
                 />
+
+                {/* Hover Glow Line */}
+                <motion.div
+                  className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${service.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl`}
+                />
               </motion.div>
             </motion.div>
           ))}
@@ -234,7 +272,7 @@ export default function FreelanceServicesSection() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mb-16"
+          className="mb-20"
         >
           <h4 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Why hire me?
@@ -247,12 +285,77 @@ export default function FreelanceServicesSection() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                whileHover={{ y: -5, scale: 1.03 }}
+                className="relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 group"
               >
-                <div className="text-5xl font-bold text-cyan-500/20 mb-4">{item.number}</div>
-                <h5 className="text-xl font-bold mb-3 text-white">{item.title}</h5>
+                <motion.div 
+                  className="text-5xl font-bold text-cyan-500/20 mb-4"
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {item.number}
+                </motion.div>
+                <h5 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors duration-300">{item.title}</h5>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                
+                {/* Animated underline */}
+                <motion.div
+                  className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-cyan-500 to-blue-600"
+                  initial={{ width: 0 }}
+                  whileHover={{ width: "100%" }}
+                  transition={{ duration: 0.4 }}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Success Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mb-16 relative"
+        >
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            {[
+              { value: '500+', label: 'Events Served', icon: '🎉' },
+              { value: '15+', label: 'Years Experience', icon: '⭐' },
+              { value: '100%', label: 'Client Satisfaction', icon: '❤️' }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.6, delay: 1.6 + index * 0.15 }}
+                whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
+                className="relative group"
+              >
+                <motion.div
+                  className="text-6xl mb-4"
+                  animate={{ 
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3
+                  }}
+                >
+                  {stat.icon}
+                </motion.div>
+                <motion.div 
+                  className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent mb-2"
+                  whileHover={{ scale: 1.15 }}
+                >
+                  {stat.value}
+                </motion.div>
+                <div className="text-gray-400 text-lg font-medium">{stat.label}</div>
+                
+                {/* Glow effect on hover */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100"
+                  transition={{ duration: 0.3 }}
+                />
               </motion.div>
             ))}
           </div>
@@ -262,7 +365,7 @@ export default function FreelanceServicesSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.6 }}
+          transition={{ duration: 0.8, delay: 1.8 }}
           className="text-center"
         >
           <motion.a
@@ -271,12 +374,32 @@ export default function FreelanceServicesSection() {
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold text-lg shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all duration-300"
           >
-            Let's Work Together
+            Let&apos;s Work Together
             <ArrowRight className="w-5 h-5" />
           </motion.a>
-          <p className="text-gray-500 mt-6 text-sm">
+          <motion.p 
+            className="text-gray-500 mt-6 text-sm"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 2 }}
+          >
             Available for freelance projects • Hong Kong based • Remote work available
-          </p>
+          </motion.p>
+          <motion.div
+            className="mt-8 flex justify-center gap-6 text-gray-600 text-xs"
+            initial={{ opacity: 0 }}
+            animate={isInView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.8, delay: 2.2 }}
+          >
+            <span className="flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+              Available Now
+            </span>
+            <span>•</span>
+            <span>Response within 24hrs</span>
+            <span>•</span>
+            <span>Free Consultation</span>
+          </motion.div>
         </motion.div>
       </div>
     </section>
