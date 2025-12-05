@@ -21,8 +21,8 @@ export default function Home() {
       {/* <TestimonialsSection /> */}
       <SkillsSection />
       <AboutSection />
-      <ExperienceSection />
-      <FreelanceServicesSection />
+      {/* <ExperienceSection /> */}
+      {/* <FreelanceServicesSection /> */}
       <ContactSection />
     </main>
   );

@@ -21,13 +21,13 @@ const projects = [
     title: 'Next Level Club',
     description: 'Premium nightclub and entertainment venue featuring modern design, event bookings, and VIP experiences',
     link: 'https://next-level-club.vercel.app/',
-    image: '/dragon-i.png'
+    image: '/nlc.png'
   },
   {
     title: 'Airbnb Clone',
     description: 'Full-featured accommodation booking platform with property listings, search filters, and reservation system',
     link: 'https://airbnb-jap-clone.vercel.app/',
-    image: '/portfolio.png'
+    image: '/airbnb-clone.png'
   }
 ];
 
