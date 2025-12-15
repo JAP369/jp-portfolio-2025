@@ -13,9 +13,9 @@ export const metadata: Metadata = {
   title: "Jonathan Paita | Bartender & F&B Operations Manager",
   description: "Jonathan Paita's Portfolio - Bartender, F&B Operations Manager, and Web Developer with 15+ years of experience in Hong Kong",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/favicon.ico',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
 };
 
