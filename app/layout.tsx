@@ -10,8 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JP Portfolio",
-  description: "Jonathan Paita's Portfolio - Product Designer & Developer",
+  title: "Jonathan Paita | Bartender & F&B Operations Manager",
+  description: "Jonathan Paita's Portfolio - Bartender, F&B Operations Manager, and Web Developer with 15+ years of experience in Hong Kong",
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

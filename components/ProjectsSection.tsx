@@ -28,6 +28,30 @@ const projects = [
     description: 'Full-featured accommodation booking platform with property listings, search filters, and reservation system',
     link: 'https://airbnb-jap-clone.vercel.app/',
     image: '/airbnb-clone.png'
+  },
+  {
+    title: 'E-Commerce Dashboard',
+    description: 'Modern admin dashboard for e-commerce management with analytics, inventory tracking, and order processing',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop'
+  },
+  {
+    title: 'Fitness Tracking App',
+    description: 'Health and fitness application with workout plans, progress tracking, and nutrition guidance',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop'
+  },
+  {
+    title: 'Real Estate Platform',
+    description: 'Property listing and search platform with virtual tours, mortgage calculator, and agent connections',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop'
+  },
+  {
+    title: 'Restaurant Booking System',
+    description: 'Comprehensive reservation management system with table booking, menu ordering, and customer reviews',
+    link: '#',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop'
   }
 ];
 
