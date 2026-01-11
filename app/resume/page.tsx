@@ -11,7 +11,7 @@ export default function ResumePage() {
     { skill: "Inventory & Database Management", level: 80 },
     { skill: "Graphic Design (Logo, Menu, Business Card)", level: 70 },
     { skill: "Adobe Photoshop (Photo Manipulation)", level: 60 },
-    { skill: "Adobe Illustrator (Vector Design)", level: 70 },
+    { skill: "Adobe Illustrator (Vector Design)", level: 80 },
     { skill: "Microsoft Office (Word, Excel & PowerPoint)", level: 80 },
     { skill: "Web Design - Front-End Development", level: 80 },
     { skill: "Database - Back-End Development", level: 50 },
@@ -136,32 +136,26 @@ export default function ResumePage() {
                 <h3 className='text-xl font-semibold text-white'>
                   Assistant Bar Manager
                 </h3>
-                <p className='text-gray-400 mb-2'>
-                  Dragon-I, Wyndham St., Central
-                </p>
+                <p className='text-gray-400 mb-2'>Dragon-I, Central</p>
                 <p className='text-sm text-gray-500 mb-3'>
-                  November 2022 - November 2025
+                  November 2002 - November 2025
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  As Assistant Bar Manager at one of Hong Kong's pioneering
-                  nightclubs—established in 2002 and a prestigious venue for
-                  over two decades hosting international celebrities like David
-                  Beckham, Michelle Yeoh, and LeBron James, along with athletes
-                  and iconic performers such as Snoop Dogg and Dr. Dre—I oversaw
-                  seamless operations across three bar stations, ensuring they
-                  were fully stocked, equipped, and ready for high-volume
-                  service. I managed staff delegation, training, and roster
-                  creation to optimize team performance; handled cashier
-                  responsibilities, including cash reconciliation and closing
-                  reports; and maintained the POS system by adding items and
-                  updating menus. Additionally, I developed innovative cocktails
-                  for both in-house use and external events outside the venue,
-                  conducted regular beverage stock-takes, ordered products to
-                  streamline supply chains and control costs, and inputted
-                  invoices into the inventory system. My contributions extended
-                  to actively supporting corporate events, international DJ
-                  parties, pop-ups, and promotions to drive engagement and
-                  revenue.
+                  In this long-term role at one of Hong Kong's pioneering
+                  nightclubs, which opened in 2002 and has been a prestigious
+                  venue for 23 years, I maintained three bar sections while
+                  overseeing staff delegation, training, and roster management
+                  to ensure seamless operations. The club has hosted
+                  international celebrities such as David Beckham, Michelle
+                  Yeoh, and LeBron James, as well as athletes, and featured
+                  performances by music artists and icons including Snoop Dogg
+                  and Dr. Dre. I conducted regular beverage stock-takes,
+                  developed innovative cocktails and menus to enhance offerings,
+                  and handled purchasing to optimise supply chains and costs.
+                  Additionally, I managed closing reports, including cash
+                  reconciliation, and actively participated in numerous
+                  corporate events, international DJ parties, pop-ups, and other
+                  promotions to boost engagement and revenue.
                 </p>
               </div>
 
@@ -177,39 +171,18 @@ export default function ResumePage() {
                   July 2021 - March 2022
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  Recruited for a head office role in central management as
-                  Purchasing & Beverage Manager, directly reporting to the
-                  Director of Operations, I directed daily restaurant
-                  operations, encompassing group-wide inventory management,
-                  regular stock-takes, and spot checks across multiple outlets
-                  to ensure accuracy and efficiency. I spearheaded comprehensive
-                  purchasing strategies, including product logistics
-                  coordination, expenditure scheduling, purchasing calendar
-                  development, determination of optimal inventory levels and
-                  delivery timings for food and beverage items, procurement of
-                  dry, frozen, and fresh produce, beverages, office supplies,
-                  equipment, and maintenance components, while fostering robust
-                  systems for product and recipe costings, vendor and market
-                  lists, data entry, and detailed reporting to senior operations
-                  leadership—incorporating invoices, inventory, stocktake lists,
-                  wastage, and staff meals for end-of-month submissions.
-                </p>
-                <br />
-                <p>
-                  mphasizing high-quality sourcing from farms, markets, and
-                  frozen suppliers, I secured all necessary certifications and
-                  licenses, implemented a daily production board system to
-                  streamline inventory oversight, ordering, forecasting, and
-                  cost control, built strong vendor relationships to stay
-                  updated on market prices and track product costs, initiated
-                  corrective actions to minimize waste and expenditures,
-                  inspected products to meet quality standards, monitored
-                  production operations for conformance to company
-                  specifications, and engaged in packing goods for each outlet.
-                  Additionally, I proactively addressed customer feedback,
-                  quality standards, and service gaps to enhance satisfaction
-                  through strategic logistics management, and handled graphic
-                  design for marketing purposes and product packaging materials.
+                  As Purchasing & Beverage Manager, I oversaw day-to-day
+                  restaurant operations, including group-wide inventory
+                  management, regular stock-takes, and spot checks across
+                  outlets. I implemented comprehensive purchasing plans, managed
+                  product logistics, scheduled expenditures, developed
+                  purchasing calendars, and determined optimal inventory levels
+                  for food and beverage products to maintain effective control.
+                  Building robust inventory systems involved product and recipe
+                  costings, vendor and market lists, data input, and reporting
+                  to the head of operations, while ensuring product quality met
+                  standards and addressing any service gaps for customer
+                  satisfaction.
                 </p>
               </div>
 
@@ -225,24 +198,15 @@ export default function ResumePage() {
                   November 2020 - June 2021
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  As Purchasing & Beverage Manager, I directed daily restaurant
-                  operations, encompassing group-wide inventory management,
-                  regular stock-takes, and spot checks across multiple outlets
-                  to ensure accuracy and efficiency. I spearheaded comprehensive
-                  purchasing strategies, including product logistics
-                  coordination, expenditure scheduling, purchasing calendar
-                  development, and determination of optimal inventory levels for
-                  food and beverage items, while fostering robust systems for
-                  product and recipe costings, vendor and market lists, data
-                  entry, and detailed reporting to senior operations leadership.
-                  Emphasizing high-quality sourcing from farms, markets, and
-                  frozen suppliers, I secured all necessary certifications and
-                  licenses, implemented a daily production board system to
-                  streamline inventory oversight, ordering, forecasting, and
-                  cost control, and proactively addressed customer feedback,
-                  quality standards, and service gaps to enhance satisfaction
-                  and minimize expenditures through strong vendor relationships
-                  and strategic logistics management.
+                  Conducted hiring and interviewing of employees, provided
+                  training and SOP manuals. Managed roster and payrolls. Setting
+                  up and closing up of establishment, ensuring hygiene standards
+                  and comply with government's covid measurements. Organised for
+                  improvements of the service for smoother and efficient
+                  operations. Developed online menus, website and declaration
+                  forms that are accessed via QR codes. To promote touch-less
+                  approach due to covid measures. Settlement of daily cash float
+                  count, petty cash and closing reports.
                 </p>
                 <br />
                 <p>
@@ -272,7 +236,7 @@ export default function ResumePage() {
               {/* Lobster Bar & Grill */}
               <div className='border-l-2 border-cyan-500/50 pl-6'>
                 <h3 className='text-xl font-semibold text-white'>
-                  Bar Service Associate
+                  Bar Operations & Service
                 </h3>
                 <p className='text-gray-400 mb-2'>
                   Lobster Bar & Grill Island Shangri-La, Admiralty
@@ -281,95 +245,64 @@ export default function ResumePage() {
                   October 2018 - June 2020
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  At the hotel's sole bar and restaurant, recognized among
-                  Asia's top 50 bars, I collaborated with other mixologists to
-                  demonstrate expertise in crafting classic and signature
-                  cocktails and mixed drinks using premium ingredients, ranging
-                  from simple to intricate recipes inspired by vintage styles,
-                  while contributing to menu development across various mixology
-                  eras. I managed daily operations, including setting up and
-                  closing the bar establishment, ensuring stringent hygiene
-                  standards, overseeing bar inventory management, and ordering
-                  beverage and food stocks. Committed to delivering exceptional
-                  hospitality and services to guests, I promptly addressed
-                  complaints and needs, maintained bar safety and cleanliness,
-                  and upheld compliance with health regulations, all while
-                  balancing attention to co-workers and operational efficiency.
+                  Serving as second-in-command in a team of 50 staff members, I
+                  collaborated with sommeliers and demonstrated expertise in
+                  creating classic and signature mixed drinks using high-quality
+                  ingredients, from simple to complex recipes, drawing
+                  inspiration from vintage cocktails to develop menus
+                  representing various mixology eras. I delivered high-quality
+                  hospitality, promptly addressing patron complaints and needs,
+                  while ensuring bar safety, cleanliness, event oversight, and
+                  compliance with health regulations without compromising
+                  attention to co-workers or operational efficiency.
                 </p>
               </div>
 
-              {/* Jamaty - 12 Noon */}
+              {/* 2 Noon */}
               <div className='border-l-2 border-cyan-500/50 pl-6'>
                 <h3 className='text-xl font-semibold text-white'>
                   Purchasing Officer & Beverage Manager
                 </h3>
                 <p className='text-gray-400 mb-2'>
-                  12 Noon (Jamaty Limited), Wong Chuk Hang, Aberdeen
+                  2 Noon (Luncheon) Limited, Wong Chuk Hang, Aberdeen
                 </p>
                 <p className='text-sm text-gray-500 mb-3'>
-                  August 2016 - May 2018
+                  August 2018 - May 2019
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  Engaged in establishing a central kitchen, office, warehouse
-                  and retail stores from scratch. Ensure all certifications and
-                  licenses are obtained as required. Developed a production
-                  board system to apply and manage in a daily basis which
-                  contains general inventory management, product and recipe
-                  costings, vendors and market lists, ordering and forecasting
-                  items in demand. Analyse variances, initiate corrective
-                  actions to avoid waste and limit costs.
-                </p>
-                <br />
-                <p>
-                  Maintained inventory by implementing purchasing plans and
-                  staying in contact and building good relationship with vendors
-                  and shippers. Product logistics management, scheduling
-                  expenditures, purchasing calendar and determining timing of
-                  all deliveries. Procuring and purchasing of dry and fresh
-                  produce, beverages, office supplies, tools, equipments,
-                  maintenance components. Sourcing of printing and packaging
-                  manufacturers for product labels, biodegradable food beverages
-                  packaging materials, marketing campaigns.
-                </p>
-                <br />
-                <p>
-                  Responsible for various sized of customised PET bottles,
-                  generating barcodes, nutritional product labels, packaging
-                  designs and assigning production expiry dates. Designed and
-                  developed non-alcoholic and alcoholic mixed beverages with
-                  cold pressed juices and healthier ingredients for retail, b2b,
-                  marketing and events. Supervision and staff training of
-                  kitchen and beverage department, ensuring an efficient and
-                  productive central kitchen production flow from preparation to
-                  dispatching of finished products.
+                  Focusing on sourcing high-quality products from farms,
+                  markets, and frozen suppliers, I ensured all certifications
+                  and licenses were obtained while developing a daily production
+                  board system for inventory management, product and recipe
+                  costings, vendor lists, ordering, and forecasting. I handled
+                  customer feedback, monitored quality standards, and controlled
+                  costs, maintaining inventory through purchasing plans, strong
+                  vendor relationships, logistics management, expenditure
+                  scheduling, and inventory determination for food and
+                  beverages.
                 </p>
               </div>
 
-              {/* Hei House */}
+              {/* Hot House */}
               <div className='border-l-2 border-cyan-500/50 pl-6'>
                 <h3 className='text-xl font-semibold text-white'>
                   Bar Supervisor
                 </h3>
                 <p className='text-gray-400 mb-2'>
-                  Hei House, Lee Tung Avenue, Wan Chai
+                  Hot House, Lee Tung Avenue, Wan Chai
                 </p>
                 <p className='text-sm text-gray-500 mb-3'>
                   May 2016 - August 2016
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  At a Malaysian and Southeast Asian fusion two-storey
-                  restaurant operating in the heart of Lee Tung Avenue, I led a
-                  team of bartenders in managing two bar stations, implementing
-                  and organizing service enhancements to optimize efficiency. I
-                  identified operational challenges and proposed targeted
-                  solutions to improve performance. I developed innovative
-                  Southeast Asian-inspired non-alcoholic and alcoholic mixed
-                  beverages designed to complement the cuisine offerings.
-                  Furthermore, I managed stock ordering for sales, maintained
-                  accurate inventory levels, conducted daily and weekly data
-                  entry for inventory and purchases, prepared closing reports
-                  for bar sales, balanced cash receipts, and strictly followed
-                  all cash handling policies and procedures.
+                  Leading a team of bartenders in operating two bar stations, I
+                  implemented service improvements to enhance efficiency,
+                  ensured the bar remained clean and hygienic, and developed
+                  consistent clean-up, maintenance, and streamlined procedures
+                  to complement the food served. I ordered stocks for sales,
+                  maintained inventory with daily data entry for purchases,
+                  secured closing reports for bar sales, balanced cash receipts,
+                  and adhered to all cash handling policies and procedures.
                 </p>
               </div>
 
@@ -379,25 +312,20 @@ export default function ResumePage() {
                   Senior Bartender
                 </h3>
                 <p className='text-gray-400 mb-2'>
-                  Mr & Mrs Fox, Swire Hotels, Quarry Bay
+                  Mr & Mrs Fox, Swire Hotel, Quarry Bay
                 </p>
                 <p className='text-sm text-gray-500 mb-3'>
                   August 2015 - May 2016
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  At one of the newest outlets under the Swire Hospitality
-                  department—a well-themed three-storey bar and restaurant
-                  located in the new SOHO of the east—I was trained and
-                  consulted by Old Street Group, Asia's longest-standing
-                  in-market bar and brand specialist, while collaborating with a
-                  team of professional mixologists. I honed high-level skills in
-                  mixing, garnishing, and serving drinks using only the finest
-                  brands and quality ingredients, including preparing in-house
-                  syrups, purees, garnishes, and other homemade components. I
-                  operated two main bar stations, one specializing in coffee,
-                  mixed drinks, and craft beers. Additionally, the venue was
-                  featured in Pernod Ricard's Bar Stars program to showcase the
-                  new bar in town.
+                  Trained by the Old Street Group as a long-standing bar and
+                  brand specialist, I collaborated with professional
+                  mixologists, excelling in mixing, garnishing, and serving
+                  drinks using premium brands and ingredients. I built a strong
+                  clientele through social networks, supervised two main bar
+                  stations—one focused on coffee, mixed drinks, and craft
+                  beers—and was featured in "Story by Pernod Ricard 2015" to
+                  showcase the new bar.
                 </p>
               </div>
 
@@ -413,19 +341,13 @@ export default function ResumePage() {
                   May 2013 - May 2015
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  As part of the opening team at a restaurant specializing in
-                  high-end Catalan and Spanish cuisines, I contributed as a
-                  bartender focused on crafting Spanish-inspired cocktails,
-                  mocktails, and a variety of gin and tonic styles. I was
-                  managed and trained by a couple of Spanish mixologists
-                  alongside a group of talented bartenders, where I learned and
-                  adopted unconventional bartending techniques and molecular
-                  mixology incorporating unusual ingredients, tools, and
-                  equipment. Through cross-training, I also served as a food
-                  runner and server, enhancing my ability to respond to
-                  additional patron requirements by inquiring about their needs
-                  and observing the dining process to ensure exceptional
-                  service.
+                  As part of the opening team specialising in Spanish-inspired
+                  cocktails, mocktails, and gin and tonic varieties, I was
+                  managed and trained by Spanish mixologists alongside talented
+                  bartenders, learning advanced techniques for mixing, pouring,
+                  and shaking. I created and implemented new cocktails and
+                  equipment, and responded to patron needs by inquiring and
+                  observing the dining process to enhance service.
                 </p>
               </div>
 
@@ -439,11 +361,8 @@ export default function ResumePage() {
                   March 2012 - April 2013
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  In this bartending role at a bar and wine cafe featuring a
-                  wide collection of wines, I created and served cocktails and
-                  various drinks to patrons, operated the coffee machine, and
-                  provided breakfast, lunch, and dinner selections throughout
-                  the day. I maintained bar operations, ensured customer
+                  In this bartending role, I provided mixing and serving of
+                  drinks to patrons, maintained bar operations, ensured customer
                   satisfaction, and delivered efficient service in a dynamic
                   environment.
                 </p>
@@ -458,11 +377,9 @@ export default function ResumePage() {
             </h2>
             <div className='grid md:grid-cols-2 gap-3'>
               {[
-                "Bartender - The Trilogy, Central (November 2025 - Present)",
-                "Bartender & Cashier - H.ER, Central (October 2025 - Present)",
                 "Bartender - Cassio Social Club, Central (May 2022 - Nov 2023)",
-                "Store Assistant - Ginsanity, Sai Ying Pun (April 2022 - November 2023)",
-                "Store Assistant - Tramline Liquor, Wan Chai (March 2022 - November 2023)",
+                "Store Assistant - Ginsanity, Sai Ying Pun (April 2022 - Present)",
+                "Store Assistant - Tramline Liquor, Wan Chai (March 2022 - Present)",
                 "Bartender - Bourbon St., Soho Central (June 2019 - Dec 2019)",
                 "Bartender, Server - Trafalgar English Pub, Wan Chai (Feb 2011 - Apr 2011)",
                 "Bartender & Server - Kupfer, Wan Chai (Aug 2019 - Dec 2019)",
