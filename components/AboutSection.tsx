@@ -127,21 +127,17 @@ export default function AboutSection() {
                         }}
                       />
                       <p>
-                        Originally from the Philippines, I moved to Hong Kong to
-                        pursue opportunities in the Food & Beverage industry.
-                        With over{" "}
+                        Born in the Philippines and raised in Hong Kong since
+                        the age of 9, I've spent over{" "}
                         <span className='text-white font-semibold'>
-                          15 years of hands-on experience
+                          15 years building expertise in the Food & Beverage
+                          industry
                         </span>
-                        , I mainly work behind the bar where I have fine-tuned
-                        my service skills and mastered the craft for drinks.
-                        I've built a career from the ground up, starting with
-                        just{" "}
-                        <span className='text-white font-semibold'>
-                          2 people including myself, and grew to 100 employees
-                        </span>
-                        , establishing a central kitchen and 3 F&B outlets
-                        within 1 year.
+                        . I primarily work behind the bar where I have
+                        fine-tuned my service skills and mastered the craft of
+                        mixology. My journey has taken me through some of Hong
+                        Kong's most prestigious venues, from boutique lounges to
+                        luxury hotel bars.
                       </p>
                     </motion.div>
 
@@ -309,15 +305,15 @@ export default function AboutSection() {
                         🏢
                       </motion.div>
                       <p>
-                        Currently based in Hong Kong, I continue to perfect my
-                        bartending craft while leveraging
+                        My experience extends beyond bartending into{" "}
                         <span className='text-white font-semibold'>
-                          {" "}
-                          computer skills
-                        </span>{" "}
-                        to optimize bar operations, manage inventory systems,
-                        and create compelling beverage menus and marketing
-                        materials.
+                          purchasing and procurement management
+                        </span>
+                        , where I've overseen inventory systems, vendor
+                        relationships, and cost control across multiple F&B
+                        outlets. From sourcing premium ingredients to managing
+                        supply chains, I ensure operational efficiency and
+                        quality standards are consistently met.
                       </p>
                     </motion.div>
                   </div>
