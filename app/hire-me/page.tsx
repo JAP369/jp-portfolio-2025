@@ -26,7 +26,7 @@ export default function HireMePage() {
       title: "Web Development",
       icon: "💻",
       gradient: "from-blue-500 to-cyan-500",
-      rate: "HK$200-300",
+      rate: "HK$200-350",
       unit: "per hour",
       description: "Modern, responsive websites and web applications",
       features: [
@@ -58,7 +58,8 @@ export default function HireMePage() {
       gradient: "from-green-500 to-emerald-500",
       rate: "HK$150-250",
       unit: "per hour",
-      description: "Professional office support, data management, and procurement services",
+      description:
+        "Professional office support, data management, and procurement services",
       features: [
         "Data entry & database management",
         "Purchasing & vendor coordination",
