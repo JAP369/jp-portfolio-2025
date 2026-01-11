@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Mail, Linkedin, Github } from "lucide-react";
+import { FileText, Mail, Linkedin, Github, Briefcase } from "lucide-react";
 import { ReactElement } from "react";
 
 // Tool icon components
@@ -215,6 +215,18 @@ export default function HeroSection() {
             <motion.a
               whileHover={{
                 scale: 1.05,
+                boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              href='/hire-me'
+              className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+            >
+              <Briefcase className='w-5 h-5' />
+              Hire Me
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.05,
                 boxShadow: "0 0 30px rgba(255,255,255,0.3)",
               }}
               whileTap={{ scale: 0.95 }}
@@ -234,7 +246,7 @@ export default function HeroSection() {
               className='px-8 py-4 border-2 border-white/20 rounded-full font-medium transition-all duration-300 flex items-center gap-2'
             >
               <Mail className='w-5 h-5' />
-              Get In Touch
+              Contact
             </motion.a>
           </motion.div>
 
