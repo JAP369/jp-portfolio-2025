@@ -50,17 +50,17 @@ const experiences = [
     ],
   },
   {
-    company: "Hotel F&B Operations | Hong Kong",
-    logo: "🏨",
+    company: "Purchasing & Procurement Management",
+    logo: "📦",
     logoGradient: "from-green-500 to-emerald-500",
     positions: [
-      { title: "F&B Service & Bar Operations", period: "2008 - 2012" },
+      { title: "Purchasing Manager & Operations", period: "2016 - 2022" },
     ],
     highlights: [
-      "Hotel bar & restaurant service",
-      "Premium guest experiences",
-      "Multi-outlet operations",
-      "Service excellence standards",
+      "Product sourcing & vendor management",
+      "Inventory control & cost optimization",
+      "Multi-outlet procurement coordination",
+      "Supply chain & logistics oversight",
     ],
   },
 ];

@@ -1,33 +1,33 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { FileText, Mail, Linkedin, Github, Heart } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { FileText, Mail, Linkedin, Github, Heart } from "lucide-react";
 
 export default function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" className="py-20 px-6 bg-[#020617]" ref={ref}>
-      <div className="max-w-6xl mx-auto">
+    <section id='contact' className='py-20 px-6 bg-[#020617]' ref={ref}>
+      <div className='max-w-6xl mx-auto'>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className='text-center'
         >
-          <motion.h3 
-            className="text-4xl md:text-6xl font-bold mb-6"
+          <motion.h3
+            className='text-4xl md:text-6xl font-bold mb-6'
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             Let's collaborate?
           </motion.h3>
-          <motion.p 
-            className="text-gray-400 text-xl mb-12"
+          <motion.p
+            className='text-gray-400 text-xl mb-12'
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -36,84 +36,109 @@ export default function ContactSection() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
-            className="flex flex-wrap gap-4 justify-center items-center mb-16"
+          <motion.div
+            className='flex flex-wrap gap-4 justify-center items-center mb-16'
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.a
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
+              }}
               whileTap={{ scale: 0.95 }}
-              href="/resume"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2"
+              href='/resume'
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
             >
-              <FileText className="w-5 h-5" />
+              <FileText className='w-5 h-5' />
               Resume
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.05, borderColor: "rgba(6, 182, 212, 0.8)" }}
+              whileHover={{
+                scale: 1.05,
+                borderColor: "rgba(6, 182, 212, 0.8)",
+              }}
               whileTap={{ scale: 0.95 }}
-              href="mailto:jonathan.paita@gmail.com"
-              className="px-8 py-4 border-2 border-white/20 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center gap-2"
+              href='mailto:jonathan.paita@gmail.com'
+              className='px-8 py-4 border-2 border-white/20 rounded-full font-medium hover:bg-white/10 transition-all duration-300 flex items-center gap-2'
             >
-              <Mail className="w-5 h-5" />
+              <Mail className='w-5 h-5' />
               Get In Touch
             </motion.a>
           </motion.div>
 
           {/* Footer */}
-          <div className="border-t border-white/10 pt-12">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-              <motion.p 
-                className="text-gray-500 flex items-center gap-2"
+          <div className='border-t border-white/10 pt-12'>
+            <div className='flex flex-col md:flex-row justify-between items-center gap-6'>
+              <motion.div
+                className='flex flex-col items-center md:items-start gap-2'
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                Built with Next.js, TypeScript & Tailwind CSS
-                <motion.span
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  <Heart className="w-4 h-4 text-cyan-400" />
-                </motion.span>
-              </motion.p>
+                <p className='text-gray-500 flex items-center gap-2'>
+                  © {new Date().getFullYear()} Jonathan Austria Paita. All
+                  rights reserved.
+                </p>
+                <p className='text-gray-600 text-sm flex items-center gap-2'>
+                  Crafted with passion
+                  <motion.span
+                    animate={{ scale: [1, 1.2, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    <Heart className='w-4 h-4 text-cyan-400 fill-cyan-400' />
+                  </motion.span>
+                  in Hong Kong
+                </p>
+              </motion.div>
 
               {/* Social Links */}
-              <motion.div 
-                className="flex gap-4"
+              <motion.div
+                className='flex gap-4'
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.7 }}
               >
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 5,
+                    backgroundColor: "rgba(6, 182, 212, 0.2)",
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  href="https://www.linkedin.com/in/jonathan-paita"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300"
+                  href='https://www.linkedin.com/in/jonathan-paita'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300'
                 >
-                  <Linkedin className="w-5 h-5" />
+                  <Linkedin className='w-5 h-5' />
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: -5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: -5,
+                    backgroundColor: "rgba(6, 182, 212, 0.2)",
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  href="https://github.com/JAP369"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300"
+                  href='https://github.com/JAP369'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300'
                 >
-                  <Github className="w-5 h-5" />
+                  <Github className='w-5 h-5' />
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.2, rotate: 5, backgroundColor: "rgba(6, 182, 212, 0.2)" }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 5,
+                    backgroundColor: "rgba(6, 182, 212, 0.2)",
+                  }}
                   whileTap={{ scale: 0.9 }}
-                  href="mailto:jonathan.paita@gmail.com"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300"
+                  href='mailto:jonathan.paita@gmail.com'
+                  className='w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300'
                 >
-                  <Mail className="w-5 h-5" />
+                  <Mail className='w-5 h-5' />
                 </motion.a>
               </motion.div>
             </div>
