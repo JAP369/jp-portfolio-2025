@@ -152,7 +152,7 @@ export default function Navbar() {
                   )}
                 </motion.button>
               )}
-              
+
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
                 className='w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors'
@@ -165,6 +165,7 @@ export default function Navbar() {
                 )}
               </motion.button>
             </div>
+          </div>
         </div>
       </motion.nav>
 
