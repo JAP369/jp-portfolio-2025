@@ -10,7 +10,6 @@ import SkillsSection from "@/components/SkillsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
-import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -25,7 +24,6 @@ export default function Home() {
       <ExperienceSection />
       {/* <FreelanceServicesSection /> */}
       <ContactSection />
-      <ThemeToggle />
     </main>
   );
 }

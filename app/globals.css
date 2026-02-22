@@ -43,6 +43,75 @@ html {
 /* Light mode sections */
 .light section {
   background-color: #f8fafc;
+  color: #020617;
+}
+
+/* Light mode headings and text */
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
+  color: #020617 !important;
+}
+
+/* Light mode paragraph text */
+.light p {
+  color: #334155 !important;
+}
+
+/* Light mode for gradient text */
+.light .bg-clip-text {
+  -webkit-text-fill-color: transparent;
+}
+
+/* Light mode for navbar */
+.light nav {
+  background-color: rgba(248, 250, 252, 0.8) !important;
+  border-color: rgba(2, 6, 23, 0.1) !important;
+}
+
+.light nav a {
+  color: #475569 !important;
+}
+
+.light nav a:hover {
+  color: #020617 !important;
+}
+
+/* Light mode cards and containers */
+.light .bg-white\/5,
+.light .bg-white\/10 {
+  background-color: rgba(2, 6, 23, 0.05) !important;
+  border-color: rgba(2, 6, 23, 0.1) !important;
+}
+
+/* Light mode text colors */
+.light .text-gray-300,
+.light .text-gray-400 {
+  color: #475569 !important;
+}
+
+.light .text-gray-500 {
+  color: #64748b !important;
+}
+
+.light .text-gray-600 {
+  color: #475569 !important;
+}
+
+.light .text-white {
+  color: #020617 !important;
+}
+
+/* Light mode borders */
+.light .border-white\/10 {
+  border-color: rgba(2, 6, 23, 0.1) !important;
+}
+
+.light .border-white\/20 {
+  border-color: rgba(2, 6, 23, 0.15) !important;
 }
 
 /* Custom scrollbar - Dark mode */

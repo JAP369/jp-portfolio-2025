@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navItems = [
@@ -14,6 +14,8 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +25,30 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem("theme") as "dark" | "light" | null;
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.classList.add(savedTheme);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      const defaultTheme = prefersDark ? "dark" : "light";
+      setTheme(defaultTheme);
+      document.documentElement.classList.add(defaultTheme);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -90,21 +116,55 @@ export default function Navbar() {
                   <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-600 group-hover:w-full transition-all duration-300' />
                 </motion.a>
               ))}
+
+              {/* Theme Toggle Button - Desktop */}
+              {mounted && (
+                <motion.button
+                  onClick={toggleTheme}
+                  className='w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300'
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label='Toggle theme'
+                >
+                  {theme === "dark" ? (
+                    <Sun className='w-5 h-5 text-yellow-400' />
+                  ) : (
+                    <Moon className='w-5 h-5 text-slate-700' />
+                  )}
+                </motion.button>
+              )}
             </div>
 
-            {/* Mobile Menu Button */}
-            <motion.button
-              onClick={() => setIsOpen(!isOpen)}
-              className='md:hidden w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors'
-              whileTap={{ scale: 0.9 }}
-            >
-              {isOpen ? (
-                <X className='w-6 h-6' />
-              ) : (
-                <Menu className='w-6 h-6' />
+            {/* Mobile Menu Button and Theme Toggle */}
+            <div className='md:hidden flex items-center gap-3'>
+              {mounted && (
+                <motion.button
+                  onClick={toggleTheme}
+                  className='w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300'
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  aria-label='Toggle theme'
+                >
+                  {theme === "dark" ? (
+                    <Sun className='w-5 h-5 text-yellow-400' />
+                  ) : (
+                    <Moon className='w-5 h-5 text-slate-700' />
+                  )}
+                </motion.button>
               )}
-            </motion.button>
-          </div>
+              
+              <motion.button
+                onClick={() => setIsOpen(!isOpen)}
+                className='w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors'
+                whileTap={{ scale: 0.9 }}
+              >
+                {isOpen ? (
+                  <X className='w-6 h-6' />
+                ) : (
+                  <Menu className='w-6 h-6' />
+                )}
+              </motion.button>
+            </div>
         </div>
       </motion.nav>
 
