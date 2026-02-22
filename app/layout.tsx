@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import MusicPlayer from "@/components/MusicPlayer";
 import StructuredData from "@/components/StructuredData";
-import { ThemeProvider } from "@/context/ThemeContext";
+import Providers from "@/components/Providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -98,10 +97,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider>
-          {children}
-          <MusicPlayer />
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
