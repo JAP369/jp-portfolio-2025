@@ -37,7 +37,8 @@ export default function MusicPlayer() {
       setIsPlaying(false);
       setCurrentTime(0);
     });
-Try autoplay when component mounts
+
+    // Try autoplay when component mounts
     const attemptAutoplay = async () => {
       try {
         audio.volume = volume;
@@ -67,18 +68,17 @@ Try autoplay when component mounts
     attemptAutoplay();
 
     // Also try on first user interaction
-    const interactionEvents = ['click', 'touchstart', 'keydown'];
-    interactionEvents.forEach(event => {
+    const interactionEvents = ["click", "touchstart", "keydown"];
+    interactionEvents.forEach((event) => {
       document.addEventListener(event, enableAutoplay, { once: true });
     });
 
     return () => {
       audio.removeEventListener("timeupdate", updateTime);
       audio.removeEventListener("loadedmetadata", updateDuration);
-      interactionEvents.forEach(event => {
+      interactionEvents.forEach((event) => {
         document.removeEventListener(event, enableAutoplay);
-      }
-      audio.removeEventListener("loadedmetadata", updateDuration);
+      });
     };
   }, []);
 
