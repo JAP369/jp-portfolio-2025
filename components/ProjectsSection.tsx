@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Image from "next/image";
+import SkeletonLoader from "./SkeletonLoader";
 
 const projects = [
   {
@@ -120,14 +122,16 @@ export default function ProjectsSection() {
                   className='relative overflow-hidden rounded-3xl aspect-[16/11]'
                   whileHover={{ scale: 1.02, y: -8 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
+                  style={{ willChange: "transform" }}
                 >
-                  <motion.img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className='absolute inset-0 w-full h-full object-cover'
-                    initial={{ scale: 1.1 }}
-                    whileHover={{ scale: 1.15 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    fill
+                    className='object-cover'
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    loading={index < 4 ? "eager" : "lazy"}
+                    quality={85}
                   />
 
                   <div className='absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent' />

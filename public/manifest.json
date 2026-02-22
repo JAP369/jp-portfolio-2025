@@ -1,0 +1,26 @@
+{
+  "name": "Jonathan Paita - Bartender & F&B Professional",
+  "short_name": "JP Portfolio",
+  "description": "Professional portfolio of Jonathan Paita - Experienced Bartender, F&B Operations Manager, and Web Developer with 15+ years of expertise",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle", "portfolio"],
+  "screenshots": [
+    {
+      "src": "/portfolio.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ]
+}

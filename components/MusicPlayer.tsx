@@ -5,12 +5,13 @@ import { Music, Play, Pause, Volume2, VolumeX, X } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 export default function MusicPlayer() {
-  const [isPlaying, setIsPlaying] = useState(true); // Start with true for autoplay
+  const [isPlaying, setIsPlaying] = useState(false); // Start with false
   const [isMuted, setIsMuted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.3); // Lower default volume
+  const [userInteracted, setUserInteracted] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // The XX - Intro
@@ -36,22 +37,47 @@ export default function MusicPlayer() {
       setIsPlaying(false);
       setCurrentTime(0);
     });
-
-    // Autoplay when component mounts
-    const playAudio = async () => {
+Try autoplay when component mounts
+    const attemptAutoplay = async () => {
       try {
+        audio.volume = volume;
         await audio.play();
         setIsPlaying(true);
+        setUserInteracted(true);
       } catch (error) {
-        console.log("Autoplay prevented by browser:", error);
+        console.log("Autoplay prevented. User interaction required:", error);
         setIsPlaying(false);
       }
     };
 
-    playAudio();
+    // Add user interaction listeners for first play
+    const enableAutoplay = async () => {
+      if (!userInteracted) {
+        setUserInteracted(true);
+        try {
+          await audio.play();
+          setIsPlaying(true);
+        } catch (error) {
+          console.log("Could not play audio:", error);
+        }
+      }
+    };
+
+    // Try autoplay immediately
+    attemptAutoplay();
+
+    // Also try on first user interaction
+    const interactionEvents = ['click', 'touchstart', 'keydown'];
+    interactionEvents.forEach(event => {
+      document.addEventListener(event, enableAutoplay, { once: true });
+    });
 
     return () => {
       audio.removeEventListener("timeupdate", updateTime);
+      audio.removeEventListener("loadedmetadata", updateDuration);
+      interactionEvents.forEach(event => {
+        document.removeEventListener(event, enableAutoplay);
+      }
       audio.removeEventListener("loadedmetadata", updateDuration);
     };
   }, []);

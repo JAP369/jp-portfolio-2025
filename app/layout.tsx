@@ -95,6 +95,13 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <StructuredData />
+        <link rel='manifest' href='/manifest.json' />
+        <meta name='theme-color' content='#06b6d4' />
+        <meta name='apple-mobile-web-app-capable' content='yes' />
+        <meta
+          name='apple-mobile-web-app-status-bar-style'
+          content='black-translucent'
+        />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>

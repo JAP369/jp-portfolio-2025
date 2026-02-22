@@ -297,23 +297,16 @@ export default function HeroSection() {
                 className='absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 blur-xl opacity-70'
               />
 
-              {/* Photo placeholder with fallback */}
+              {/* Profile Photo */}
               <div className='relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-cyan-500/20 to-blue-600/20'>
-                {/* Placeholder - Replace src with your photo path */}
-                <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900'>
-                  <span className='text-6xl md:text-8xl font-bold text-white/20'>
-                    JP
-                  </span>
-                </div>
-                {/* Uncomment and add your photo:
-              <Image
-                src="/profile-photo.jpg"
-                alt="Jonathan Paita"
-                fill
-                className='object-cover'
-                priority
-              />
-              */}
+                <Image
+                  src='/jp-photo.jpg'
+                  alt='Jonathan Paita - Bartender & F&B Professional'
+                  fill
+                  className='object-cover'
+                  priority
+                  sizes='(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px'
+                />
               </div>
             </div>
           </motion.div>

@@ -135,3 +135,45 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #38bdf8 0%, #22d3ee 100%);
 }
+
+/* Performance Optimizations - will-change for animated elements */
+[class*="animate-"],
+[class*="motion-"],
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-auto {
+  will-change: auto;
+}
+
+/* Optimize frequently animated elements */
+button:hover,
+a:hover,
+.group:hover > * {
+  will-change: transform, opacity;
+}
+
+/* Remove will-change after animations complete */
+button:not(:hover),
+a:not(:hover),
+.group:not(:hover) > * {
+  will-change: auto;
+}
+
+/* Improve image rendering */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
