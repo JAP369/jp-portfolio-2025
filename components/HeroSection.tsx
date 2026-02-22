@@ -201,95 +201,97 @@ export default function HeroSection() {
               .
             </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className='text-lg md:text-xl text-gray-400 mb-3'
-          >
-            Bartender & F&B Professional with{" "}
-            <span className='text-white font-semibold'>15+ years</span> of
-            experience,
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className='text-base md:text-lg text-gray-500 mb-8'
-          >
-            specializing in Bartending, Mixology, Service Excellence, Purchasing
-            & Operations from coffee shops to central kitchens
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className='flex flex-wrap gap-4 justify-center lg:justify-start items-center'
-          >
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              href='/hire-me'
-              className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className='text-lg md:text-xl text-gray-400 mb-3'
             >
-              <Briefcase className='w-5 h-5' />
-              Hire Me
-            </motion.a>
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(255,255,255,0.3)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              href='/resume'
-              className='group px-8 py-4 bg-white text-black rounded-full font-medium transition-all duration-300 flex items-center gap-2'
-            >
-              <FileText className='w-5 h-5' />
-              Resume
-            </motion.a>
-            <motion.a
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "rgba(255,255,255,0.15)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              href='#contact'
-              className='px-8 py-4 border-2 border-white/20 rounded-full font-medium transition-all duration-300 flex items-center gap-2'
-            >
-              <Mail className='w-5 h-5' />
-              Contact
-            </motion.a>
-          </motion.div>
-        </motion.div>
+              Bartender & F&B Professional with{" "}
+              <span className='text-white font-semibold'>15+ years</span> of
+              experience,
+            </motion.p>
 
-        {/* Photo Section */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className='order-1 lg:order-2 flex justify-center lg:justify-end'
-        >
-          <div className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'>
-            {/* Animated border effect */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className='text-base md:text-lg text-gray-500 mb-8'
+            >
+              specializing in Bartending, Mixology, Service Excellence,
+              Purchasing & Operations from coffee shops to central kitchens
+            </motion.p>
+
+            {/* CTA Buttons */}
             <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className='absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 blur-xl opacity-70'
-            />
-            
-            {/* Photo placeholder with fallback */}
-            <div className='relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-cyan-500/20 to-blue-600/20'>
-              {/* Placeholder - Replace src with your photo path */}
-              <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900'>
-                <span className='text-6xl md:text-8xl font-bold text-white/20'>JP</span>
-              </div>
-              {/* Uncomment and add your photo:
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7 }}
+              className='flex flex-wrap gap-4 justify-center lg:justify-start items-center'
+            >
+              <motion.a
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='/hire-me'
+                className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+              >
+                <Briefcase className='w-5 h-5' />
+                Hire Me
+              </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(255,255,255,0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='/resume'
+                className='group px-8 py-4 bg-white text-black rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+              >
+                <FileText className='w-5 h-5' />
+                Resume
+              </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='#contact'
+                className='px-8 py-4 border-2 border-white/20 rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+              >
+                <Mail className='w-5 h-5' />
+                Contact
+              </motion.a>
+            </motion.div>
+          </motion.div>
+
+          {/* Photo Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className='order-1 lg:order-2 flex justify-center lg:justify-end'
+          >
+            <div className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'>
+              {/* Animated border effect */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className='absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 blur-xl opacity-70'
+              />
+
+              {/* Photo placeholder with fallback */}
+              <div className='relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-cyan-500/20 to-blue-600/20'>
+                {/* Placeholder - Replace src with your photo path */}
+                <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900'>
+                  <span className='text-6xl md:text-8xl font-bold text-white/20'>
+                    JP
+                  </span>
+                </div>
+                {/* Uncomment and add your photo:
               <Image
                 src="/profile-photo.jpg"
                 alt="Jonathan Paita"
@@ -298,122 +300,123 @@ export default function HeroSection() {
                 priority
               />
               */}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Social Links - Now outside the grid */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9 }}
+          className='flex gap-6 justify-center mb-16 relative z-10'
+        >
+          <motion.a
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            href='https://www.linkedin.com/in/jonathan-paita'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
+          >
+            <Linkedin className='w-5 h-5' />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2, rotate: -5 }}
+            whileTap={{ scale: 0.9 }}
+            href='https://github.com/JAP369'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
+          >
+            <Github className='w-5 h-5' />
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            href='mailto:jonathan.paita@gmail.com'
+            className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
+          >
+            <Mail className='w-5 h-5' />
+          </motion.a>
+        </motion.div>
+
+        {/* Tools Carousel - Bottom Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1 }}
+          className='w-full pb-12 relative z-10'
+        >
+          <div className='relative overflow-hidden py-8'>
+            {/* Gradient fade edges */}
+            <div className='absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
+            <div className='absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
+
+            {/* Scrolling carousel */}
+            <div className='flex animate-carousel'>
+              {/* First set of tools */}
+              {tools.map((tool, index) => (
+                <motion.div
+                  key={`tool-1-${index}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2 + index * 0.1 }}
+                  whileHover={{
+                    scale: 1.1,
+                    y: -8,
+                    transition: { duration: 0.2 },
+                  }}
+                  className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
+                >
+                  <motion.div
+                    whileHover={{
+                      boxShadow: `0 10px 40px ${tool.bg}40`,
+                      rotate: [0, -5, 5, 0],
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className='w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300'
+                    style={{ backgroundColor: tool.bg }}
+                  >
+                    <ToolIcon name={tool.name} bg={tool.bg} />
+                  </motion.div>
+                  <span className='text-xs text-gray-500 whitespace-nowrap group-hover:text-gray-300 transition-colors duration-300'>
+                    {tool.name}
+                  </span>
+                </motion.div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {tools.map((tool, index) => (
+                <motion.div
+                  key={`tool-2-${index}`}
+                  whileHover={{
+                    scale: 1.1,
+                    y: -8,
+                    transition: { duration: 0.2 },
+                  }}
+                  className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
+                >
+                  <motion.div
+                    whileHover={{
+                      boxShadow: `0 10px 40px ${tool.bg}40`,
+                      rotate: [0, -5, 5, 0],
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className='w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300'
+                    style={{ backgroundColor: tool.bg }}
+                  >
+                    <ToolIcon name={tool.name} bg={tool.bg} />
+                  </motion.div>
+                  <span className='text-xs text-gray-500 whitespace-nowrap group-hover:text-gray-300 transition-colors duration-300'>
+                    {tool.name}
+                  </span>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.div>
       </div>
-
-      {/* Social Links - Now outside the grid */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.9 }}
-        className='flex gap-6 justify-center mb-16 relative z-10'
-      >
-            <motion.a
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              href='https://www.linkedin.com/in/jonathan-paita'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
-            >
-              <Linkedin className='w-5 h-5' />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.2, rotate: -5 }}
-              whileTap={{ scale: 0.9 }}
-              href='https://github.com/JAP369'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
-            >
-              <Github className='w-5 h-5' />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-              href='mailto:jonathan.paita@gmail.com'
-              className='w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 backdrop-blur-sm'
-            >
-              <Mail className='w-5 h-5' />
-            </motion.a>
-          </motion.div>
-
-      {/* Tools Carousel - Bottom Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1 }}
-        className='w-full pb-12 relative z-10'
-      >
-        <div className='relative overflow-hidden py-8'>
-          {/* Gradient fade edges */}
-          <div className='absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
-          <div className='absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
-
-          {/* Scrolling carousel */}
-          <div className='flex animate-carousel'>
-            {/* First set of tools */}
-            {tools.map((tool, index) => (
-              <motion.div
-                key={`tool-1-${index}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                whileHover={{
-                  scale: 1.1,
-                  y: -8,
-                  transition: { duration: 0.2 },
-                }}
-                className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
-              >
-                <motion.div
-                  whileHover={{
-                    boxShadow: `0 10px 40px ${tool.bg}40`,
-                    rotate: [0, -5, 5, 0],
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className='w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300'
-                  style={{ backgroundColor: tool.bg }}
-                >
-                  <ToolIcon name={tool.name} bg={tool.bg} />
-                </motion.div>
-                <span className='text-xs text-gray-500 whitespace-nowrap group-hover:text-gray-300 transition-colors duration-300'>
-                  {tool.name}
-                </span>
-              </motion.div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {tools.map((tool, index) => (
-              <motion.div
-                key={`tool-2-${index}`}
-                whileHover={{
-                  scale: 1.1,
-                  y: -8,
-                  transition: { duration: 0.2 },
-                }}
-                className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
-              >
-                <motion.div
-                  whileHover={{
-                    boxShadow: `0 10px 40px ${tool.bg}40`,
-                    rotate: [0, -5, 5, 0],
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className='w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300'
-                  style={{ backgroundColor: tool.bg }}
-                >
-                  <ToolIcon name={tool.name} bg={tool.bg} />
-                </motion.div>
-                <span className='text-xs text-gray-500 whitespace-nowrap group-hover:text-gray-300 transition-colors duration-300'>
-                  {tool.name}
-                </span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
 
       <style jsx>{`
         @keyframes carousel {
