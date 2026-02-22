@@ -9,7 +9,6 @@ const navItems = [
   { name: "Skills", href: "#skills" },
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -27,7 +26,7 @@ export default function Navbar() {
 
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
+    href: string,
   ) => {
     e.preventDefault();
     setIsOpen(false);
@@ -93,27 +92,6 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA Buttons - Desktop */}
-            <div className='hidden md:flex items-center gap-3'>
-              <motion.a
-                href='/hire-me'
-                className='px-5 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-medium hover:opacity-90 transition-opacity text-sm'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Hire Me
-              </motion.a>
-              <motion.a
-                href='#contact'
-                onClick={(e) => handleNavClick(e, "#contact")}
-                className='px-5 py-2 border-2 border-cyan-500/50 rounded-full text-cyan-400 font-medium hover:bg-cyan-500/10 transition-all text-sm'
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact
-              </motion.a>
-            </div>
-
             {/* Mobile Menu Button */}
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
@@ -154,25 +132,6 @@ export default function Navbar() {
                   {item.name}
                 </motion.a>
               ))}
-              <motion.a
-                href='/hire-me'
-                className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-medium text-center hover:opacity-90 transition-opacity mt-4'
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navItems.length * 0.05 }}
-              >
-                Hire Me
-              </motion.a>
-              <motion.a
-                href='#contact'
-                onClick={(e) => handleNavClick(e, "#contact")}
-                className='block w-full px-6 py-3 border-2 border-cyan-500/50 rounded-full text-cyan-400 font-medium text-center hover:bg-cyan-500/10 transition-all'
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (navItems.length + 1) * 0.05 }}
-              >
-                Contact
-              </motion.a>
             </div>
           </motion.div>
         )}

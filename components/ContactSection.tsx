@@ -11,6 +11,7 @@ import {
   Heart,
   Briefcase,
 } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -138,6 +139,9 @@ export default function ContactSection() {
               </motion.a>
             </div>
           </motion.div>
+
+          {/* Contact Form */}
+          <ContactForm />
 
           {/* Footer */}
           <div className='border-t border-white/10 pt-12'>

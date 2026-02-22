@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Download, Printer } from "lucide-react";
 
 export default function ResumePage() {
   const technicalSkills = [
@@ -35,12 +36,28 @@ export default function ResumePage() {
           >
             ← Back to Portfolio
           </Link>
-          <button
-            onClick={() => window.print()}
-            className='px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-lg transition-colors'
-          >
-            Print Resume
-          </button>
+          <div className='flex gap-3'>
+            <button
+              onClick={() => {
+                // Create a download link for the PDF
+                const link = document.createElement("a");
+                link.href = "/Jonathan_Paita_Resume.pdf";
+                link.download = "Jonathan_Paita_Resume.pdf";
+                link.click();
+              }}
+              className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 rounded-lg transition-all flex items-center gap-2'
+            >
+              <Download className='w-4 h-4' />
+              Download PDF
+            </button>
+            <button
+              onClick={() => window.print()}
+              className='px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-lg transition-colors flex items-center gap-2'
+            >
+              <Printer className='w-4 h-4' />
+              Print
+            </button>
+          </div>
         </div>
       </div>
 
