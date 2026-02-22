@@ -128,7 +128,7 @@ export default function ExperienceSection() {
                 EXPERIENCE
               </motion.h2>
               <motion.h3
-                className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent'
+                className='text-5xl md:text-7xl font-bold mb-6 text-black dark:text-transparent dark:bg-gradient-to-r dark:from-white dark:via-gray-200 dark:to-gray-400 dark:bg-clip-text'
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -287,7 +287,7 @@ export default function ExperienceSection() {
                 AWARDS
               </motion.h2>
               <motion.h3
-                className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent'
+                className='text-5xl md:text-7xl font-bold mb-6 text-black dark:text-transparent dark:bg-gradient-to-r dark:from-white dark:via-gray-200 dark:to-gray-400 dark:bg-clip-text'
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 1 }}

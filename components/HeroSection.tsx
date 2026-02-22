@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { FileText, Mail, Linkedin, Github, Briefcase } from "lucide-react";
-import { ReactElement } from "react";
+import { ReactElement, useState, useEffect } from "react";
+import Image from "next/image";
 
 // Tool icon components
 const ToolIcon = ({ name, bg }: { name: string; bg: string }) => {
@@ -83,6 +84,19 @@ const tools = [
 ];
 
 export default function HeroSection() {
+  const [greeting, setGreeting] = useState("Hey");
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) {
+      setGreeting("Good morning");
+    } else if (hour >= 12 && hour < 17) {
+      setGreeting("Good afternoon");
+    } else {
+      setGreeting("Good evening");
+    }
+  }, []);
+
   return (
     <section
       id='home'
@@ -135,60 +149,63 @@ export default function HeroSection() {
       </div>
 
       <div className='max-w-6xl mx-auto relative z-10 w-full flex-1 flex flex-col items-center justify-center'>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className='text-center'
-        >
-          {/* Availability Badge */}
+        {/* Hero Content - Text and Photo */}
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full mb-16'>
+          {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ delay: 0.1 }}
-            className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-sm'
-          >
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className='w-2 h-2 bg-green-500 rounded-full'
-            />
-            <span className='text-sm text-gray-300'>
-              Available for new opportunities
-            </span>
-          </motion.div>
-
-          {/* Name and Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6'
+            transition={{ duration: 0.8 }}
+            className='text-center lg:text-left order-2 lg:order-1'
           >
-            Hey, I'm{" "}
-            <motion.span
-              className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600'
-              animate={{
-                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-              }}
-              transition={{
-                duration: 8,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              style={{ backgroundSize: "200% auto" }}
+            {/* Availability Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ delay: 0.1 }}
+              className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-sm'
             >
-              Jonathan
-            </motion.span>
-            .
-          </motion.h1>
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className='w-2 h-2 bg-green-500 rounded-full'
+              />
+              <span className='text-sm text-gray-300'>
+                Available for new opportunities
+              </span>
+            </motion.div>
+
+            {/* Name and Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className='text-4xl md:text-6xl lg:text-7xl font-bold mb-6'
+            >
+              {greeting}, I'm{" "}
+              <motion.span
+                className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600'
+                animate={{
+                  backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                style={{ backgroundSize: "200% auto" }}
+              >
+                Jonathan
+              </motion.span>
+              .
+            </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className='text-lg md:text-xl text-gray-400 mb-3 max-w-3xl mx-auto'
+            className='text-lg md:text-xl text-gray-400 mb-3'
           >
             Bartender & F&B Professional with{" "}
             <span className='text-white font-semibold'>15+ years</span> of
@@ -199,7 +216,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className='text-base md:text-lg text-gray-500 mb-12'
+            className='text-base md:text-lg text-gray-500 mb-8'
           >
             specializing in Bartending, Mixology, Service Excellence, Purchasing
             & Operations from coffee shops to central kitchens
@@ -210,7 +227,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className='flex flex-wrap gap-4 justify-center items-center mb-12'
+            className='flex flex-wrap gap-4 justify-center lg:justify-start items-center'
           >
             <motion.a
               whileHover={{
@@ -249,14 +266,50 @@ export default function HeroSection() {
               Contact
             </motion.a>
           </motion.div>
+        </motion.div>
 
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-            className='flex gap-6 justify-center mb-32'
-          >
+        {/* Photo Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='order-1 lg:order-2 flex justify-center lg:justify-end'
+        >
+          <div className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'>
+            {/* Animated border effect */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className='absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 blur-xl opacity-70'
+            />
+            
+            {/* Photo placeholder with fallback */}
+            <div className='relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-cyan-500/20 to-blue-600/20'>
+              {/* Placeholder - Replace src with your photo path */}
+              <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900'>
+                <span className='text-6xl md:text-8xl font-bold text-white/20'>JP</span>
+              </div>
+              {/* Uncomment and add your photo:
+              <Image
+                src="/profile-photo.jpg"
+                alt="Jonathan Paita"
+                fill
+                className='object-cover'
+                priority
+              />
+              */}
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Social Links - Now outside the grid */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9 }}
+        className='flex gap-6 justify-center mb-16 relative z-10'
+      >
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
               whileTap={{ scale: 0.9 }}
@@ -286,8 +339,6 @@ export default function HeroSection() {
               <Mail className='w-5 h-5' />
             </motion.a>
           </motion.div>
-        </motion.div>
-      </div>
 
       {/* Tools Carousel - Bottom Section */}
       <motion.div

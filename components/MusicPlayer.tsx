@@ -13,9 +13,13 @@ export default function MusicPlayer() {
   const [volume, setVolume] = useState(0.3); // Lower default volume
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  // The XX - Intro (You may need to replace with your own hosted file)
-  const musicUrl =
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+  // The XX - Intro
+  // To use the actual song, you need to:
+  // 1. Download from: https://soundcloud.com/hamdiofficialmusic/the-xx-intro-hamdi-edit-free
+  // 2. Or from YouTube: https://www.youtube.com/watch?v=xMV6l2y67rk
+  // 3. Host the file in /public/music/ folder
+  // 4. Update the musicUrl to: "/music/the-xx-intro.mp3"
+  const musicUrl = "/music/the-xx-intro.mp3"; // Place your audio file in public/music/
   const songTitle = "Intro";
   const artistName = "The XX";
 

@@ -71,7 +71,7 @@ export default function AboutSection() {
               ABOUT
             </motion.h2>
             <motion.h3
-              className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent'
+              className='text-5xl md:text-7xl font-bold text-black dark:text-transparent dark:bg-gradient-to-r dark:from-white dark:via-gray-200 dark:to-gray-400 dark:bg-clip-text'
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.2 }}
