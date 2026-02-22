@@ -27,8 +27,15 @@ export default function BackToTop() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
+      left: 0,
       behavior: "smooth",
     });
+    // Additional fallback to ensure we reach the top
+    setTimeout(() => {
+      if (window.scrollY > 0) {
+        window.scrollTo(0, 0);
+      }
+    }, 800);
   };
 
   return (
@@ -39,7 +46,7 @@ export default function BackToTop() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           onClick={scrollToTop}
-          className='fixed bottom-6 left-6 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 group'
+          className='fixed bottom-32 right-8 z-50 w-14 h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 group'
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           aria-label='Back to top'

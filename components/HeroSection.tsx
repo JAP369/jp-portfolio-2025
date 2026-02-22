@@ -253,32 +253,6 @@ export default function HeroSection() {
                 <FileText className='w-5 h-5' />
                 Resume
               </motion.a>
-              <motion.a
-                whileHover={{
-                  scale: 1.05,
-                  backgroundColor: "rgba(255,255,255,0.15)",
-                }}
-                whileTap={{ scale: 0.95 }}
-                href='#contact'
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.querySelector("#contact");
-                  if (element) {
-                    const offset = 80;
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition =
-                      elementPosition + window.pageYOffset - offset;
-                    window.scrollTo({
-                      top: offsetPosition,
-                      behavior: "smooth",
-                    });
-                  }
-                }}
-                className='px-8 py-4 border-2 border-white/20 rounded-full font-medium transition-all duration-300 flex items-center gap-2'
-              >
-                <Mail className='w-5 h-5' />
-                Contact
-              </motion.a>
             </motion.div>
           </motion.div>
 
