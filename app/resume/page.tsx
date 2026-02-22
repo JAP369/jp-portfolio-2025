@@ -15,7 +15,7 @@ export default function ResumePage() {
     { skill: "Microsoft Office (Word, Excel & PowerPoint)", level: 80 },
     { skill: "Web Design - Front-End Development", level: 80 },
     { skill: "Database - Back-End Development", level: 50 },
-    { skill: "Autodesk Maya (3D Animation)", level: 60 },
+    { skill: "Autodesk Maya (3D Animation)", level: 50 },
   ];
 
   const languages = [
@@ -57,10 +57,7 @@ export default function ResumePage() {
               Jonathan Austria Paita
             </h1>
             <div className='flex flex-wrap justify-center gap-2 text-sm text-gray-400 mb-3'>
-              <span>
-                📍 4A, Tak Fung House, 1-3 Morrison Hill Road, Wan Chai, Hong
-                Kong
-              </span>
+              <span>📍Wan Chai, Hong Kong</span>
             </div>
             <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-400'>
               <span>📧 jon89ap@gmail.com</span>
@@ -236,25 +233,38 @@ export default function ResumePage() {
               {/* Lobster Bar & Grill */}
               <div className='border-l-2 border-cyan-500/50 pl-6'>
                 <h3 className='text-xl font-semibold text-white'>
-                  Bar Operations & Service
+                  Bar Operations Assistant
                 </h3>
                 <p className='text-gray-400 mb-2'>
-                  Lobster Bar & Grill Island Shangri-La, Admiralty
+                  Lobster Bar & Grill - Island Shangri-La, Admiralty
                 </p>
                 <p className='text-sm text-gray-500 mb-3'>
                   October 2018 - June 2020
                 </p>
                 <p className='text-gray-300 leading-relaxed'>
-                  Serving as second-in-command in a team of 50 staff members, I
-                  collaborated with sommeliers and demonstrated expertise in
-                  creating classic and signature mixed drinks using high-quality
-                  ingredients, from simple to complex recipes, drawing
-                  inspiration from vintage cocktails to develop menus
-                  representing various mixology eras. I delivered high-quality
-                  hospitality, promptly addressing patron complaints and needs,
-                  while ensuring bar safety, cleanliness, event oversight, and
-                  compliance with health regulations without compromising
-                  attention to co-workers or operational efficiency.
+                  Contributed to the creative evolution of a beverage program at
+                  a venue recognized among Asia’s 50 Best Bars, maintaining a
+                  culture of technical precision and storytelling. I supported
+                  the development of sophisticated cocktail menus that bridged
+                  vintage mixology with modern innovation, utilizing premium
+                  ingredients to execute complex, era-defining recipes. My focus
+                  remained on upholding the elite standards expected of a
+                  globally recognized establishment, ensuring every drink met
+                  the high-volume execution and quality benchmarks of a top-tier
+                  bar.
+                </p>
+                <br />
+                <p>
+                  In addition to menu execution, I managed the daily rigors of a
+                  prestigious environment with a focus on service philosophy and
+                  operational integrity. I addressed patron needs with a
+                  commitment to five-star hospitality standards, ensuring guest
+                  satisfaction remained a priority during peak service. By
+                  strictly enforcing health, safety, and regulatory compliance
+                  and providing meticulous event oversight, I helped optimize
+                  workflow efficiency to deliver seamless service without
+                  compromising the attention to detail required in a top-50
+                  ranked establishment.
                 </p>
               </div>
 

@@ -3,7 +3,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { FileText, Mail, Linkedin, Github, Heart } from "lucide-react";
+import {
+  FileText,
+  Mail,
+  Linkedin,
+  Github,
+  Heart,
+  Briefcase,
+} from "lucide-react";
 
 export default function ContactSection() {
   const ref = useRef(null);
@@ -37,7 +44,7 @@ export default function ContactSection() {
 
           {/* CTA Buttons */}
           <motion.div
-            className='flex flex-wrap gap-4 justify-center items-center mb-16'
+            className='flex flex-wrap gap-4 justify-center items-center mb-12'
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -48,8 +55,20 @@ export default function ContactSection() {
                 boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
               }}
               whileTap={{ scale: 0.95 }}
-              href='/resume'
+              href='/hire-me'
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+            >
+              <Briefcase className='w-5 h-5' />
+              Hire Me
+            </motion.a>
+            <motion.a
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              href='/resume'
+              className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
             >
               <FileText className='w-5 h-5' />
               Resume
@@ -66,6 +85,58 @@ export default function ContactSection() {
               <Mail className='w-5 h-5' />
               Get In Touch
             </motion.a>
+          </motion.div>
+
+          {/* Social Media Icons */}
+          <motion.div
+            className='mb-16'
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <p className='text-gray-400 text-lg mb-6'>Connect with me</p>
+            <div className='flex gap-6 justify-center'>
+              <motion.a
+                whileHover={{
+                  scale: 1.15,
+                  y: -5,
+                  boxShadow: "0 10px 30px rgba(6, 182, 212, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='https://www.linkedin.com/in/jonathan-paita'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='w-14 h-14 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-sm border border-cyan-400/30 flex items-center justify-center transition-all duration-300 hover:border-cyan-400/60'
+              >
+                <Linkedin className='w-6 h-6 text-cyan-400' />
+              </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.15,
+                  y: -5,
+                  boxShadow: "0 10px 30px rgba(6, 182, 212, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='https://github.com/JAP369'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='w-14 h-14 rounded-full bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 flex items-center justify-center transition-all duration-300 hover:border-purple-400/60'
+              >
+                <Github className='w-6 h-6 text-purple-400' />
+              </motion.a>
+              <motion.a
+                whileHover={{
+                  scale: 1.15,
+                  y: -5,
+                  boxShadow: "0 10px 30px rgba(6, 182, 212, 0.3)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                href='mailto:jonathan.paita@gmail.com'
+                className='w-14 h-14 rounded-full bg-gradient-to-br from-green-500/20 to-emerald-500/20 backdrop-blur-sm border border-green-400/30 flex items-center justify-center transition-all duration-300 hover:border-green-400/60'
+              >
+                <Mail className='w-6 h-6 text-green-400' />
+              </motion.a>
+            </div>
           </motion.div>
 
           {/* Footer */}
