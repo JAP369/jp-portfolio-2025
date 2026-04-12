@@ -4,7 +4,6 @@ import Script from "next/script";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import Providers from "@/components/Providers";
-import WhatsAppCTA from "@/components/WhatsAppCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,7 +106,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>
-        <WhatsAppCTA />
         {/* Google AdSense — Script must live in body, not head */}
         {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
           <Script
