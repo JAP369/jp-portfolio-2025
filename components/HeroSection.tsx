@@ -253,6 +253,15 @@ export default function HeroSection() {
                 <FileText className='w-5 h-5' />
                 Resume
               </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href='/portfolio-pdf'
+                className='group px-8 py-4 border border-white/20 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2 hover:border-white/50'
+              >
+                <FileText className='w-5 h-5' />
+                Portfolio PDF
+              </motion.a>
             </motion.div>
           </motion.div>
 

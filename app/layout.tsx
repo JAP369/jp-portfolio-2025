@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import Providers from "@/components/Providers";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -102,8 +103,12 @@ export default function RootLayout({
         <meta
           name='apple-mobile-web-app-status-bar-style'
           content='black-translucent'
-        />{" "}
-        {/* Google AdSense — set NEXT_PUBLIC_ADSENSE_PUBLISHER_ID in .env.local */}
+        />
+      </head>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <Providers>{children}</Providers>
+        <WhatsAppCTA />
+        {/* Google AdSense — Script must live in body, not head */}
         {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
           <Script
             async
@@ -111,10 +116,7 @@ export default function RootLayout({
             crossOrigin='anonymous'
             strategy='lazyOnload'
           />
-        )}{" "}
-      </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <Providers>{children}</Providers>
+        )}
       </body>
     </html>
   );

@@ -4,8 +4,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-type Category = "All" | "Websites" | "Logos" | "Business Cards" | "Fliers";
+type Category =
+  | "All"
+  | "Websites"
+  | "Logos"
+  | "Menu Design"
+  | "Business Cards"
+  | "Fliers";
 
 interface Project {
   title: string;
@@ -14,6 +21,8 @@ interface Project {
   image: string;
   category: Category;
   comingSoon?: boolean;
+  caseStudy?: string; // slug for /work/[slug]
+  sponsored?: boolean; // partner / sponsored slot
 }
 
 const projects: Project[] = [
@@ -25,6 +34,16 @@ const projects: Project[] = [
     link: "https://homie-hk.vercel.app/en",
     image: "/homie-hk.png",
     category: "Websites",
+    caseStudy: "homie",
+  },
+  {
+    title: "Timpla",
+    description:
+      "Home-cooked Filipino food delivery from Wan Chai kitchen — authentic meals delivered across Hong Kong with weekly subscription boxes",
+    link: "https://timpla-hk.vercel.app/",
+    image: "/timpla-hk.png",
+    category: "Websites",
+    caseStudy: "timpla",
   },
   {
     title: "DirectHelper HK",
@@ -33,6 +52,7 @@ const projects: Project[] = [
     link: "https://directhelper.vercel.app/",
     image: "/directhelper.png",
     category: "Websites",
+    caseStudy: "directhelper",
   },
   {
     title: "NeatFix",
@@ -41,6 +61,7 @@ const projects: Project[] = [
     link: "https://neatfix.vercel.app/",
     image: "/neatfix.png",
     category: "Websites",
+    caseStudy: "neatfix",
   },
   {
     title: "FlipFlix",
@@ -49,6 +70,7 @@ const projects: Project[] = [
     link: "https://flip-flix.vercel.app/",
     image: "/flip-flix.png",
     category: "Websites",
+    caseStudy: "flip-flix",
   },
   // ── EXISTING website projects ────────────────────────────────────────────
   {
@@ -115,7 +137,28 @@ const projects: Project[] = [
     category: "Business Cards",
     comingSoon: true,
   },
-  // ── Fliers (coming soon placeholders) ───────────────────────────────────
+  // ── Menu Design (coming soon) ───────────────────────────────
+  {
+    title: "Dine Menu — Timpla HK",
+    description:
+      "Full print-ready menu design for a Filipino home kitchen featuring food photography and bilingual layout",
+    link: "#",
+    image:
+      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop",
+    category: "Menu Design",
+    comingSoon: true,
+  },
+  {
+    title: "Restaurant Menu — Kusina",
+    description:
+      "Warm, branded menu design with Filipino cultural motifs, clear sections, and photo-forward layout",
+    link: "#",
+    image:
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop",
+    category: "Menu Design",
+    comingSoon: true,
+  },
+  // ── Fliers (coming soon placeholders) ────────────────────────
   {
     title: "Event Flier — Next Level Club",
     description:
@@ -126,12 +169,24 @@ const projects: Project[] = [
     category: "Fliers",
     comingSoon: true,
   },
+  // ── Sponsored / Partner slot ────────────────────────────────
+  {
+    title: "Want Your Project Featured Here?",
+    description:
+      "This slot is available for a new website, brand identity, or design project. Contact me to discuss a collaboration or sponsorship.",
+    link: "/#contact",
+    image:
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+    category: "Websites",
+    sponsored: true,
+  },
 ];
 
 const categories: Category[] = [
   "All",
   "Websites",
   "Logos",
+  "Menu Design",
   "Business Cards",
   "Fliers",
 ];
@@ -274,13 +329,30 @@ export default function ProjectsSection() {
                         </div>
                       )}
 
+                      {/* Sponsored badge */}
+                      {project.sponsored && (
+                        <div className='absolute top-4 left-4 px-3 py-1 bg-amber-500/80 backdrop-blur-md border border-amber-400/50 rounded-full text-xs text-amber-100 font-semibold tracking-wide'>
+                          ★ Partner Slot Available
+                        </div>
+                      )}
+
                       <div className='absolute bottom-0 left-0 right-0 p-8'>
-                        <h4 className='text-2xl font-bold mb-3 text-white'>
+                        <h4 className='text-2xl font-bold mb-2 text-white'>
                           {project.title}
                         </h4>
-                        <p className='text-gray-300 text-sm leading-relaxed'>
+                        <p className='text-gray-300 text-sm leading-relaxed mb-4'>
                           {project.description}
                         </p>
+                        {/* Case study link */}
+                        {project.caseStudy && (
+                          <Link
+                            href={`/work/${project.caseStudy}`}
+                            onClick={(e) => e.stopPropagation()}
+                            className='inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-white border border-cyan-500/40 hover:border-white/60 px-3 py-1.5 rounded-full backdrop-blur-sm transition-all duration-200'
+                          >
+                            View Case Study →
+                          </Link>
+                        )}
                       </div>
 
                       {isClickable && (
