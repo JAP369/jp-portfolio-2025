@@ -5,13 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import Image from "next/image";
 
-type Category =
-  | "All"
-  | "Websites"
-  | "Logos"
-  | "Menu Design"
-  | "Business Cards"
-  | "Fliers";
+type Category = "All" | "Websites" | "Logos" | "Business Cards" | "Fliers";
 
 interface Project {
   title: string;
@@ -30,14 +24,6 @@ const projects: Project[] = [
       "AI-powered roommate and room-finding platform for Hong Kong with zero agency fees and smart compatibility matching",
     link: "https://homie-hk.vercel.app/en",
     image: "/homie-hk.png",
-    category: "Websites",
-  },
-  {
-    title: "Timpla",
-    description:
-      "Home-cooked Filipino food delivery from Wan Chai kitchen — authentic meals delivered across Hong Kong with weekly subscription boxes",
-    link: "https://timpla-hk.vercel.app/",
-    image: "/timpla-hk.png",
     category: "Websites",
   },
   {
@@ -66,14 +52,6 @@ const projects: Project[] = [
   },
   // ── EXISTING website projects ────────────────────────────────────────────
   {
-    title: "Kusina - Filipino Restaurant",
-    description:
-      "Authentic Filipino cuisine website with online menu and catering services in Hong Kong",
-    link: "https://kusina-hk.vercel.app/",
-    image: "/kusina.png",
-    category: "Websites",
-  },
-  {
     title: "NPL Marketplace",
     description:
       "Nepal's trusted marketplace for buying and selling electronics, property, vehicles, and more",
@@ -98,14 +76,6 @@ const projects: Project[] = [
     category: "Websites",
   },
   {
-    title: "Helperly",
-    description:
-      "Professional domestic helper recruitment agency in Hong Kong with visa assistance, training programs, and 24/7 support",
-    link: "https://helperly-main.vercel.app/",
-    image: "/helperly.png",
-    category: "Websites",
-  },
-  {
     title: "Airbnb Clone",
     description:
       "Full-featured accommodation booking platform with property listings, search filters, and reservation system",
@@ -114,16 +84,6 @@ const projects: Project[] = [
     category: "Websites",
   },
   // ── Logo designs (coming soon placeholders) ──────────────────────────────
-  {
-    title: "Brand Identity — Kusina",
-    description:
-      "Full brand identity package including logo, colour palette, and typography for a Filipino restaurant",
-    link: "#",
-    image:
-      "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=600&fit=crop",
-    category: "Logos",
-    comingSoon: true,
-  },
   {
     title: "Logo Design — NeatFix",
     description:
@@ -144,27 +104,6 @@ const projects: Project[] = [
     category: "Logos",
     comingSoon: true,
   },
-  // ── Menu Design (coming soon placeholders) ───────────────────────────────
-  {
-    title: "Dine Menu — Timpla HK",
-    description:
-      "Full print-ready menu design for a Filipino home kitchen featuring food photography and bilingual layout",
-    link: "#",
-    image:
-      "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&h=600&fit=crop",
-    category: "Menu Design",
-    comingSoon: true,
-  },
-  {
-    title: "Restaurant Menu — Kusina",
-    description:
-      "Warm, branded menu design with Filipino cultural motifs, clear sections, and photo-forward layout",
-    link: "#",
-    image:
-      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=600&fit=crop",
-    category: "Menu Design",
-    comingSoon: true,
-  },
   // ── Business Cards (coming soon placeholders) ────────────────────────────
   {
     title: "Business Card — NeatFix",
@@ -173,16 +112,6 @@ const projects: Project[] = [
     link: "#",
     image:
       "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=800&h=600&fit=crop",
-    category: "Business Cards",
-    comingSoon: true,
-  },
-  {
-    title: "Business Card — Helperly",
-    description:
-      "Elegant, minimal card design for a domestic helper recruitment agency in Hong Kong",
-    link: "#",
-    image:
-      "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=600&fit=crop",
     category: "Business Cards",
     comingSoon: true,
   },
@@ -197,23 +126,12 @@ const projects: Project[] = [
     category: "Fliers",
     comingSoon: true,
   },
-  {
-    title: "Promo Flier — Timpla HK",
-    description:
-      "Vibrant promotional flier for a weekly meal subscription drive with bold typography and food photography",
-    link: "#",
-    image:
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop",
-    category: "Fliers",
-    comingSoon: true,
-  },
 ];
 
 const categories: Category[] = [
   "All",
   "Websites",
   "Logos",
-  "Menu Design",
   "Business Cards",
   "Fliers",
 ];
