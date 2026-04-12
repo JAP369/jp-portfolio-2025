@@ -153,8 +153,8 @@ export default function ContactSection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <p className='text-gray-500 flex items-center gap-2'>
-                  © {new Date().getFullYear()} Jonathan Austria Paita. All
-                  rights reserved.
+                  © {new Date().getFullYear()} Jonathan Paita. All rights
+                  reserved.
                 </p>
                 <p className='text-gray-600 text-sm flex items-center gap-2'>
                   Crafted with passion

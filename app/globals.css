@@ -177,3 +177,63 @@ img {
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
+/* ─── Print / Save-as-PDF styles for Resume page ──────────────────────────── */
+@media print {
+  /* Hide everything except the resume content */
+  nav,
+  header,
+  footer,
+  .adsbygoogle,
+  [data-no-print] {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  /* Make the resume card look clean on paper */
+  .bg-white\/5,
+  [class*="bg-white"] {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    color: #0f172a !important;
+  }
+
+  p, span, li {
+    color: #334155 !important;
+  }
+
+  /* Cyan accent colour readable on white */
+  .text-cyan-400 {
+    color: #0891b2 !important;
+  }
+
+  a {
+    color: #0891b2 !important;
+    text-decoration: none;
+  }
+
+  /* Progress bar background */
+  .bg-gray-700 {
+    background: #e2e8f0 !important;
+  }
+
+  /* Gradient bars as solid colour */
+  [class*="from-cyan"] {
+    background: #0891b2 !important;
+  }
+
+  /* Ensure page breaks work cleanly */
+  section {
+    page-break-inside: avoid;
+  }
+}
+

@@ -25,7 +25,7 @@ interface Project {
 const projects: Project[] = [
   // ── NEW website projects ─────────────────────────────────────────────────
   {
-    title: "Homie HK",
+    title: "Homie",
     description:
       "AI-powered roommate and room-finding platform for Hong Kong with zero agency fees and smart compatibility matching",
     link: "https://homie-hk.vercel.app/en",
@@ -33,7 +33,7 @@ const projects: Project[] = [
     category: "Websites",
   },
   {
-    title: "Timpla HK",
+    title: "Timpla",
     description:
       "Home-cooked Filipino food delivery from Wan Chai kitchen — authentic meals delivered across Hong Kong with weekly subscription boxes",
     link: "https://timpla-hk.vercel.app/",

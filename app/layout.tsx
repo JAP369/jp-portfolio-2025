@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import StructuredData from "@/components/StructuredData";
 import Providers from "@/components/Providers";
@@ -101,7 +102,16 @@ export default function RootLayout({
         <meta
           name='apple-mobile-web-app-status-bar-style'
           content='black-translucent'
-        />
+        />{" "}
+        {/* Google AdSense — set NEXT_PUBLIC_ADSENSE_PUBLISHER_ID in .env.local */}
+        {process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID}`}
+            crossOrigin='anonymous'
+            strategy='lazyOnload'
+          />
+        )}{" "}
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         <Providers>{children}</Providers>

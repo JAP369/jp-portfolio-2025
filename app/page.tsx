@@ -10,6 +10,7 @@ import SkillsSection from "@/components/SkillsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import AdSense from "@/components/AdSense";
 
 export default function Home() {
   return (
@@ -17,12 +18,24 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ProjectsSection />
+
+      {/* Ad unit — between Projects & Skills */}
+      <div className='max-w-4xl mx-auto px-6 py-4'>
+        <AdSense slot='1234567890' className='w-full' />
+      </div>
+
       <AdditionalExperienceSection />
       {/* <TestimonialsSection /> */}
       <SkillsSection />
       <AboutSection />
       <ExperienceSection />
       {/* <FreelanceServicesSection /> */}
+
+      {/* Ad unit — before Contact */}
+      <div className='max-w-4xl mx-auto px-6 py-4'>
+        <AdSense slot='0987654321' className='w-full' />
+      </div>
+
       <ContactSection />
     </main>
   );

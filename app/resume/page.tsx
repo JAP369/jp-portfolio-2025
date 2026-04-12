@@ -27,40 +27,6 @@ export default function ResumePage() {
 
   return (
     <div className='min-h-screen bg-[#020617] text-white'>
-      {/* Header */}
-      <div className='border-b border-white/10 py-6'>
-        <div className='max-w-4xl mx-auto px-6 flex justify-between items-center'>
-          <Link
-            href='/'
-            className='text-cyan-400 hover:text-cyan-300 transition-colors'
-          >
-            ← Back to Portfolio
-          </Link>
-          <div className='flex gap-3'>
-            <button
-              onClick={() => {
-                // Create a download link for the PDF
-                const link = document.createElement("a");
-                link.href = "/Jonathan_Paita_Resume.pdf";
-                link.download = "Jonathan_Paita_Resume.pdf";
-                link.click();
-              }}
-              className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 rounded-lg transition-all flex items-center gap-2'
-            >
-              <Download className='w-4 h-4' />
-              Download PDF
-            </button>
-            <button
-              onClick={() => window.print()}
-              className='px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-lg transition-colors flex items-center gap-2'
-            >
-              <Printer className='w-4 h-4' />
-              Print
-            </button>
-          </div>
-        </div>
-      </div>
-
       {/* Resume Content */}
       <div className='max-w-4xl mx-auto px-6 py-12'>
         <motion.div
@@ -70,7 +36,7 @@ export default function ResumePage() {
         >
           {/* Header */}
           <div className='text-center border-b border-white/10 pb-8'>
-            <h1 className='text-4xl md:text-5xl font-bold mb-3 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+            <h1 className='text-4xl md:text-5xl font-bold mb-3 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
               Jonathan Austria Paita
             </h1>
             <div className='flex flex-wrap justify-center gap-2 text-sm text-gray-400 mb-3'>
@@ -130,7 +96,7 @@ export default function ResumePage() {
                   </div>
                   <div className='w-full bg-gray-700 rounded-full h-2'>
                     <div
-                      className='bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
+                      className='bg-linear-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
                       style={{ width: `${item.level}%` }}
                     />
                   </div>
@@ -522,7 +488,7 @@ export default function ResumePage() {
                   </div>
                   <div className='w-full bg-gray-700 rounded-full h-2'>
                     <div
-                      className='bg-gradient-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
+                      className='bg-linear-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
                       style={{ width: `${item.level}%` }}
                     />
                   </div>
@@ -530,6 +496,38 @@ export default function ResumePage() {
               ))}
             </div>
           </section>
+        </motion.div>
+
+        {/* ── Bottom action bar ─────────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className='flex flex-col sm:flex-row justify-between items-center gap-4 mt-10 pt-8 border-t border-white/10'
+        >
+          <Link
+            href='/'
+            className='flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium'
+          >
+            ← Back to Portfolio
+          </Link>
+
+          <div className='flex gap-3'>
+            <button
+              onClick={() => window.print()}
+              className='px-5 py-2.5 bg-linear-to-r from-cyan-500 to-blue-600 hover:opacity-90 rounded-xl transition-all flex items-center gap-2 font-semibold'
+            >
+              <Download className='w-4 h-4' />
+              Download PDF
+            </button>
+            <button
+              onClick={() => window.print()}
+              className='px-5 py-2.5 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-xl transition-colors flex items-center gap-2'
+            >
+              <Printer className='w-4 h-4' />
+              Print
+            </button>
+          </div>
         </motion.div>
       </div>
     </div>
