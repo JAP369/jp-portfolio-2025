@@ -10,6 +10,7 @@ import SkillsSection from "@/components/SkillsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactSection from "@/components/ContactSection";
+import CocktailShowcaseSection from "@/components/CocktailShowcaseSection";
 import AdSense from "@/components/AdSense";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ProjectsSection />
+      <CocktailShowcaseSection />
 
       {/* Ad unit — between Projects & Skills */}
       <div className='max-w-4xl mx-auto px-6 py-4'>

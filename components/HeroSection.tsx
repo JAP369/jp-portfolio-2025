@@ -149,14 +149,14 @@ export default function HeroSection() {
       </div>
 
       <div className='max-w-6xl mx-auto relative z-10 w-full flex-1 flex flex-col items-center justify-center'>
-        {/* Hero Content - Text and Photo */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full mb-16'>
+        {/* Hero Content - Text */}
+        <div className='flex flex-col items-center w-full mb-16'>
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className='text-center lg:text-left order-2 lg:order-1'
+            className='text-center max-w-3xl w-full'
           >
             {/* Availability Badge */}
             <motion.div
@@ -185,7 +185,7 @@ export default function HeroSection() {
             >
               {greeting}, I'm{" "}
               <motion.span
-                className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600'
+                className='text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-sky-500 to-blue-600'
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                 }}
@@ -227,7 +227,7 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className='flex flex-wrap gap-4 justify-center lg:justify-start items-center'
+              className='flex flex-wrap gap-4 justify-center items-center'
             >
               <motion.a
                 whileHover={{
@@ -236,7 +236,7 @@ export default function HeroSection() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 href='/hire-me'
-                className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
+                className='group px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white rounded-full font-medium transition-all duration-300 flex items-center gap-2'
               >
                 <Briefcase className='w-5 h-5' />
                 Hire Me
@@ -254,35 +254,6 @@ export default function HeroSection() {
                 Resume
               </motion.a>
             </motion.div>
-          </motion.div>
-
-          {/* Photo Section */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='order-1 lg:order-2 flex justify-center lg:justify-end'
-          >
-            <div className='relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96'>
-              {/* Animated border effect */}
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className='absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 blur-xl opacity-70'
-              />
-
-              {/* Profile Photo */}
-              <div className='relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-cyan-500/20 to-blue-600/20'>
-                <Image
-                  src='/jp-photo.jpg'
-                  alt='Jonathan Paita - Bartender & F&B Professional'
-                  fill
-                  className='object-cover'
-                  priority
-                  sizes='(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px'
-                />
-              </div>
-            </div>
           </motion.div>
         </div>
 
@@ -332,8 +303,8 @@ export default function HeroSection() {
         >
           <div className='relative overflow-hidden py-8'>
             {/* Gradient fade edges */}
-            <div className='absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
-            <div className='absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
+            <div className='absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
+            <div className='absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none'></div>
 
             {/* Scrolling carousel */}
             <div className='flex animate-carousel'>
@@ -349,7 +320,7 @@ export default function HeroSection() {
                     y: -8,
                     transition: { duration: 0.2 },
                   }}
-                  className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
+                  className='shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
                 >
                   <motion.div
                     whileHover={{
@@ -376,7 +347,7 @@ export default function HeroSection() {
                     y: -8,
                     transition: { duration: 0.2 },
                   }}
-                  className='flex-shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
+                  className='shrink-0 mx-6 flex flex-col items-center gap-3 cursor-pointer group'
                 >
                   <motion.div
                     whileHover={{

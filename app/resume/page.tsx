@@ -1,8 +1,284 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
-import { Download, Printer } from "lucide-react";
+import {
+  Download,
+  Printer,
+  MapPin,
+  Phone,
+  Mail,
+  Github,
+  Briefcase,
+  Calendar,
+} from "lucide-react";
+
+const partTimeJobs = [
+  {
+    title: "BARTENDER & CASHIER",
+    company: "H.ER",
+    location: "Central",
+    period: "November 2025 – Present",
+  },
+  {
+    title: "BARTENDER",
+    company: "The Trilogy",
+    location: "Central",
+    period: "October 2025 – March 2026",
+  },
+  {
+    title: "BARTENDER",
+    company: "Cassio Social Club",
+    location: "Central",
+    period: "May 2022 – October 2022",
+  },
+  {
+    title: "STORE ASSISTANT",
+    company: "Ginsanity",
+    location: "Sai Ying Pun",
+    period: "April 2022 – June 2022",
+  },
+  {
+    title: "STORE ASSISTANT",
+    company: "Tramline Liqour",
+    location: "Wan Chai",
+    period: "March 2022 – June 2022",
+  },
+  {
+    title: "BARTENDER",
+    company: "Bourbon St.",
+    location: "SOHO, Central",
+    period: "June – December 2011",
+  },
+  {
+    title: "BARTENDER, CASHIER & SERVER",
+    company: "Trafalgar English Pub",
+    location: "Wan Chai",
+    period: "February – April 2011",
+  },
+  {
+    title: "BARTENDER & SERVER",
+    company: "Le Jardin Club",
+    location: "Central",
+    period: "August 2010 – December 2019",
+  },
+  {
+    title: "BARBACK & SERVER",
+    company: "Stormies",
+    location: "Central",
+    period: "March – May 2008",
+  },
+  {
+    title: "SALES PROMOTER",
+    company: "V.I.P.",
+    location: "Central",
+    period: "January 2008 – February 2008",
+  },
+  {
+    title: "SERVER",
+    company: "Viceroy Restaurant",
+    location: "Wan Chai",
+    period: "June 2007 – July 2007",
+  },
+  {
+    title: "SALES PROMOTER",
+    company: "Mango Telecom",
+    location: "Central",
+    period: "June 2006 – August 2006",
+  },
+  {
+    title: "SALES PROMOTER",
+    company: "FILGLOBE",
+    location: "Central",
+    period: "March 2006 – April 2006",
+  },
+  {
+    title: "SALES PROMOTER",
+    company: "Smart 1528",
+    location: "Central",
+    period: "April 2005 – February 2006",
+  },
+];
+
+const workExperience = [
+  {
+    company: "Dragon-I",
+    location: "Wyndham Street, Central",
+    period: "November 2022 – November 2025",
+    title: "Assistant Bar Manager",
+    bullets: [
+      "Managed three bar sections simultaneously with full staff delegation, training and roster oversight",
+      "Developed innovative cocktail menus and beverage programs for a premier nightclub hosting world celebrities",
+      "Conducted regular beverage stock-takes; managed purchasing to optimise supply chains and costs",
+      "Handled daily closing reports including cash reconciliation and end-of-night audits",
+      "Coordinated and participated in corporate events, international DJ nights and promotional pop-ups",
+      "Recruited, onboarded and evaluated bar staff; conducted performance reviews and disciplinary procedures where required",
+      "Liaised directly with promoters, VIP hosts and event organisers to ensure seamless beverage service delivery",
+      "Introduced personalised drink experiences and custom event menus to elevate the guest experience",
+    ],
+  },
+  {
+    company: "The Big Things Kitchen",
+    location: "Wong Chuk Hang, Aberdeen",
+    period: "July 2021 – March 2022",
+    title: "Purchasing & Beverage Manager",
+    bullets: [
+      "Oversaw group-wide inventory management with regular stock-takes and spot checks across all outlets",
+      "Implemented comprehensive purchasing plans, logistics scheduling and optimal inventory level management for F&B",
+      "Built inventory systems including product and recipe costings, vendor and market lists, data input and reporting",
+      "Managed product quality assurance and service gap analysis to ensure consistent customer satisfaction",
+      "Reported directly to head of operations; controlled expenditure within budgetary guidelines",
+      "Negotiated vendor contracts and coordinated deliveries to align with kitchen production schedules and reduce waste",
+      "Established the beverage program for a multi-concept food group spanning multiple bar and dining outlets",
+      "Curated wine, spirits and craft beer lists tailored to each outlet's individual concept and price range",
+      "Designed cocktail menus incorporating locally sourced and seasonal ingredients for the group's bar outlets",
+      "Conducted staff beverage training workshops covering product knowledge, pouring standards and guest recommendation skills",
+      "Analysed beverage sales data to identify best-sellers, manage slow-moving inventory and maximise contribution margins",
+      "Introduced digital beverage ordering tools and stock management systems to streamline daily operations",
+      "Liaised with regional distributors and importers to secure exclusive products and promotional brand allocations",
+      "Reviewed and updated beverage cost of goods monthly to ensure alignment with group-wide F&B profit targets",
+      "Developed supplier scorecards and performance KPIs to maintain supply chain accountability across the group",
+      "Created an inter-outlet transfer system to redistribute surplus stock between venues and minimise write-offs",
+    ],
+  },
+  {
+    company: "Freeze Lounge",
+    location: "SOHO, Central",
+    period: "November 2020 – June 2021",
+    title: "Lounge Manager",
+    bullets: [
+      "Hired, interviewed and trained employees; wrote SOP manuals, managed rosters and payroll",
+      "Set up and closed establishment; enforced hygiene standards and government covid compliance measures",
+      "Developed online menus, website and QR-accessible declaration forms enabling a fully touchless guest experience",
+      "Settled daily cash float counts, petty cash and compiled nightly closing and liability reports",
+      "Controlled general costs; refined and promoted slow-moving inventory to maintain profitability",
+      "Managed all vendor and purchasing relationships; monitored market trends in the hookah shisha industry",
+      "Maintained guest and reservation database; organised private events and collaborated with neighbouring venues",
+      "Created photography and video content for social media marketing and brand promotion",
+    ],
+  },
+  {
+    company: "Lobster Bar & Grill – Island Shangri-La",
+    location: "Admiralty",
+    period: "October 2018 – June 2020",
+    title: "Bar Operations Assistant",
+    bullets: [
+      "Contributed to the beverage program at a venue ranked among Asia's 50 Best Bars",
+      "Supported cocktail menu development bridging vintage mixology with contemporary innovation using premium ingredients",
+      "Upheld elite quality and service standards expected of a globally recognised top-tier bar",
+      "Delivered five-star hospitality and prioritised guest satisfaction throughout high-volume service",
+      "Enforced health, safety and regulatory compliance; provided meticulous event and operational oversight",
+      "Documented prep recipes and mise en place standards to maintain consistency across all shift teams",
+      "Assisted senior bartenders during high-profile tasting events, media nights and awards ceremonies",
+      "Developed comprehensive knowledge of fine wines, premium spirits and classic cocktail heritage to enrich guest interactions",
+    ],
+  },
+  {
+    company: "12 Noon (Jamaty Limited)",
+    location: "Wong Chuk Hang, Aberdeen",
+    period: "August 2016 – May 2018",
+    title: "Purchasing Officer & Beverage Manager",
+    bullets: [
+      "Designed and maintained the full beverage program including cocktails, wines, craft spirits and non-alcoholic options",
+      "Sourced premium artisanal beverage products aligned with the venue's casual dining concept and budget",
+      "Created standardised cocktail recipes with consistent portioning, garnish specifications and documented build sheets",
+      "Conducted regular staff training sessions on cocktail preparation, beverage service and upselling techniques",
+      "Monitored beverage sales performance and refined the menu by replacing low-performers with seasonal specials",
+      "Collaborated with the kitchen team on food and beverage pairings to enhance the overall dining experience",
+      "Established par levels for all beverage lines and conducted weekly counts to prevent stockouts and overstock",
+      "Managed relationships with beverage distributors and brand ambassadors to access promotional allocations and tastings",
+      "Sourced high-quality F&B products from farms, markets and frozen suppliers; obtained all required certifications",
+      "Developed a daily production board system for inventory management, ordering and sales forecasting",
+      "Negotiated pricing and lead times with multiple suppliers to improve margins and delivery reliability",
+      "Maintained accurate purchasing records and generated weekly expenditure reports for management review",
+      "Built comprehensive vendor and market lists; established a database for ongoing supplier performance evaluation",
+      "Monitored quality standards and managed logistics across the full supply chain",
+      "Tracked F&B market pricing trends and identified cost-saving opportunities without compromising product quality",
+      "Assisted in developing the annual F&B budget and reported on monthly variances to the operations manager",
+    ],
+  },
+  {
+    company: "Hei House",
+    location: "Lee Tung Avenue, Wan Chai",
+    period: "May 2016 – August 2016",
+    title: "Bar Supervisor",
+    bullets: [
+      "Led a team of bartenders across two bar stations, implementing improvements to elevate service efficiency",
+      "Ensured bar cleanliness, hygiene and streamlined procedures to complement the dining experience",
+      "Ordered weekly stocks and maintained daily inventory data entry and purchase records",
+      "Secured closing reports for bar sales and balanced cash receipts in line with company policies",
+      "Conducted daily pre-service briefings to brief staff on specials, table counts and any operational updates",
+      "Liaised with the kitchen team to align beverage service timing with food plate delivery",
+      "Resolved guest complaints with professionalism and escalated recurring issues to senior management",
+      "Maintained accurate shift handover records to ensure continuity across day and evening operations",
+    ],
+  },
+  {
+    company: "Mr & Mrs Fox – Swire Hotel",
+    location: "Quarry Bay",
+    period: "August 2015 – May 2016",
+    title: "Senior Bartender",
+    bullets: [
+      "Collaborated with professional mixologists, excelling in mixing, garnishing and serving with premium brands",
+      "Built a strong clientele through social networks and brand engagement",
+      "Supervised two main bar stations covering coffee, mixed drinks and craft beers",
+      "Featured in 'Story by Pernod Ricard 2015' to showcase the venue's new bar concept",
+      "Mentored and coached junior bar staff on technique, product knowledge and hotel service standards",
+      "Maintained accurate daily par levels and ensured all premium spirits were correctly stored and labelled",
+      "Applied in-depth knowledge of Swire Hotel's luxury hospitality protocols to deliver consistently elevated service",
+      "Contributed research into contemporary cocktail trends to inform seasonal menu refreshes",
+    ],
+  },
+  {
+    company: "Catalunya (Hong Kong)",
+    location: "Wan Chai",
+    period: "May 2013 – July 2015",
+    title: "Head Bartender",
+    bullets: [
+      "Part of the opening team specialising in Spanish-inspired cocktails, mocktails and gin & tonic varieties",
+      "Trained by Spanish mixologists in advanced mixing, pouring and shaking techniques",
+      "Created and implemented new cocktails and equipment upgrades for the bar program",
+      "Responded to patron needs through active observation and inquiry to continuously improve service",
+      "Developed a structured cocktail training programme for junior bartending and service staff",
+      "Managed daily bar setup and breakdown ensuring strict compliance with hygiene and food safety standards",
+      "Contributed to sourcing premium imported Spanish spirits and artisanal ingredients for the bar program",
+      "Represented the venue at trade events and spirit brand masterclasses to expand industry knowledge",
+    ],
+  },
+  {
+    company: "Staunton's Wine Bar & Cafe",
+    location: "SOHO, Central",
+    period: "March 2012 – April 2013",
+    title: "Bartender",
+    bullets: [
+      "Mixed and served a full range of cocktails, wines and beers while maintaining orderly bar operations",
+      "Ensured consistent customer satisfaction and delivered efficient service in a fast-paced environment",
+      "Developed working knowledge of wine varietals, beer styles and spirits to advise guests with confidence",
+      "Assisted in training new bar staff on drink preparation and venue-specific service standards",
+      "Maintained accurate pour counts and minimised wastage to support beverage cost targets",
+      "Engaged with regulars to build lasting rapport and encourage repeat visits to the venue",
+      "Managed multiple simultaneous orders professionally during busy evening and weekend service",
+      "Collaborated with management on weekly inventory counts and assisted with stock ordering",
+    ],
+  },
+  {
+    company: "All Night Long",
+    location: "Knutsford Terrace, Tsim Sha Tsui",
+    period: "January 2011 – February 2012",
+    title: "Bartender",
+    bullets: [
+      "Prepared and served a wide range of cocktails, spirits, wines and beers according to standard bar recipes",
+      "Maintained cleanliness and organisation of the bar station throughout service",
+      "Memorised the full menu and daily specials to confidently guide guest selections",
+      "Handled cash transactions accurately and balanced the till at the end of each shift",
+      "Restocked and rotated bar inventory including spirits, mixers, garnishes and glassware after each service",
+      "Operated professionally in a high-volume nightlife environment during late-night and weekend peak periods",
+      "Coordinated with floor staff and managers to ensure smooth beverage service delivery across the venue",
+      "Adhered to responsible service of alcohol guidelines and proactively monitored guest wellbeing",
+    ],
+  },
+];
 
 export default function ResumePage() {
   const technicalSkills = [
@@ -14,515 +290,363 @@ export default function ResumePage() {
     { skill: "Adobe Photoshop (Photo Manipulation)", level: 60 },
     { skill: "Adobe Illustrator (Vector Design)", level: 80 },
     { skill: "Microsoft Office (Word, Excel & PowerPoint)", level: 80 },
-    { skill: "Web Design - Front-End Development", level: 80 },
-    { skill: "Database - Back-End Development", level: 50 },
+    { skill: "Web Design – Front-End Development", level: 80 },
+    { skill: "Database – Back-End Development", level: 50 },
     { skill: "Autodesk Maya (3D Animation)", level: 50 },
   ];
 
   const languages = [
-    { language: "Tagalog (Speaking & Writing)", level: 90 },
-    { language: "English (Speaking & Writing)", level: 80 },
-    { language: "Cantonese (Speaking)", level: 10 },
+    {
+      language: "Tagalog",
+      sub: "Speaking · Writing · Reading",
+      flag: "🇵🇭",
+      level: 90,
+    },
+    {
+      language: "English",
+      sub: "Speaking · Writing · Reading",
+      flag: "🇬🇧",
+      level: 80,
+    },
+    { language: "Cantonese", sub: "Speaking", flag: "🇭🇰", level: 10 },
   ];
 
   return (
     <div className='min-h-screen bg-[#020617] text-white'>
       {/* Resume Content */}
-      <div className='max-w-4xl mx-auto px-6 py-12'>
+      <div className='max-w-6xl mx-auto px-4 py-10'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className='bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12 space-y-8'
+          className='rounded-2xl overflow-hidden border border-white/10 shadow-2xl flex flex-col lg:flex-row'
         >
-          {/* Header */}
-          <div className='text-center border-b border-white/10 pb-8'>
-            <h1 className='text-4xl md:text-5xl font-bold mb-3 bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-              Jonathan Austria Paita
-            </h1>
-            <div className='flex flex-wrap justify-center gap-2 text-sm text-gray-400 mb-3'>
-              <span>📍Wan Chai, Hong Kong</span>
+          {/* ── LEFT SIDEBAR ── */}
+          <aside className='lg:w-[320px] shrink-0 bg-[#0f172a] px-8 py-10 flex flex-col gap-8'>
+            {/* Portrait Photo */}
+            <div className='flex flex-col items-center text-center gap-3'>
+              <div className='w-32 h-32 rounded-full overflow-hidden ring-2 ring-cyan-500/60 shadow-lg shadow-cyan-500/20 shrink-0'>
+                <Image
+                  src='/jp-photo.jpg'
+                  alt='Jonathan Austria Paita'
+                  width={128}
+                  height={128}
+                  className='w-full h-full object-cover grayscale'
+                  style={{ objectPosition: "50% 30%" }}
+                  priority
+                />
+              </div>
+              <div>
+                <h1 className='text-2xl font-bold text-white leading-tight'>
+                  Jonathan
+                  <br />
+                  <span className='text-cyan-400'>Austria Paita</span>
+                </h1>
+                <p className='mt-1 text-sm font-medium text-gray-400 uppercase tracking-widest'>
+                  Bar & Operations Manager
+                </p>
+              </div>
             </div>
-            <div className='flex flex-wrap justify-center gap-4 text-sm text-gray-400'>
-              <span>📧 jon89ap@gmail.com</span>
-              <span>📱 +852 9760 2612</span>
+
+            {/* Contact */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Contact
+              </h2>
+              <ul className='space-y-2 text-sm text-gray-300'>
+                <li className='flex items-start gap-2'>
+                  <MapPin className='w-4 h-4 text-cyan-400 mt-0.5 shrink-0' />
+                  <span>Wan Chai, Hong Kong</span>
+                </li>
+                <li className='flex items-start gap-2'>
+                  <Phone className='w-4 h-4 text-cyan-400 mt-0.5 shrink-0' />
+                  <span>+852 9760 2612</span>
+                </li>
+                <li className='flex items-start gap-2'>
+                  <Mail className='w-4 h-4 text-cyan-400 mt-0.5 shrink-0' />
+                  <span>jon89ap@gmail.com</span>
+                </li>
+                <li className='flex items-start gap-2'>
+                  <Github className='w-4 h-4 text-cyan-400 mt-0.5 shrink-0' />
+                  <a
+                    href='https://github.com/JAP369'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='hover:text-cyan-400 transition-colors break-all'
+                  >
+                    github.com/JAP369
+                  </a>
+                </li>
+              </ul>
             </div>
-          </div>
 
-          {/* Objective */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>Objective</h2>
-            <p className='text-gray-300 leading-relaxed'>
-              To obtain a challenging leadership position applying creative
-              problem-solving and lean management skills with a growing company
-              to achieve optimum utilisation of resources and maximum profits.
-            </p>
-          </section>
-
-          {/* Skills & Acknowledgements */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-              Skills & Acknowledgements
-            </h2>
-            <div className='grid md:grid-cols-2 gap-3'>
-              {[
-                "Motivation and problem-solving skills",
-                "Works well as a team member or independently",
-                "Resourceful, energetic, competent, multi-tasking, and results-oriented",
-                "Good communication and presentation skills",
-                "Highly self-motivated",
-                "Absolute service to guests/customers",
-                "Team player",
-                "Innovative approach to overcoming obstacles",
-              ].map((skill, index) => (
-                <div key={index} className='flex items-center gap-2'>
-                  <span className='text-cyan-400'>▸</span>
-                  <span className='text-gray-300'>{skill}</span>
-                </div>
-              ))}
+            {/* Objective */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Objective
+              </h2>
+              <p className='text-sm text-gray-300 leading-relaxed'>
+                To obtain a challenging leadership position applying creative
+                problem-solving and lean management skills with a growing
+                company to achieve optimum utilisation of resources and maximum
+                profits.
+              </p>
             </div>
-          </section>
 
-          {/* Technical Skills */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-              Technical Skills
-            </h2>
-            <div className='space-y-3'>
-              {technicalSkills.map((item, index) => (
-                <div key={index}>
-                  <div className='flex justify-between mb-1 text-sm'>
-                    <span className='text-gray-300'>{item.skill}</span>
-                    <span className='text-cyan-400'>{item.level}%</span>
+            {/* Education */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Education
+              </h2>
+              <div className='space-y-4 text-sm'>
+                {[
+                  {
+                    degree: "Full-Time Software Engineering Course",
+                    school: "Accelerate Hong Kong",
+                    period: "May 2018 – September 2018",
+                  },
+                  {
+                    degree: "B.S. Information Technology",
+                    school:
+                      "Informatics Computer Institute, Manila, Philippines",
+                    period: "June 2008 – 2010",
+                  },
+                  {
+                    degree: "Certified 3D Animation & Design Program",
+                    school:
+                      "First Academy of Computer Arts, Manila, Philippines",
+                    period: "July 2007 – November 2007",
+                  },
+                  {
+                    degree: "Secondary School",
+                    school: "Della Memorial School (Hip Wo), Hong Kong",
+                    period: "September 2002 – May 2007",
+                  },
+                  {
+                    degree: "Primary School",
+                    school: "Sir Ellis Kadoorie School, Hong Kong",
+                    period: "September 2000 – July 2002",
+                  },
+                ].map((edu, i) => (
+                  <div key={i}>
+                    <p className='font-semibold text-white text-xs leading-snug'>
+                      {edu.degree}
+                    </p>
+                    <p className='text-gray-400 text-xs mt-0.5'>{edu.school}</p>
+                    <p className='text-cyan-400/80 text-xs mt-0.5'>
+                      {edu.period}
+                    </p>
                   </div>
-                  <div className='w-full bg-gray-700 rounded-full h-2'>
-                    <div
-                      className='bg-linear-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
-                      style={{ width: `${item.level}%` }}
-                    />
+                ))}
+              </div>
+            </div>
+
+            {/* Technical Skills */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Technical Skills
+              </h2>
+              <div className='space-y-2.5'>
+                {technicalSkills.map((item, index) => (
+                  <div key={index}>
+                    <div className='flex justify-between mb-1 text-xs'>
+                      <span className='text-gray-300'>{item.skill}</span>
+                      <span className='text-cyan-400'>{item.level}%</span>
+                    </div>
+                    <div className='w-full bg-gray-700 rounded-full h-1.5'>
+                      <div
+                        className='bg-linear-to-r from-cyan-500 to-blue-600 h-1.5 rounded-full'
+                        style={{ width: `${item.level}%` }}
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Work Experience */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-              Work Experience
-            </h2>
-            <div className='space-y-6'>
-              {/* Dragon-i */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Assistant Bar Manager
-                </h3>
-                <p className='text-gray-400 mb-2'>Dragon-I, Central</p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  November 2002 - November 2025
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  In this long-term role at one of Hong Kong's pioneering
-                  nightclubs, which opened in 2002 and has been a prestigious
-                  venue for 23 years, I maintained three bar sections while
-                  overseeing staff delegation, training, and roster management
-                  to ensure seamless operations. The club has hosted
-                  international celebrities such as David Beckham, Michelle
-                  Yeoh, and LeBron James, as well as athletes, and featured
-                  performances by music artists and icons including Snoop Dogg
-                  and Dr. Dre. I conducted regular beverage stock-takes,
-                  developed innovative cocktails and menus to enhance offerings,
-                  and handled purchasing to optimise supply chains and costs.
-                  Additionally, I managed closing reports, including cash
-                  reconciliation, and actively participated in numerous
-                  corporate events, international DJ parties, pop-ups, and other
-                  promotions to boost engagement and revenue.
-                </p>
-              </div>
-
-              {/* The Big Things Kitchen */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Purchasing & Beverage Manager
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  The Big Things Kitchen, Wong Chuk Hang, Aberdeen
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  July 2021 - March 2022
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  As Purchasing & Beverage Manager, I oversaw day-to-day
-                  restaurant operations, including group-wide inventory
-                  management, regular stock-takes, and spot checks across
-                  outlets. I implemented comprehensive purchasing plans, managed
-                  product logistics, scheduled expenditures, developed
-                  purchasing calendars, and determined optimal inventory levels
-                  for food and beverage products to maintain effective control.
-                  Building robust inventory systems involved product and recipe
-                  costings, vendor and market lists, data input, and reporting
-                  to the head of operations, while ensuring product quality met
-                  standards and addressing any service gaps for customer
-                  satisfaction.
-                </p>
-              </div>
-
-              {/* Freeze Lounge */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Lounge Manager
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  Freeze Lounge, SOHO, Central
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  November 2020 - June 2021
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Conducted hiring and interviewing of employees, provided
-                  training and SOP manuals. Managed roster and payrolls. Setting
-                  up and closing up of establishment, ensuring hygiene standards
-                  and comply with government's covid measurements. Organised for
-                  improvements of the service for smoother and efficient
-                  operations. Developed online menus, website and declaration
-                  forms that are accessed via QR codes. To promote touch-less
-                  approach due to covid measures. Settlement of daily cash float
-                  count, petty cash and closing reports.
-                </p>
-                <br />
-                <p>
-                  General cost control, inventory and stock management. Refined
-                  inventory by clearing up unwanted bottles and ingredients and
-                  pushing it out as promotional products. Manage all
-                  controllable costs to keep operations profitable. Purchasing
-                  of general stocks and ensuring good relationship with vendors.
-                  Handling company's sales, settling and finalising the closing
-                  and liability report.
-                </p>
-                <br />
-                <p>
-                  Taking reservations, recording of guest's database and
-                  organising private events. Maintain awareness of market trends
-                  in the hookah shisha industry, understanding forthcoming
-                  customer initiatives and monitoring what local competitors are
-                  doing. Taken photos videos of products, establishment to
-                  generate content for social media marketing and promotion.
-                  Collaborated with neighbouring restaurant to supplement for
-                  food to provide to guests.
-                </p>
-                <br />
-                <p></p>
-              </div>
-
-              {/* Lobster Bar & Grill */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Bar Operations Assistant
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  Lobster Bar & Grill - Island Shangri-La, Admiralty
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  October 2018 - June 2020
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Contributed to the creative evolution of a beverage program at
-                  a venue recognized among Asia’s 50 Best Bars, maintaining a
-                  culture of technical precision and storytelling. I supported
-                  the development of sophisticated cocktail menus that bridged
-                  vintage mixology with modern innovation, utilizing premium
-                  ingredients to execute complex, era-defining recipes. My focus
-                  remained on upholding the elite standards expected of a
-                  globally recognized establishment, ensuring every drink met
-                  the high-volume execution and quality benchmarks of a top-tier
-                  bar.
-                </p>
-                <br />
-                <p>
-                  In addition to menu execution, I managed the daily rigors of a
-                  prestigious environment with a focus on service philosophy and
-                  operational integrity. I addressed patron needs with a
-                  commitment to five-star hospitality standards, ensuring guest
-                  satisfaction remained a priority during peak service. By
-                  strictly enforcing health, safety, and regulatory compliance
-                  and providing meticulous event oversight, I helped optimize
-                  workflow efficiency to deliver seamless service without
-                  compromising the attention to detail required in a top-50
-                  ranked establishment.
-                </p>
-              </div>
-
-              {/* 2 Noon */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Purchasing Officer & Beverage Manager
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  2 Noon (Luncheon) Limited, Wong Chuk Hang, Aberdeen
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  August 2018 - May 2019
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Focusing on sourcing high-quality products from farms,
-                  markets, and frozen suppliers, I ensured all certifications
-                  and licenses were obtained while developing a daily production
-                  board system for inventory management, product and recipe
-                  costings, vendor lists, ordering, and forecasting. I handled
-                  customer feedback, monitored quality standards, and controlled
-                  costs, maintaining inventory through purchasing plans, strong
-                  vendor relationships, logistics management, expenditure
-                  scheduling, and inventory determination for food and
-                  beverages.
-                </p>
-              </div>
-
-              {/* Hot House */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Bar Supervisor
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  Hot House, Lee Tung Avenue, Wan Chai
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  May 2016 - August 2016
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Leading a team of bartenders in operating two bar stations, I
-                  implemented service improvements to enhance efficiency,
-                  ensured the bar remained clean and hygienic, and developed
-                  consistent clean-up, maintenance, and streamlined procedures
-                  to complement the food served. I ordered stocks for sales,
-                  maintained inventory with daily data entry for purchases,
-                  secured closing reports for bar sales, balanced cash receipts,
-                  and adhered to all cash handling policies and procedures.
-                </p>
-              </div>
-
-              {/* Mr & Mrs Fox */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Senior Bartender
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  Mr & Mrs Fox, Swire Hotel, Quarry Bay
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  August 2015 - May 2016
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  Trained by the Old Street Group as a long-standing bar and
-                  brand specialist, I collaborated with professional
-                  mixologists, excelling in mixing, garnishing, and serving
-                  drinks using premium brands and ingredients. I built a strong
-                  clientele through social networks, supervised two main bar
-                  stations—one focused on coffee, mixed drinks, and craft
-                  beers—and was featured in "Story by Pernod Ricard 2015" to
-                  showcase the new bar.
-                </p>
-              </div>
-
-              {/* Catalunya */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>
-                  Head Bartender
-                </h3>
-                <p className='text-gray-400 mb-2'>
-                  Catalunya (Hong Kong), Wan Chai
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  May 2013 - May 2015
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  As part of the opening team specialising in Spanish-inspired
-                  cocktails, mocktails, and gin and tonic varieties, I was
-                  managed and trained by Spanish mixologists alongside talented
-                  bartenders, learning advanced techniques for mixing, pouring,
-                  and shaking. I created and implemented new cocktails and
-                  equipment, and responded to patron needs by inquiring and
-                  observing the dining process to enhance service.
-                </p>
-              </div>
-
-              {/* Staunton's */}
-              <div className='border-l-2 border-cyan-500/50 pl-6'>
-                <h3 className='text-xl font-semibold text-white'>Bartender</h3>
-                <p className='text-gray-400 mb-2'>
-                  Staunton's Wine Bar & Cafe, SOHO, Central
-                </p>
-                <p className='text-sm text-gray-500 mb-3'>
-                  March 2012 - April 2013
-                </p>
-                <p className='text-gray-300 leading-relaxed'>
-                  In this bartending role, I provided mixing and serving of
-                  drinks to patrons, maintained bar operations, ensured customer
-                  satisfaction, and delivered efficient service in a dynamic
-                  environment.
-                </p>
+                ))}
               </div>
             </div>
-          </section>
 
-          {/* Part-Time Work Experience */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-              Part-Time Work Experience
-            </h2>
-            <div className='grid md:grid-cols-2 gap-3'>
-              {[
-                "Bartender - Cassio Social Club, Central (May 2022 - Nov 2023)",
-                "Store Assistant - Ginsanity, Sai Ying Pun (April 2022 - Present)",
-                "Store Assistant - Tramline Liquor, Wan Chai (March 2022 - Present)",
-                "Bartender - Bourbon St., Soho Central (June 2019 - Dec 2019)",
-                "Bartender, Server - Trafalgar English Pub, Wan Chai (Feb 2011 - Apr 2011)",
-                "Bartender & Server - Kupfer, Wan Chai (Aug 2019 - Dec 2019)",
-                "Bar-back & Server - VIP, Central (Feb 2008 - Apr 2008)",
-                "Server - Viceroy Restaurant, Wan Chai (June 2007 - July 2007)",
-                "Sales Promoter - Various locations (Apr 2001 - Jan 2008)",
-              ].map((exp, index) => (
-                <div key={index} className='flex items-start gap-2'>
-                  <span className='text-cyan-400 mt-1'>•</span>
-                  <span className='text-gray-300 text-sm'>{exp}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Education */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>Education</h2>
-            <div className='space-y-4'>
-              <div>
-                <h3 className='text-lg font-semibold text-white'>
-                  Full-Time Software Engineering Course
-                </h3>
-                <p className='text-gray-400'>Accelerate Hong Kong</p>
-                <p className='text-sm text-gray-500'>
-                  May 2018 - September 2018
-                </p>
-              </div>
-              <div>
-                <h3 className='text-lg font-semibold text-white'>
-                  Bachelor of Science in Information Technology
-                </h3>
-                <p className='text-gray-400'>
-                  Informatics Computer Institute, Manila, Philippines
-                </p>
-                <p className='text-sm text-gray-500'>June 2008 - 2010</p>
-              </div>
-              <div>
-                <h3 className='text-lg font-semibold text-white'>
-                  Certified 3D Animation & Design Program
-                </h3>
-                <p className='text-gray-400'>
-                  First Academy of Computer Arts, Manila, Philippines
-                </p>
-                <p className='text-sm text-gray-500'>
-                  July 2007 - November 2007
-                </p>
-              </div>
-              <div>
-                <h3 className='text-lg font-semibold text-white'>
-                  Secondary School
-                </h3>
-                <p className='text-gray-400'>
-                  Della Memorial School (Hip Wo), Hong Kong
-                </p>
-                <p className='text-sm text-gray-500'>
-                  September 2002 - May 2007
-                </p>
-              </div>
-              <div>
-                <h3 className='text-lg font-semibold text-white'>
-                  Primary School
-                </h3>
-                <p className='text-gray-400'>
-                  Sir Ellis Kadoorie School, Hong Kong
-                </p>
-                <p className='text-sm text-gray-500'>
-                  September 2000 - July 2002
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Certifications */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>
-              Certifications
-            </h2>
-            <div className='grid md:grid-cols-2 gap-2'>
-              {[
-                "Accelerate Software Engineering Certification (2018)",
-                "Programming Hub: HTML - Certification of Excellence",
-                "Programming Hub: JavaScript - Certification of Excellence",
-                "Programming Hub: Git - Certification of Excellence",
-                "Jerry Global - Beverage & Hospitality Certification Program (2020)",
-                "Grapea & Co. Wine E-Learning (2020)",
-                "Champagne Taittinger Masterclass (2016)",
-                "Grand Marnier Masterclass (2015)",
-                "ExcelWithBusiness Web Design (2013)",
-                "Global Leadership College Music & Digital Arts (2014)",
-                "BOLS Bartending Academy (2012)",
-                "Carlsberg Beer Academy (2012)",
-                "Erdington (Hong Kong) Scotch whisky Training (2012)",
-                "PC Networking & Windows 200 Server Administration (2009)",
-              ].map((cert, index) => (
-                <div key={index} className='flex items-start gap-2'>
-                  <span className='text-cyan-400 mt-1'>•</span>
-                  <span className='text-gray-300 text-sm'>{cert}</span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Languages */}
-          <section>
-            <h2 className='text-2xl font-bold mb-4 text-cyan-400'>Languages</h2>
-            <div className='space-y-3'>
-              {languages.map((item, index) => (
-                <div key={index}>
-                  <div className='flex justify-between mb-1 text-sm'>
-                    <span className='text-gray-300'>{item.language}</span>
-                    <span className='text-cyan-400'>{item.level}%</span>
+            {/* Languages */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Languages
+              </h2>
+              <div className='space-y-3'>
+                {languages.map((item, index) => (
+                  <div key={index}>
+                    <div className='flex items-center justify-between mb-1'>
+                      <div className='flex items-center gap-1.5'>
+                        <span className='text-base'>{item.flag}</span>
+                        <span className='text-xs font-semibold text-white uppercase tracking-wide'>
+                          {item.language}
+                        </span>
+                      </div>
+                      <span className='text-xs text-cyan-400'>
+                        {item.level}%
+                      </span>
+                    </div>
+                    <p className='text-xs text-gray-500 mb-1'>{item.sub}</p>
+                    <div className='w-full bg-gray-700 rounded-full h-1.5'>
+                      <div
+                        className='bg-linear-to-r from-cyan-500 to-blue-600 h-1.5 rounded-full'
+                        style={{ width: `${item.level}%` }}
+                      />
+                    </div>
                   </div>
-                  <div className='w-full bg-gray-700 rounded-full h-2'>
-                    <div
-                      className='bg-linear-to-r from-cyan-500 to-blue-600 h-2 rounded-full transition-all duration-1000'
-                      style={{ width: `${item.level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </section>
+
+            {/* Certifications */}
+            <div>
+              <h2 className='text-xs font-bold uppercase tracking-widest text-cyan-400 mb-3 border-b border-cyan-400/30 pb-1'>
+                Certifications
+              </h2>
+              <ul className='space-y-1.5 text-xs text-gray-300'>
+                {[
+                  "Accelerate Software Engineering Certification (2018)",
+                  "Programming Hub: HTML – Excellence",
+                  "Programming Hub: JavaScript – Excellence",
+                  "Programming Hub: Git – Excellence",
+                  "Jerry Global – Beverage & Hospitality (2020)",
+                  "Grapea & Co. Wine E-Learning (2020)",
+                  "Champagne Taittinger Masterclass (2016)",
+                  "Grand Marnier Masterclass (2015)",
+                  "ExcelWithBusiness Web Design (2013)",
+                  "Global Leadership College Music & Digital Arts (2014)",
+                  "BOLS Bartending Academy (2012)",
+                  "Carlsberg Beer Academy (2012)",
+                  "Erdington (HK) Scotch Whisky Training (2012)",
+                  "PC Networking & Windows Server Admin (2009)",
+                ].map((cert, i) => (
+                  <li key={i} className='flex items-start gap-1.5'>
+                    <span className='text-cyan-400 mt-0.5'>▸</span>
+                    <span>{cert}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+
+          {/* ── RIGHT MAIN CONTENT ── */}
+          <main className='flex-1 bg-[#020617] px-8 py-10 space-y-10'>
+            {/* Skills & Acknowledgements */}
+            <section>
+              <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-4 border-b border-cyan-400/30 pb-2'>
+                Skills &amp; Acknowledgements
+              </h2>
+              <div className='grid sm:grid-cols-2 gap-2'>
+                {[
+                  "Motivation and problem-solving skills",
+                  "Works well as a team member or independently",
+                  "Resourceful, energetic, competent, multi-tasking and results-oriented",
+                  "Good communication and presentation skills",
+                  "Highly self-motivated",
+                  "Absolute service to guests / customers",
+                  "Team player",
+                  "Innovative approach to overcoming obstacles",
+                ].map((skill, i) => (
+                  <div key={i} className='flex items-start gap-2 text-sm'>
+                    <span className='text-cyan-400 mt-0.5'>▸</span>
+                    <span className='text-gray-300'>{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Work Experience */}
+            <section>
+              <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-6 border-b border-cyan-400/30 pb-2'>
+                Work Experience
+              </h2>
+              <div className='space-y-7'>
+                {workExperience.map((job, i) => (
+                  <div key={i} className='border-l-2 border-cyan-500/40 pl-5'>
+                    <div className='flex flex-wrap items-start justify-between gap-1 mb-0.5'>
+                      <h3 className='text-base font-bold text-white'>
+                        {job.company}
+                      </h3>
+                      <span className='text-xs text-cyan-400 font-medium whitespace-nowrap'>
+                        {job.period}
+                      </span>
+                    </div>
+                    <div className='flex flex-wrap items-center gap-x-3 gap-y-0.5 mb-2'>
+                      <span className='text-sm font-semibold text-cyan-300 italic'>
+                        {job.title}
+                      </span>
+                      <span className='text-xs text-gray-500 flex items-center gap-1'>
+                        <MapPin className='w-3 h-3' />
+                        {job.location}
+                      </span>
+                    </div>
+                    <ul className='space-y-1'>
+                      {job.bullets.map((b, bi) => (
+                        <li
+                          key={bi}
+                          className='flex items-start gap-2 text-sm text-gray-300'
+                        >
+                          <span className='text-cyan-500 mt-1 text-xs'>●</span>
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Part-Time Work Experience */}
+            <section>
+              <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-6 border-b border-cyan-400/30 pb-2'>
+                Part-Time Work Experience
+              </h2>
+              <div className='grid sm:grid-cols-2 xl:grid-cols-3 gap-4'>
+                {partTimeJobs.map((job, i) => (
+                  <div
+                    key={i}
+                    className='bg-white/5 border border-white/10 rounded-xl p-4 hover:border-cyan-500/40 transition-colors'
+                  >
+                    <h3 className='text-xs font-bold uppercase tracking-wide text-white mb-2 leading-snug'>
+                      {job.title}
+                    </h3>
+                    <div className='flex items-start gap-1.5 text-xs text-gray-400 mb-1'>
+                      <Briefcase className='w-3 h-3 text-cyan-400 mt-0.5 shrink-0' />
+                      <span>
+                        {job.company}, {job.location}
+                      </span>
+                    </div>
+                    <div className='flex items-start gap-1.5 text-xs text-gray-400'>
+                      <Calendar className='w-3 h-3 text-cyan-400 mt-0.5 shrink-0' />
+                      <span>{job.period}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </main>
         </motion.div>
 
-        {/* ── Bottom action bar ─────────────────────────────────────────── */}
+        {/* ── Bottom action bar ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className='flex flex-col sm:flex-row justify-between items-center gap-4 mt-10 pt-8 border-t border-white/10'
+          className='flex flex-col sm:flex-row justify-between items-center gap-4 mt-8 pt-6 border-t border-white/10'
         >
           <Link
             href='/'
-            className='flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium'
+            className='flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm'
           >
             ← Back to Portfolio
           </Link>
-
           <div className='flex gap-3'>
             <button
               onClick={() => window.print()}
-              className='px-5 py-2.5 bg-linear-to-r from-cyan-500 to-blue-600 hover:opacity-90 rounded-xl transition-all flex items-center gap-2 font-semibold'
+              className='px-5 py-2.5 bg-linear-to-r from-cyan-500 to-blue-600 hover:opacity-90 rounded-xl transition-all flex items-center gap-2 font-semibold text-sm'
             >
               <Download className='w-4 h-4' />
               Download PDF
             </button>
             <button
               onClick={() => window.print()}
-              className='px-5 py-2.5 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-xl transition-colors flex items-center gap-2'
+              className='px-5 py-2.5 bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/50 rounded-xl transition-colors flex items-center gap-2 text-sm'
             >
               <Printer className='w-4 h-4' />
               Print
