@@ -330,8 +330,8 @@ export default function ResumePage() {
                   alt='Jonathan Austria Paita'
                   width={128}
                   height={128}
-                  className='w-full h-full object-cover grayscale'
-                  style={{ objectPosition: "50% 30%" }}
+                  className='w-full h-full object-cover grayscale scale-150'
+                  style={{ objectPosition: "50% 18%" }}
                   priority
                 />
               </div>
