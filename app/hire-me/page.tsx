@@ -102,7 +102,7 @@ export default function HireMePage() {
               Available for Hire
             </span>
           </motion.div>
-          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
             Hire Me for Your Project
           </h1>
           <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -125,13 +125,13 @@ export default function HireMePage() {
             >
               {/* Glow Effect */}
               <motion.div
-                className={`absolute -inset-1 bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-20 blur-xl rounded-3xl transition-opacity duration-500`}
+                className={`absolute -inset-1 bg-linear-to-r ${service.gradient} opacity-0 group-hover:opacity-20 blur-xl rounded-3xl transition-opacity duration-500`}
               />
 
-              <div className='relative p-8 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-white/20 backdrop-blur-sm transition-all duration-500 h-full'>
+              <div className='relative p-8 rounded-3xl bg-linear-to-br from-white/5 to-white/2 border border-white/10 hover:border-white/20 backdrop-blur-sm transition-all duration-500 h-full'>
                 {/* Icon */}
                 <motion.div
-                  className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center text-5xl mb-6 shadow-lg`}
+                  className={`w-20 h-20 rounded-2xl bg-linear-to-br ${service.gradient} flex items-center justify-center text-5xl mb-6 shadow-lg`}
                   whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 >
@@ -144,7 +144,7 @@ export default function HireMePage() {
                 </h3>
 
                 <div className='flex items-baseline gap-2 mb-4'>
-                  <span className='text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+                  <span className='text-4xl font-bold bg-linear-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                     {service.rate}
                   </span>
                   <span className='text-gray-500 text-sm flex items-center gap-1'>
@@ -167,7 +167,7 @@ export default function HireMePage() {
                       transition={{ delay: 0.3 + idx * 0.1 }}
                       className='flex items-start gap-3 text-gray-300'
                     >
-                      <Check className='w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5' />
+                      <Check className='w-5 h-5 text-cyan-400 shrink-0 mt-0.5' />
                       <span className='text-sm'>{feature}</span>
                     </motion.li>
                   ))}
@@ -182,10 +182,10 @@ export default function HireMePage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className='relative p-12 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 backdrop-blur-sm text-center'
+          className='relative p-12 rounded-3xl bg-linear-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 backdrop-blur-sm text-center'
         >
           <motion.div
-            className='absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 opacity-20 blur-xl rounded-3xl'
+            className='absolute -inset-1 bg-linear-to-r from-cyan-500 to-blue-600 opacity-20 blur-xl rounded-3xl'
             animate={{
               opacity: [0.2, 0.3, 0.2],
             }}
@@ -200,8 +200,8 @@ export default function HireMePage() {
               Ready to Work Together?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Let's discuss your project requirements and how I can help bring
-              your vision to life.
+              Let&apos;s discuss your project requirements and how I can help
+              bring your vision to life.
             </p>
 
             <div className='flex flex-wrap gap-4 justify-center'>
@@ -212,7 +212,7 @@ export default function HireMePage() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 href='mailto:jon89ap@gmail.com'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 flex items-center gap-2'
+                className='px-8 py-4 bg-linear-to-r from-cyan-500 to-blue-600 text-white rounded-full font-semibold transition-all duration-300 flex items-center gap-2'
               >
                 <Mail className='w-5 h-5' />
                 Email Me
