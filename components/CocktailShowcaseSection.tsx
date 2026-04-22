@@ -71,6 +71,14 @@ const cocktails: Cocktail[] = [
     venue: "12 Noon",
   },
   {
+    name: "Hei-Ria",
+    ingredients: "brandy · triple sec · calamansi · wine",
+    year: 2016,
+    image: "/cocktails/hei-ria.png",
+    accent: "#dc2626",
+    venue: "Hei House",
+  },
+  {
     name: "Heilo-Heilo",
     ingredients:
       "gold rum · malibu · purple yam · nata de coco · banana · milk",
