@@ -19,6 +19,72 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: "neozen",
+    title: "NeoZen",
+    tagline: "Hong Kong's collector trading portal for Pop Mart, LEGO & PSA cards",
+    category: "Marketplace Platform",
+    year: "2025",
+    role: "Full-Stack Designer & Developer",
+    client: "NeoZen HK",
+    liveUrl: "https://neozen-hk.vercel.app/",
+    heroImage: "/neozen.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Marketplace", "Collectibles"],
+    problem:
+      "Hong Kong's booming collector culture — from Labubu and Molly Pop Mart figures to vintage LEGO sets and PSA-graded trading cards — lacked a safe, verified platform. Trades happened through fragile WhatsApp groups and Facebook Marketplace, with no authentication, no dispute resolution, and rampant scams.",
+    solution:
+      "NeoZen is a verified collector trading portal with a dual QR handshake system at Safe-Zone partner shops, a rarity tracker, live trade feed, and a digital shelf (My Vault) for cataloguing collections. The dark, neon-accented UI reflects the underground collector aesthetic while building institutional-grade trust.",
+    outcome:
+      "The platform launched with 8,340 verified traders and an active jackpot pool of HKD 42K, with 1,247 active trades in the first month. The Safe-Zone partner network eliminated fraudulent trades by 100% within the verified system.",
+    features: [
+      "Dual QR handshake at Safe-Zone partner shops for verified trades",
+      "Live trade feed with real-time transaction updates",
+      "My Vault — digital shelf for cataloguing your collection",
+      "PSA grading tracker with rarity scoring",
+      "Jackpot pool for high-value trade events",
+      "Meetup coordination for in-person exchanges",
+    ],
+    metrics: [
+      { label: "Active Trades", value: "1,247" },
+      { label: "Verified Traders", value: "8,340" },
+      { label: "Jackpot Pool", value: "HKD 42K" },
+      { label: "Fraud Rate", value: "0%" },
+    ],
+    gallery: ["/neozen.png"],
+  },
+  {
+    slug: "owlswift",
+    title: "OwlSwift",
+    tagline: "Hong Kong's first 24/7 micro-mobility courier service",
+    category: "Logistics & Delivery",
+    year: "2025",
+    role: "Full-Stack Designer & Developer",
+    client: "OwlSwift Ltd",
+    liveUrl: "https://owlswift.vercel.app/",
+    heroImage: "/owlswift.png",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Logistics", "On-Demand"],
+    problem:
+      "Hong Kong has world-class public transport but its last-mile delivery ecosystem shuts down at night. Restaurants, pharmacies, and individuals needing urgent deliveries after midnight had no reliable, on-demand option — existing couriers operate on rigid schedules and don't cover all 18 districts around the clock.",
+    solution:
+      "OwlSwift is a 24/7 hyper-local courier platform powered by a fleet of walkers, cyclists, scooters, and motorcycles across all 18 HK districts. The platform matches packages to the right vehicle type in real-time, with live courier tracking, night-shift bounties to incentivise off-peak coverage, and Night Owl Points for repeat senders.",
+    outcome:
+      "Night deliveries cut transit times by up to 60% due to empty streets, with average ETAs under 15 minutes. The courier-side bounty model (up to 1.8× normal rate) successfully recruited a reliable night fleet across all districts.",
+    features: [
+      "24/7 delivery across all 18 Hong Kong districts",
+      "Multi-vehicle fleet — walkers, bicycles, scooters, motorcycles",
+      "Live courier tracking on interactive map",
+      "Night Owl Points — rewards for off-peak bookings",
+      "Midnight Bounties — 1.8× pay for night-shift couriers",
+      "ID-verified, rated, and insured courier network",
+    ],
+    metrics: [
+      { label: "Districts Covered", value: "18" },
+      { label: "Avg. Night ETA", value: "<15 min" },
+      { label: "Night Speed Gain", value: "60%" },
+      { label: "Hours Active", value: "24/7" },
+    ],
+    gallery: ["/owlswift.png"],
+  },
+  {
     slug: "homie",
     title: "Homie",
     tagline: "AI-powered roommate matching for Hong Kong",

@@ -26,7 +26,44 @@ interface Project {
 }
 
 const projects: Project[] = [
+  // ── TOP projects ──────────────────────────────────────────────────────────
+  {
+    title: "StockPour",
+    description:
+      "The complete bar inventory platform for Hong Kong — lightning-fast stock takes, AI demand forecasting, recipe costing, supplier compliance tracking, and HK's only bar inventory trade marketplace",
+    link: "https://stockpour.vercel.app/en",
+    image: "/stockpour.png",
+    category: "Websites",
+    caseStudy: "stockpour",
+  },
+  {
+    title: "PourForge",
+    description:
+      "A gamified mixology training platform for bartenders — courses, flashcards, quizzes, cocktail encyclopedia, and recipe builder to master the craft fast",
+    link: "https://pourforge.vercel.app/",
+    image: "/pourforge.png",
+    category: "Websites",
+    caseStudy: "pourforge",
+  },
   // ── NEW website projects ─────────────────────────────────────────────────
+  {
+    title: "NeoZen",
+    description:
+      "Hong Kong's collector trading portal — trade, collect, and verify rare Pop Mart figures, vintage LEGO, and PSA-graded cards powered by community trust",
+    link: "https://neozen-hk.vercel.app/",
+    image: "/neozen.png",
+    category: "Websites",
+    caseStudy: "neozen",
+  },
+  {
+    title: "OwlSwift",
+    description:
+      "Hong Kong's first 24/7 micro-mobility courier service — walkers, bicycles, scooters & motorcycles on demand, instantly, night or day",
+    link: "https://owlswift.vercel.app/",
+    image: "/owlswift.png",
+    category: "Websites",
+    caseStudy: "owlswift",
+  },
   {
     title: "Homie",
     description:
