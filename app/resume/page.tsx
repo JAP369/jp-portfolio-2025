@@ -330,8 +330,7 @@ export default function ResumePage() {
                   alt='Jonathan Austria Paita'
                   width={128}
                   height={128}
-                  className='w-full h-full object-cover grayscale scale-150'
-                  style={{ objectPosition: "50% 18%" }}
+                  className='w-full h-full object-cover grayscale'
                   priority
                 />
               </div>
@@ -342,7 +341,7 @@ export default function ResumePage() {
                   <span className='text-cyan-400'>Austria Paita</span>
                 </h1>
                 <p className='mt-1 text-sm font-medium text-gray-400 uppercase tracking-widest'>
-                  Bar | Operations | Procurement | Design | Web Dev| Admin
+                  Bar | Operations | Procurement | Design | Web| Admin
                 </p>
               </div>
             </div>
