@@ -526,30 +526,6 @@ export default function ResumePage() {
 
           {/* ── RIGHT MAIN CONTENT ── */}
           <main className='flex-1 bg-[#020617] px-8 py-10 space-y-10'>
-            {/* Skills & Acknowledgements */}
-            <section>
-              <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-4 border-b border-cyan-400/30 pb-2'>
-                Skills &amp; Acknowledgements
-              </h2>
-              <div className='grid sm:grid-cols-2 gap-2'>
-                {[
-                  "Motivation and problem-solving skills",
-                  "Works well as a team member or independently",
-                  "Resourceful, energetic, competent, multi-tasking and results-oriented",
-                  "Good communication and presentation skills",
-                  "Highly self-motivated",
-                  "Absolute service to guests / customers",
-                  "Team player",
-                  "Innovative approach to overcoming obstacles",
-                ].map((skill, i) => (
-                  <div key={i} className='flex items-start gap-2 text-sm'>
-                    <span className='text-cyan-400 mt-0.5'>▸</span>
-                    <span className='text-gray-300'>{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-
             {/* Work Experience */}
             <section>
               <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-6 border-b border-cyan-400/30 pb-2'>
@@ -586,6 +562,34 @@ export default function ResumePage() {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {/* Skills & Strengths */}
+            <section>
+              <h2 className='text-lg font-bold uppercase tracking-widest text-cyan-400 mb-4 border-b border-cyan-400/30 pb-2'>
+                Skills &amp; Strengths
+              </h2>
+              <div className='grid sm:grid-cols-2 gap-2'>
+                {[
+                  "Strong leadership and team management skills with the ability to motivate and develop high-performing teams",
+                  "Excellent problem-solving and creative decision-making under pressure",
+                  "Resourceful and results-oriented with a proven ability to optimise resources and drive profitability",
+                  "Highly self-motivated and capable of working effectively both independently and as part of a team",
+                  "Exceptional communication and interpersonal skills, including confident presentation and guest engagement",
+                  "Outstanding customer service orientation with a genuine commitment to delivering memorable guest experiences",
+                  "Proficient in multi-tasking and managing high-volume operations across multiple outlets or bar sections",
+                  "Innovative approach to operational challenges, continuously improving processes and service standards",
+                  "Strong analytical skills with experience in inventory control, cost management, and data-driven decision making",
+                  "Skilled in staff training, performance management, and developing standard operating procedures (SOPs)",
+                  "Adaptable and resilient with the ability to thrive in fast-paced, dynamic hospitality environments",
+                  "Detail-oriented with excellent organisational and time-management abilities",
+                ].map((skill, i) => (
+                  <div key={i} className='flex items-start gap-2 text-sm'>
+                    <span className='text-cyan-400 mt-0.5'>▸</span>
+                    <span className='text-gray-300'>{skill}</span>
                   </div>
                 ))}
               </div>
