@@ -341,7 +341,7 @@ export default function ResumePage() {
                   <span className='text-cyan-400'>Austria Paita</span>
                 </h1>
                 <p className='mt-1 text-sm font-medium text-gray-400 uppercase tracking-widest'>
-                  Bar | Operations | Procurement | Design | Web| Admin
+                  Bar | Operations | Procurement | Web | Design| Admin
                 </p>
               </div>
             </div>
