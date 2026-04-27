@@ -387,7 +387,7 @@ export default function ProjectsSection() {
                             onClick={(e) => e.stopPropagation()}
                             className='inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-white border border-cyan-500/40 hover:border-white/60 px-3 py-1.5 rounded-full backdrop-blur-sm transition-all duration-200'
                           >
-                            View Case Study →
+                            View Project →
                           </Link>
                         )}
                       </div>

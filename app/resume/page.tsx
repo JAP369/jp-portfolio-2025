@@ -232,7 +232,7 @@ const workExperience = [
   },
   {
     company: "Catalunya (Hong Kong)",
-    location: "Wan Chai",
+    location: "Morrison Hill, Wan Chai",
     period: "May 2013 – July 2015",
     title: "Head Bartender",
     bullets: [
@@ -342,7 +342,7 @@ export default function ResumePage() {
                   <span className='text-cyan-400'>Austria Paita</span>
                 </h1>
                 <p className='mt-1 text-sm font-medium text-gray-400 uppercase tracking-widest'>
-                  Bar & Operations Manager
+                  Bar | Operations | Procurement | Design | Web Dev| Admin
                 </p>
               </div>
             </div>
